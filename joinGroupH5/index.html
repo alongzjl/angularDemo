@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+    <!-- <script src="../js/jquery-1.11.3.js"></script> --> 
+    <script src="./rem.js"></script>  
+    <style media="screen"> 
+        *{margin:0;padding:0;}
+        .top{ 
+            width:100%;
+            height:4.95rem;
+            background: url(./h5/h5-bg@2x.png) no-repeat;
+            background-size: 100%;
+            padding-top:.33rem;
+        }
+        .top>p{
+            font-family: 'PingFangSC-Semibold';
+            font-size: .32rem;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            line-height: .32rem;
+            text-align: center;
+            margin-bottom:.7rem;
+        }
+        .top .icon {
+            position: relative;
+            margin: 0 auto;
+            width:6.5rem;
+            height:2rem;
+        }
+        .icon img{
+            position: absolute;
+            width:1.76rem;
+            height:1.76rem;
+            left:1.32rem;
+            border-radius: 50% 50%;
+        }
+        .icon span{
+            font-family: 'PingFangSC-Semibold';
+            font-size: 20px;
+            letter-spacing: -0.48px;
+            position: absolute;
+            left: 3.48rem;
+            top:.5rem;
+            color: #FFFFFF;
+            overflow: hidden;
+		    text-overflow: ellipsis;
+		    white-space: nowrap;
+		    width: 3rem;
+        }
+        .icon span:last-child{
+            font-family: 'PingFangSC-Regular';
+            font-size: 14px;
+            letter-spacing: -0.34px;
+            line-height: 24px;
+            top:.98rem
+        }
+        .middle{
+            background: #FFFFFF;
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.08);
+            border-radius: 3px;
+            margin:0 .32rem;
+            margin-top:-1.6rem;
+            padding-top:.58rem;
+            padding-bottom: .62rem;
+        }
+        .middle p{
+            text-align: center;
+            font-family: PingFangSC-Regular;
+            font-size: 14px;
+            color: #959FAF;
+            letter-spacing: -0.34px;
+            margin-bottom: .62rem;
+        }
+        .middle input{
+            display: block;
+            width:6rem;
+            height:.96rem;
+            margin:0 auto;
+            outline: inherit;
+            font-family: PingFangSC-Regular;
+            font-size: 14px;
+            color: #959FAF;
+            line-height: 14px;
+            background: #F7F8FA;
+            border: 1px solid #E3E5E8;
+            padding-left:.2rem;
+            margin-bottom: .32rem;
+            border-radius: 6px
+        }
+        button{
+            width:4.4rem;
+            height:.96rem;
+            outline: inherit;
+            margin: 0 auto;
+            display: block;
+            border-radius: 6px
+        }
+        #subBtn{
+            border:0;
+            background: #09BFCD;
+            box-shadow: 0 3px 10px 0 rgba(0,188,211,0.30);
+            font-family: PingFangSC-Medium;
+            font-size: 16px;
+            color: #FFFFFF;
+            margin-top:.66rem;
+            /*margin-bottom: 1.18rem;*/
+        }
+        .footer>p{
+            font-family: PingFangSC-Regular;
+            font-size: 14px;
+            color: #959FAF;
+            letter-spacing: -0.34px;
+            margin-top:.56rem;
+            text-align: center;
+            margin-bottom: .5rem
+        }
+        #downBtn{
+            border: 1px solid #00BCD3;
+            font-family: PingFangSC-Regular;
+            font-size: 16px;
+            color: #00BCD3;
+            background: #fff;
+            margin-top:-.12rem;
+            text-align: center;
+            margin-bottom: .64rem
+        }
+        .urlClose {
+            display:none;
+        }
+        .urlClose h2 {
+                height: 2rem;
+                font-size: 30px;
+                text-align: center;
+                line-height: 2rem;
+                margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="urlClose">
+        <h2>该连接已失效!</h2>
+    </div>
+    <div class="urlOpen">
+        <div class="top">
+            <p></p>
+        </div>
+        <div class="middle">
+            <p></p>
+            <input type="text" name="" value="" class="acc" placeholder="">
+            <input type="password" name="" value="" class="pwd" placeholder="">
+            <button id="subBtn"></button>
+        </div>
+        <div class="footer">
+            <p></p>
+            <button id="downBtn"></button>
+        </div>
+    </div>
+   <script type="text/javascript">
+
+    var mobileUrl = judgeMobile() == 1 ? 'http://app.qq.com/#id=detail&appid=1105399970' :
+                "https://itunes.apple.com/cn/app/wordtalk/id896998815?mt=8";
+       var groupId = getQueryString('id');
+       var identity = getQueryString('iden'); 
+       var isvalidate = 0; 
+       var langObj = {
+           "Chinese":[
+               '欢迎加入','请输入您在Gopopon注册的账号和密码','输入注册时的手机号或邮箱','输入账号密码','申请加入','还未安装Pop On?','下载Pop On'
+           ],
+           "English":[
+               'Welcome!','Please enter your GoPopOn account name and password','Enter your phone number or email','Enter account password','Apply for an account',"Haven't installed Pop On?","Download Pop On"
+           ],
+           "Japanese":[
+               'ようこそ','GoPopOnで登録したIDとパスワードを入力してください','登録した携帯番号又はEmailを入力','IDとパスワードを入力','加入申請','まだPopOnをインストールしていませんか？','PopOnをダウンロードし、登録する'
+           ],
+           "Korean":[
+               '가입을 환영합니다.','GoPopOn에 등록된 아이디와 비밀번호를 입력하세요.','등록시 핸드폰 번호나 메일 주소를 입력하세요.','아이디 비밀번호를 입력하세요.','가입 신청','PopOn 미설정？','다운 및 PopOn 등록'
+           ],
+           "Spanish":[
+               '¡Te damos la bienvenida!','Introduce tu nombre y contraseña de la cuenta GoPopOn','Indica tu número de teléfono o correo electrónico','Introduce la contraseña de la cuenta','Solicitar una cuenta','¿Aún no has instalado Pop On?','Descarga Pop On y regístrate'
+           ]
+       }
+       var lang = getQueryString('L');
+       var langArr = langObj.Chinese;  
+       switch (lang) {
+           case 'Chinese':langArr = langObj.Chinese;break;
+           case 'English':langArr = langObj.English;break;
+           case 'Japanese':langArr = langObj.Japanese;break;
+           case 'Korean':langArr = langObj.Korean;break;
+           case 'Spanish':langArr = langObj.Spanish;break;
+           default:
+           case 'Chinese':langArr = langObj.Chinese;break;
+       }
+       $('.top>p').html(langArr[0]);
+       $('.middle>p').html(langArr[1]);
+       $('.acc').attr('placeholder', langArr[2]);
+       $('.pwd').attr('placeholder', langArr[3]);
+       $('#subBtn').html(langArr[4]);
+       $('.footer>p').html(langArr[5]);
+       $('#downBtn').html(langArr[6]);
+    //    $('.top>p').html(langArr[7]);
+
+       $('#downBtn').on('click',function(){ 
+            document.location.href = mobileUrl;
+       })
+        $.ajax({
+            url:groupInviteQueryUrl,
+            type:'post',
+            data:{
+              groupId:groupId,
+              identity:identity
+            },
+            success:function(data){ 
+             if(data.code == 200){   
+               if(data.result.status == 0){
+                    $('.urlClose').css({display:'block'}); 
+                    $('.urlOpen').css({display:'none'});
+                }else{
+
+                    var html = '';
+                    var orgTitle = data.result.orgTitle ? data.result.orgTitle : '';
+                    html += ' <div class="icon"><img src="'+data.result.orgAvatar+'" /><span>'+orgTitle+'</span><span>'+data.result.groupTitle+'</span></div>';
+                    $(html).appendTo($('.top'));
+                    isvalidate = data.result.isvalidate;
+                }
+              }
+            }
+        })
+        $('#subBtn').on('click',function(){
+            var acc = $('.acc').val();
+            var pwd = $('.pwd').val();
+            if(!acc || !pwd){
+                alert('账号密码不能为空!');
+                return false
+            }
+            $.ajax({
+                url:checkUserUrl,
+                type:'post',
+                data:{
+                   acc:acc,
+                    pwd:pwd
+                 },
+                success:function(data){
+                	if(data.code == 200 && data.result){
+                        if(isvalidate == 0){
+                        	groupInviteUser(groupId,acc,'',identity,lang); 
+                        }else{
+                            document.location.href = inviteUrl +'/index2.html?iden='+identity+'&id=' + groupId+'&acc='+acc + '&L=' + lang;  
+                        }
+                    }else{
+                    	alert('用户不存在，请先下载注册！');
+                    }
+                }
+            })
+        })
+
+   </script>
+</body>
+</html>

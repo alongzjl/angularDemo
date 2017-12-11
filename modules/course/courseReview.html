@@ -1,0 +1,14 @@
+<div id="navContent">
+    <div>
+	    <ul>
+		    <li>{{detailsCourse.title || ''}}</li>
+		    <li>{{detailsCourse.category.display || ''}}</li>
+		    <li>{{detailsCourse.difficulty.display || ''}}</li>
+		    <li class="courseDetails" ng-click="courseDetailsShow()">{{course_details}}</li>
+		   <!--  <li style="float:right;cursor: pointer;" ng-click="return()">返回</li> -->
+	    </ul>
+    </div>
+</div>  
+<div class="editCourse">
+    <iframe id="mobileView" scrolling="no" src="{{detailsCourse.url}}"></iframe>   
+</div>    

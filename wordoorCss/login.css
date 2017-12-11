@@ -1,0 +1,202 @@
+* {
+	margin:0;
+	padding:0;
+    font-family: "Microsoft Yahei";
+}
+ul li {
+    list-style: none;
+}
+.lognBody {
+    background-color: #f9f9f9;
+    overflow-y: hidden;
+    font-family: "Microsoft Yahei";
+}
+.login {
+	width:1002px;
+	margin:55px auto 0;
+}
+.loginImg {
+	margin-top:55px;
+	width:455px;
+	height:280px;
+	float:left;
+}
+.login .content {
+	float:right;
+    width: 355px;
+    height: 400px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    position: relative;
+}
+.foot {
+    position: fixed;
+    bottom: 0px;
+    border-top: solid 1px #dbdbdb;
+    width: 100%;
+    background-color: #f9f9f9;
+}
+
+.foot p{
+    margin: 0;
+}
+
+.foot a {
+	display:block;
+	height: 55px;
+    line-height: 55px;
+    font-size: 13px;
+    text-align: center;
+    text-decoration: none;
+    color: #808080;
+}
+.lognTitle {
+    padding: 0 20px;
+}
+.lognTitle h3 {
+    height: 65px;
+    line-height: 65px;
+    font-size: 20px;
+    font-weight: normal;
+    color: #505756;
+    cursor: pointer;
+    width: 116px;
+    margin: 0 20px;
+    text-align: center;
+}
+.CheckMark {
+    border-bottom: 3px solid #09c0ce;
+}
+.emailLogin {
+	float:left;
+}
+.mobileLogin {
+	float:right;
+}
+.emailLoginInp, .mobileLoginInp {
+	 padding: 25px 22px 0 22px;
+    position: relative;
+    
+}
+.mobileLoginInp {
+	display:none;
+}
+.mobileLoginInp select {
+	width: 94px;
+    height: 40px;
+    box-sizing: border-box;
+    border: solid 1px #dbdbdb;
+    border-radius: 3px;
+    margin-right: 2%;
+    background-color: #f9f9f9;
+    outline: none;
+    float:left;
+}
+.login .userNameEmail,.login .userPasswordEmail,.login .userNameMobile,.login .userPasswordMobile {
+	border: solid 1px #dbdbdb;
+    border-radius: 3px;
+    background-color: #f9f9f9;
+    width: 100%;
+    font-size: 14px;
+    height: 40px;
+    color: #505766;
+   	outline: none;
+}
+.userPasswordMobile {
+	float:left;
+}
+.mobileLoginInp .userNameMobile {
+	width:210px;
+	float:left;
+}
+ .RFpassword {
+    color: #505766;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: right;
+    padding: 10px 0 30px 0;
+}
+.RFpassword a {
+    color: #505766;
+    text-decoration: none;
+  
+ }
+.login .loginBut {
+	height: 40px;
+	width:100%;
+    border-radius: 3px;
+    background-color: #09c0ce;
+    font-size: 18px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    color:#fff;
+    padding:0;
+    border:none;
+}
+.login .loginBut:hover {
+	background-color: rgba(9, 192, 206, 0.8);
+	color:#fff;
+	border:none;
+}
+.login .form-group {
+     margin-bottom: 25px; 
+     position:relative;
+}
+.errorMobile {
+    position: absolute;
+    top:42px;
+    left:100px;
+    height:20px;
+    width:200px;
+}
+.errorPassword,.errorEmail,.errorPasswordEmail{
+    position: absolute;
+    top:42px;
+    left:0;
+    height:20px;
+    width:200px; 
+}
+.showUserMobile {
+    display: none;
+    position: absolute;
+    width:210px;
+    top:42px;
+    left:100px;
+    z-index: 10;
+}
+.showUserMobilePwd,.showUserEmail,.showUserEmailPwd {
+    display: none;
+     position: absolute;
+     width:310px;
+    top:42px;
+    left:0;
+    z-index: 9;
+}
+.showUserMobile li,
+.showUserMobilePwd li,
+.showUserEmail li,
+.showUserEmailPwd li
+ {
+    height:30px;
+    line-height:30px;
+    color:#cdcdcd;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    padding-left:15px;
+    border-radius: 3px;
+    border:1px solid #dbdbdb;
+}
+.showUserMobilePwd li input,
+.showUserEmailPwd li input
+ {
+    border:none;
+   width: 100%;
+    font-size: 14px;
+    font-family: Helvetica;
+    height: 24px;
+    color: #505766;
+    outline: none; 
+    cursor: pointer;
+}
+    

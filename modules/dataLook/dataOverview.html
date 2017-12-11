@@ -1,0 +1,29 @@
+<div style="margin-bottom:32px;">
+	<div class="dataAllShow">
+		<h2>{{tutorNums}}</h2>     
+		<p>{{Numbers_of_Tutors}}</p>
+	</div>
+	<div class="dataAllShow" style="background-color: #ADD5AE;">
+		<h2>{{stuNums}}</h2>  
+		<p>{{Numbers_of_Students}}</p> 
+	</div>  
+	<div class="dataAllShow" style="background-color: #74A1D6;">
+		<h2>{{materialNums}}</h2>
+		<p>{{Total_Numbers_of_Courses}}</p>
+	</div> 
+	<div class="dataAllShow" style="background-color: #B4C4DE;">
+		<h2>{{orderReqNums}}</h2>
+		<p>{{Order_Times}}</p>
+	</div> 
+	<div class="dataAllShow" style="margin-right:0;background-color: #09C0CE;">
+		<h2>{{orderTotalDuration}}</h2>
+		<p>{{Order_Time}}</p>    
+	</div>  
+	<div style="clear:both;"></div> 
+</div>
+<detail-look-zhe type="All" wordoor="{{orgId}}"></detail-look-zhe>     
+<div>
+	<div class="banjiTable" ng-repeat="(index,itemLook) in groupList track by $index">
+		<detail-look look="{{itemLook.groupId}}" type="{{itemLook.type}}"></detail-look>
+	</div>
+</div>

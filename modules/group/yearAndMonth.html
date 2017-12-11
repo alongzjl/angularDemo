@@ -1,0 +1,23 @@
+<div class="show_date" ng-click="show_date()">
+	{{myYear}}{{year}}{{myMonth}}{{month}}
+	<span></span>
+	<div class="date_list" ng-show="showList">
+		<div class="year"> 
+			<ul>  
+				<li ng-repeat="item in year_list" ng-click="change_year($event,item)" ng-class="{'choosed':myYear==item}">{{item}}</li>
+			</ul> 
+		</div>
+		 
+		<ul class="month">
+			<li ng-repeat="item in month_list" ng-click="change_month($event,item)" ng-class="{'choosed':myMonth==item}">{{item}}{{month}}</li>
+		</ul>   
+	</div> 
+	<!-- <ul class="date_list" ng-show="showList"> 
+		<li ng-repeat="item in year_or_month" ng-click="showList = false;myChooseDate({date:item,type:myType})" ng-class="{'choosed':myDate==item}">{{item==thisYearOrMonth&&myDate==thisYear?('今'+show):item}}{{item==thisYearOrMonth&&myDate==thisYear?'':show}}</li>
+		<div class="year_page" ng-if="myType=='year'&&showList==true?true:false">  
+			<div class="year_next" ng-click="next_year($event)">></div>  
+			<div class="year_prev" ng-click="prev_year($event)"><</div>   
+		</div>          
+	</ul>  --> 
+</div>     
+    

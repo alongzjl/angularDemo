@@ -1,0 +1,158 @@
+<div class="searchAdd clear">
+    <div class="clear">
+        <div class="addCourse addse gadd fr" ng-click="addGroup()">
+           <!--  <div class="addSign"><img src="./images/security/index_addcourse.png"></div> -->
+            <span>{{add_Popzu}}</span> 
+        </div>
+    </div>  
+</div>  
+<div class="PopzuCount">{{allGroups}}
+	<div class="searchAddVerify clear">
+		<div class="search fl">
+            <div class="sologo gsearch"><img src="./images/Popzu/index_search.png"></div>
+            <input class="gword" type="text" placeholder="{{search}}">
+        </div> 
+    </div>
+</div>
+<div class="noDataShow" ng-if="noDataShowGroup">
+    <p>{{noDataShowGroupContent}}</p>
+</div>
+<ul class="groupUl">
+	<li ng-repeat="(index,item) in groupList track by $index" class="PopzuList fl" ng-click="groupDetail(index)">
+		<div class="PopzuListTitle">
+			<p class="title">{{item.name || ''}}</p>
+			<a class="international">
+				<span>{{item.lang}}</span>    
+			</a>
+		</div>
+		<ul class="clear userPortrait">
+			<li ng-repeat="stu in item.groupMembers track by $index" style="background-image: url({{stu.avatar}})"></li>
+		</ul>  
+		<div class="course">    
+			<p>
+				<span class="couresL">{{item.stuNum}} {{Student}} </span> 
+				<span class="courseT">{{item.trainNum}} {{Tutor}}</span>
+			</p>  
+		</div>     
+		<div ng-mouseover="isEnter=true" ng-mouseout="isEnter=false" class="setUp"> 
+			<img style="width:27px;height:27px;" src="./images/security/Course-Details_setting.png" alt="" />
+			<ul class="editLi" ng-class="{true:'show',false:'hide'}[isEnter]">
+				<li ng-click="editMembers(index,$event)" ng-mouseover="isMouseEnter=true" ng-mouseout="isMouseEnter=false" ng-class="{true:'commonBackgroundAndColorActive',false:'commonBackgroundAndColor'}[isMouseEnter]">{{Edit}}</li>
+				<li ng-click="removeMembers($event,item.id)" ng-mouseover="isMouseEnterAnother=true" ng-mouseout="isMouseEnterAnother=false" ng-class="{true:'commonBackgroundAndColorActive',false:'commonBackgroundAndColor'}[isMouseEnterAnother]">{{Remove}}</li> 
+			</ul>      
+		</div>
+	</li>
+</ul>
+<div class="worDoorPaging">
+	<div class="tcdPageCode" ng-show="groupListPaging"></div>
+</div>
+<!--添加群组-->
+<div class="shadow" ng-if="addGroupShow">    
+	<div id="createNewGroup" class="groupAdd">  
+		<div class="title">
+			{{add_Popzu}}
+			<div class="delete group_close" ng-click="closeShodowAdd()">
+				<img src="./images/close.png">		
+			</div>
+		</div>
+		<div class="fromContent">
+			<table> 
+			<tbody><tr>
+				<th width="154">{{popzu_name}}</th>
+				<th>
+					<input maxlength="30" ng-keyup="changeLength()" ng-model="$parent.groupName" type="text" class="gname tabTitH" placeholder="{{charaters_at_most_30}}">
+						<!-- <span class="red">{{length}}</span>    --> 
+				</th> 
+			</tr>  
+			<tr>  
+				<th width="154">{{description}}</th>
+				<th>
+					<input type="text" class="gdesc tabTitH" ng-model="$parent.desc">
+				</th>
+			</tr>
+			<tr>
+				<th>{{Popzu_type}}</th>
+				<th>
+					<input type="text"  ng-click="showgroupUl()" class="tabTitH gtype" readonly="readonly" ng-model="groupTypeShow">
+					<div class="single"><img src="./images/Creatacourse_arrow.png">
+					</div>
+					<ul ng-show="groupUl">
+						<li ng-click="chooseGroup(groupType)" ng-mouseover="isMouseEnter=true" ng-mouseout="isMouseEnter=false" ng-class="{true:'commonBackgroundAndColorActive',false:'commonBackgroundAndColor'}[isMouseEnter]"><span>{{groupTypeShow}}</span></li>  
+					</ul>
+				</th>
+			</tr>
+			<tr>
+				<th>{{language}}</th>
+				<th>
+					<input type="text" class="tabTitH glang" readonly="readonly" ng-click="showLiLang()" ng-model="groupLangShow">
+					<div class="single"><img src="./images/Creatacourse_arrow.png">
+					</div>
+					 <ul ng-show="groupLang">
+                             <li ng-click="chooseLang(item.value,item.name)" ng-repeat="item in languageListChoose" ng-mouseover="isChooseLang=$index" ng-mouseout="isChooseLang=100" ng-repeat="item in languageListChoose" ng-class="{commonBackgroundAndColorActive:isChooseLang==$index}">{{item.name}}</li>                     
+                        </ul>
+				</th>
+			</tr>
+			</tbody>
+			</table> 
+		</div>
+		<div class="btnGroupByNew clear">
+			<div class="confirm groupSave" ng-click="addGroupSave()">{{Confirm}}</div>
+			<div class="cancel group_close" ng-click="closeShodowAdd()">{{Cancel}}</div>
+		</div>
+	</div>
+</div>
+<!--编辑群组-->
+<div class="shadow" ng-if="editGroupShow"> 
+	<div id="createNewGroup" class="groupAdd">
+		<div class="title">
+			{{edit_popzu}}
+			<div class="delete group_close" ng-click="closeShodowEdit()">
+				<img src="./images/close.png">		
+			</div>
+		</div>
+		<div class="fromContent">
+			<table>
+			<tbody><tr>
+				<th width="154">{{popzu_name}}</th>
+				<th>
+					<input maxlength="30" ng-keyup="changeLength()" ng-model="$parent.groupName" type="text" class="gname tabTitH" placeholder="{{charaters_at_most_30}}"> 
+						<!-- <span class="red">{{length}}</span>  -->
+				</th>  
+			</tr> 
+			<tr>
+				<th width="154">{{description}}</th>
+				<th>
+					<input type="text" class="gdesc tabTitH" ng-model="$parent.desc">
+				</th>  
+			</tr>
+			<tr>
+				<th>{{Popzu_type}}</th>
+				<th>
+					<input type="text"  ng-click="showgroupUl()" class="tabTitH gtype" readonly="readonly" ng-model="groupTypeShow">
+					<div class="single"><img src="./images/Creatacourse_arrow.png">
+					</div>
+					<ul ng-show="groupUl">
+						<li ng-click="chooseGroup(groupType)" ng-mouseover="isMouseEnter=true" ng-mouseout="isMouseEnter=false" ng-class="{true:'commonBackgroundAndColorActive',false:'commonBackgroundAndColor'}[isMouseEnter]"><span>{{groupTypeShow}}</span></li>
+					</ul>
+				</th> 
+			</tr>
+			<tr>
+				<th>{{language}}</th>
+				<th>
+					<input type="text" class="tabTitH glang" readonly="readonly" ng-click="showLiLang()" ng-model="groupLangShow">
+					<div class="single"><img src="./images/Creatacourse_arrow.png">
+					</div>
+					 <ul ng-show="groupLang">
+                              <li ng-click="chooseLang(item.value,item.name)" ng-mouseover="isChooseLang=$index" ng-mouseout="isChooseLang=100" ng-repeat="item in languageListChoose" ng-class="{commonBackgroundAndColorActive:isChooseLang==$index}" ng-repeat="item in languageListChoose">{{item.name}}</li>
+                    </ul>
+				</th>
+			</tr>
+			</tbody>
+			</table>
+		</div>
+		<div class="btnGroupByNew clear">
+			<div class="confirm groupSave" ng-click="editGroupSave()">{{Confirm}}</div>
+			<div class="cancel group_close" ng-click="closeShodowEdit()">{{Cancel}}</div>
+		</div> 
+	</div>
+</div>

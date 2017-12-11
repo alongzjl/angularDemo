@@ -1,0 +1,9 @@
+<div class="titleGroup"><div class="groupName">{{name}}</div></div>
+<div class="subMenu subMenuGroup">
+    <ul style="width:1002px;margin:0 auto;">
+        <li ng-click="groupTutor(1)" ng-mouseenter="isChooseTitle=1" ng-mouseleave="isChooseTitle=5" ng-class="{subMenuSelect:isChooseTitle==1,subMenuSelectenter:isChooseTitleEnter==1}">{{tutor}}</li>
+        <li ng-click="groupStudent(2)" ng-mouseenter="isChooseTitle=2" ng-mouseleave="isChooseTitle=5" ng-class="{subMenuSelect:isChooseTitle==2,subMenuSelectenter:isChooseTitleEnter==2}">{{students}}</li>
+        <li ng-click="groupCourse(3)" ng-mouseenter="isChooseTitle=3" ng-mouseleave="isChooseTitle=5" ng-class="{subMenuSelect:isChooseTitle==3,subMenuSelectenter:isChooseTitleEnter==3}">{{training_plan}}</li>
+    </ul>   
+</div>          
+<div ui-view></div>      

@@ -1,0 +1,111 @@
+<div class="orgContent"> 
+	<div class="filterUser">
+		<div class="filterUserOne">
+	         <div class="title">{{dataFilterShow[0]}}</div>
+	        <select class="form-control" style="width:80px;" ng-model="sexGet" ng-change="chooseSexStu()"> 
+	        	<option value=''>{{dataFilterShow[1]}}</option>
+	          	<option value='{{item.value}}' ng-repeat="item in sexDatas">{{item.display}}</option>  
+	        </select>  
+	        <div style="clear:both;"></div>    
+	    </div>   
+	    <div class="filterUserOne"> 
+	         <div class="title">{{dataFilterShow[2]}}</div>
+	        <select class="form-control" ng-model="nativeLanguageGet" ng-change="chooseNativeLanguageStu()">
+	          <option value=''>{{dataFilterShow[1]}}</option>
+	          <option value='{{item.id}}' ng-repeat="item in languageList">{{item.display}}</option>
+	        </select> 
+	        <div style="clear:both;"></div>
+	    </div>
+	    <div class="filterUserOne">
+	         <div class="title">{{dataFilterShow[3]}}</div>
+	        <select class="form-control" ng-model="learningLanguageGet" ng-change="chooseLearningLanguageStu()">
+	          <option value=''>{{dataFilterShow[1]}}</option>  
+	          <option value='{{item.id}}' ng-repeat="item in languageList">{{item.display}}</option>
+	        </select>   
+	        <div style="clear:both;"></div> 
+	    </div> 
+	    <div class="filterUserOne" style="margin-right:0;">
+	         <div class="title">{{dataFilterShow[4]}}</div> 
+	        <select class="form-control" ng-model="groupGet" ng-change="chooseGroupStu()">
+	          <option value=''>{{dataFilterShow[1]}}</option>
+	          <option value='{{item.id}}' ng-repeat="item in orgGroupList">{{item.name}}</option>
+	        </select>    
+	        <div style="clear:both;"></div>
+	    </div>
+	    <div style="clear:both;"></div>
+	</div>
+	<div style="width: 300px;">  
+		<div class="search" style="background-color: #f9f9f9;margin-top:15px;width:189px;border:1px solid #E5E7EA;">
+	        <div class="sologo gsearch" ng-click="searchStudent()">
+	        	<img src="./images/Popzu/index_search.png">    
+	        </div>  
+	        <input class="gword" type="text" placeholder="{{dataFilterShow[13]}}" style="background-color: #f9f9f9;width:126px;" ng-model="searchContentStu">
+	    </div>  
+	</div>    
+	<table style="width:740px;text-align:center;margin-top:40px;margin-bottom:20px;" ng-if="orgStudentListDataShow==1 ? true :false">  
+		<thead>
+			<tr style="color:#808080;">
+				<td style="text-align: left;">{{dataFilterShow[5]}}</td>
+				<td>{{dataFilterShow[2]}}</td>
+				<td>{{dataFilterShow[3]}}</td> 
+				<td>{{dataFilterShow[6]}}</td>  
+				<td>{{dataFilterShow[7]}}</td> 
+				<td>{{dataFilterShow[8]}}</td>
+				<td>{{dataFilterShow[9]}}</td>
+			</tr>
+		</thead>
+		<tbody>  
+			<tr style="height:120px;" ng-repeat="item in orgStudentListData">
+				<td>   
+					<div style="position:relative;">   
+						<img ng-src="{{item.avatar || './images/security/avatar.png'}}" class="imgShow" />
+						<div class="userInf">
+							<div class="userName">{{item.name || ''}}</div>
+							<img ng-src="{{item.sexImg}}" class="xingbie" />
+							<div class="userEmail">{{item.account || ''}}</div>
+						</div>  
+						<div class="TutorPingJia" style="top:60px;">  
+							<div class="PingContent">{{dataFilterShow[4]}}</div>
+							<div class="PingContent orderGroupAll">
+								<ul>  
+									<li ng-repeat="value in item.groups track by $index">{{value}}</li>
+								</ul> 
+							</div> 
+							<div style="clear:both;"></div>
+						</div>
+					</div>  
+				</td>  
+				<td width='60'>{{item.nativeLanguage || ''}}</td>
+				<td width="80">{{item.learningLanguage || ''}}</td> 
+				<td width="80" style="color:#ADD5AE;">
+					<div class="timesLearn">{{item.orderNums || 0}}{{dataFilterShow[10]}}</div>
+					<div class="learnDurarion">{{item.orderTotalDuration || 0}}{{dataFilterShow[11]}}</div>
+				</td>    
+				<td width="80">{{item.createTime}}</td> 
+				<td width="100" style="word-wrap:break-word;word-break:break-all;">{{item.interests || ''}}</td>
+				<td width="80"><div class="userDetails" ng-click="studentDetailsLook(item.userId)">{{dataFilterShow[12]}}</div></td>
+			</tr>         
+		</tbody>  
+	</table> 
+	<div ng-if="orgStudentListDataShow==0?true:false" class="no_data_show">
+	
+		<img src="./images/dataLook/empty@2x.png">
+		<p>这里什么都没有~~</p>  
+	</div> 
+	 <div class="worDoorPaging_dataLook"> 
+		<div class="tcdPageCode" ng-show="orgStudentListPaging"></div>
+	</div>
+</div>   
+<!-- 详情弹窗 -->     
+<div class="shadow" ng-if="studentLookShow"> 
+	<div class="orderDetailsLook">   
+		<div class="orderLookTitle">   
+			{{dataFilterShow[9]}}
+            <div class="delete" ng-click="closeShadow()"> 
+                <img src="./images/close.png">
+            </div>    
+		</div>     
+		<stu-And-Tut-Details userid="{{userIdDirective}}" identity="Student" groupid=""></stu-And-Tut-Details>  
+	</div>    
+</div>    
+

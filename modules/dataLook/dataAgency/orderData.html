@@ -1,0 +1,101 @@
+<div class="orgContent"> 
+	<div class="filterUser">
+		<div class="filterUserOne">
+	         <div class="title">{{dataFilterShow[2]}}</div>
+	        <select style="width:80px;" class="form-control" ng-model="nativeLanguageGet" ng-change="chooseNativeLanguage()"> 
+	          <option value=''>{{dataFilterShow[1]}}</option>
+	          <option value='{{item.id}}' ng-repeat="item in languageList">{{item.display}}</option>
+	        </select>   
+	        <div style="clear:both;"></div>
+	    </div>
+	    <div class="filterUserOne">  
+	         <div class="title">{{orderDataShow[0]}}</div>
+	        <select class="form-control" ng-model="orderLanguageGet" ng-change="orderNativeLanguage()">
+	          <option value=''>{{dataFilterShow[1]}}</option>    
+	          <option value='{{item.id}}' ng-repeat="item in languageList">{{item.display}}</option>
+	        </select> 
+	        <div style="clear:both;"></div>
+	    </div> 
+	    <div class="filterUserOne" style="margin-right:0;">
+	         <div class="title">{{dataFilterShow[4]}}</div>  
+	         <select class="form-control" ng-model="groupGet" ng-change="chooseGroup()">
+	          <option value=''>{{dataFilterShow[1]}}</option>
+	          <option value='{{item.id}}' ng-repeat="item in orgGroupList">{{item.name}}</option>
+	        </select>    
+	        <div style="clear:both;"></div>
+	    </div>
+	    <div style="clear:both;"></div> 
+	</div> 
+	<div style="width: 300px;">
+		<div class="search" style="background-color: #f9f9f9;margin-top:15px;width:189px;border:1px solid #E5E7EA;">
+	        <div class="sologo gsearch" ng-click="searchContentClick()">
+	        	<img src="./images/Popzu/index_search.png">
+	        </div>
+	        <input class="gword" type="text" placeholder="{{dataFilterShow[13]}}" style="background-color: #f9f9f9;width:126px;" ng-model="searchContent">
+	    </div>   
+	</div> 
+	<table style="width:740px;text-align:center;margin-top:40px;" ng-if="contentOnData==1 ? true :false"> 
+		<thead>  
+			<tr style="color:#808080;height:50px;"> 
+				<td style="text-align: left;">{{orderDataShow[1]}}</td>
+				<td>{{dataFilterShow[1]}}</td>  
+				<td style="text-align: left;">{{orderDataShow[2]}}</td>
+				<td>{{orderDataShow[3]}}</td>
+				<td>{{orderDataShow[4]}}</td>
+			</tr>    
+		</thead>        
+		<tbody>
+			<tr style="height:180px;vertical-align: top;"  ng-repeat="item in orgOrderListData">
+				<td width="180">       
+					<div style="position:relative;"> 
+						<img ng-src="{{item.userAvatar || './images/security/avatar.png'}}" class="imgShow" />
+						<div class="userInf" style="margin-top: -10px;">  
+							<div class="userName">{{item.userName || ''}}</div>
+							<img ng-src="{{item.sexImg}}" class="xingbie" /> 
+							<div class="userEmail">{{item.account || ''}}</div>
+							<div class="InGroupInf">{{item.groupName || ''}}</div>
+						</div>          
+						<div class="stuPingJia">
+							<div class="PingContent">{{orderDataShow[5]}}</div>
+							<div class="PingContent" style="color:#ADD5AE;">9.9</div>
+							<div class="PingContent" style="width:600px;">
+								<ul title="{{item.stuEvals.join(' ')}}"> 
+									<li ng-repeat="value in item.stuEvals.slice(0,3) track by $index">{{value}}</li>
+									<div style="clear:both;"></div>
+								</ul>  
+							</div>  
+							<div style="clear:both;"></div> 
+						</div> 
+						<div class="TutorPingJia"> 
+							<div class="PingContent">{{orderDataShow[6]}}</div>  
+							<div class="PingContent" style="color:#ADD5AE;">10</div>
+							<div class="PingContent" style="width:600px;">
+								<ul title="{{item.tutEvals.join(' ')}}"> 
+									<li ng-repeat="value in item.tutEvals.slice(0,3) track by $index">{{value}}</li>
+									<div style="clear:both;"></div>
+								</ul>
+							</div>
+							<div style="clear:both;"></div>
+						</div>
+						<div style="clear:both;"></div>
+					</div>  
+				</td>  
+				<td width="120">{{item.nativeLanguage || ''}}</td>   
+				<td width="180" style="text-align: left;"> 
+					<p style="margin-top: -10px;">{{item.materialName || ''}}</p>
+					<div class="courseInfor">{{item.serviceLanguage || ''}}</div>
+				</td>   
+				<td width='100'>{{item.providerName || ''}}</td> 
+				<td width="100"><p>{{item.beginTime}}</p><p>{{item.orderduration || 0}}{{dataFilterShow[11]}}</p></td>
+			</tr>     
+		</tbody>
+	</table>
+	<div ng-if="contentOnData==0?true:false" class="no_data_show">
+	
+		<img src="./images/dataLook/empty@2x.png">
+		<p>这里什么都没有~~</p>  
+	</div>  
+	 <div class="worDoorPaging_dataLook">
+		<div class="tcdPageCode" ng-show="orgOrderListPaging"></div>  
+	</div> 
+</div>

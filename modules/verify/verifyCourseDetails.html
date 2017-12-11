@@ -1,0 +1,22 @@
+<div class="goToPrevCourse">
+	<div>
+		<span ng-click="goBack()">{{Previous_Page}}</span><span>|</span><span>{{Course_Under_Review}}</span><span>></span><span>{{detailsCourse.title}}</span><span class="courseDetails" ng-click="courseDetailsShow()"></span>
+	</div>   
+</div>   
+<div id="navContent">    
+    <div>        
+	    <ul>     
+		    <li>{{series_course}}:&nbsp;<span ng-repeat="item in courseSeriesAll">{{item.title}}</span></li> 
+		    <li>{{course_classification}}:&nbsp;<span>{{detailsCourse.category.display}}</span></li>
+		    <li>{{difficulty}}:&nbsp;<span>{{detailsCourse.difficulty.display}}</span></li>
+		   <li  class="verifyCoursePass" style="float:right;cursor: pointer;" ng-click="verifyPass(detailsCourse.id)">{{approved}}</li> 
+		    <li  class="verifyCoursePass" style="float:right;cursor: pointer;" ng-click="verifyUnpass(detailsCourse.id)">{{rejected}}</li>  
+		</ul>    
+    </div>
+</div> 
+<div class="editCourse">
+    <iframe id="mobileView" scrolling="no" src="{{detailsCourse.url}}"></iframe>
+</div>
+<div>
+	
+</div> 

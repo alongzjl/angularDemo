@@ -1,0 +1,38 @@
+
+<div class="PopzuCount">
+	{{displayCourseAll}}
+	<div class="searchAddVerify clear">
+	    <div class="clear">
+	        <div class="search fl"> 
+	            <div class="sologo gsearch" ng-click="searchCourse()"><img src="./images/Popzu/index_search.png"></div>
+	            <input class="gword" type="text" placeholder="{{search}}" ng-model="searchContent">
+	        </div>  
+	    </div>
+	</div> 
+</div>  
+<div class="noDataShow" ng-if="displayCourseNoDataShow">
+    <p>{{no_data}}</p>
+</div>
+<ul class="displayCourse verifyDisplayCourse"> 
+	<li class="courseRealDetail alongCourse" ng-repeat="(index,item) in displayCourse" ng-click="reviewCorse(item)">
+		<div style="background-size:100%;;background-image: url({{item.cover}})" class="myPic">
+			<div class="pub">
+				<span>{{item.auditStatusShow}}</span>
+			</div>
+			<div class="signWrap">
+				<div class="sign time">{{item.category.display || ''}}</div>
+				<div class="sign el">{{item.difficulty.display}}</div>
+			</div>
+		</div>
+		<div class="font">
+			<h3>{{item.title}}</h3>
+            <ul>
+                <li ng-repeat="value in item.seriesInformation track by $index" class="seriesAllInCourse">{{value.title}}</li>
+            </ul>
+        </div>
+    </li>
+	<div style="clear:both;"></div>
+</ul>
+<div class="worDoorPaging">
+	<div class="tcdPageCode" ng-show="displayCoursePaging"></div>
+</div>

@@ -1,0 +1,115 @@
+<div class="clear groupaddType">
+   <div class="addCourse addse gadd fr" ng-click="addGroupStudent()">
+       <!--  <div class="addSign"><img src="./images/security/index_addcourse.png"></div> -->
+        <span>{{Add_student}}</span>
+    </div>
+</div>
+<div class="noDataShow" ng-if="noDatastudentList">  
+    <p>{{noStudentShow}}</p> 
+</div>
+<ul class="allTutor">
+	<li ng-repeat="item in studentList" class="allTutorLi">
+		<img ng-src="{{item.avatar || './images/security/avatar.png'}}" alt="" class="imgshow"/>
+		<p><span>{{item.name || 'No.'+ item.userId}}</span></p>
+		<div class="clear sound">  
+			<div class="leftCircle"></div>
+			<div class="centerCircle">
+				<div class="Music_player"></div>
+				<img class="recording_play check_play" style="width:12px;height:12px;margin-top:2px;margin-right: 20px;" src="./images/tutor/sound.png">
+			</div>
+			<div class="rightCircle"></div>
+		</div>
+		<div class="score">
+			<ul class="clear fl">
+				<li style="background-image: url(./images/tutor/star-gold.png)"></li>
+				<li style="background-image: url(./images/tutor/star-gold.png)"></li>
+				<li style="background-image: url(./images/tutor/star-gold.png)"></li>
+				<li style="background-image: url(./images/tutor/star-gold.png)"></li>
+				<li style="background-image: url(./images/tutor/star-gold.png)"></li>
+			</ul>
+			<div class="fr"> 
+				<span style="color: #aaaaaa;font-style: italic;">5</span>
+			</div>
+		</div>  
+		<div ng-mouseover="isEnter=true" ng-mouseout="isEnter=false" class="setUp">
+			<img style="width:27px;height:27px;" src="./images/security/Course-Details_setting.png" alt="" />
+			<ul class="editLi" id="groupDelete"" ng-class="{true:'show',false:'hide'}[isEnter]">
+				<li ng-click="removeGroupStudent(item.userId)" ng-mouseover="isMouseEnter=true" ng-mouseout="isMouseEnter=false" ng-class="{true:'commonBackgroundAndColorActive',false:'commonBackgroundAndColor'}[isMouseEnter]">{{delete}}</li>  
+			</ul>
+		</div>
+	</li>
+</ul>
+<div class="worDoorPaging">
+	<div class="tcdPageCode" ng-show="groupStudentPaging"></div>
+</div>
+<div class="shadow" ng-show="studentShow">
+	<div id="addTutorAndStu">		
+		<div class="stUinvitation-title">{{Add_student}} 
+			<div class="delete group_close" ng-click="closeShodowAdd()">
+				<img src="./images/close.png">		
+			</div>
+		</div>		
+		<ul class="studentTitle"> 
+			<li ng-click="changeTypeOne($event,1)" ng-class="{colorBlack:isInviterStu==1}">{{Add_Members_in_Bulk}}</li>
+			<li ng-click="changeTypeOne($event,2)" ng-class="{colorBlack:isInviterStu==2}">{{Send_invitation_via_email}}</li>
+			<li ng-click="changeTypeOne($event,3)" ng-class="{colorBlack:isInviterStu==3}">{{Send_invitation_via_a_link}}</li>
+		</ul>
+		<div class="userAdd" ng-if="addType==1?true:false">
+			<div class="studentMobile">
+				<div>{{Please_enter_the_Pop_On}}</div>
+				<div ng-click="changeTypeUser($event)">{{oneOrManyNumersCopy}}</div>
+			</div>  
+			<div class="contentChange"> 
+				<ul class="emailInp" ng-if="onlyOneUser">
+					<li><input type="text" placeholder="{{Email_or_Phone_Number}}" class="inputValue" /><span>{{format_phone}}</span></li>   
+				</ul>
+				<div class="addBtn" ng-if="onlyOneUser" ng-click="addOneLine(Email_or_Phone_Number)">	
+						<span>+</span>{{Insert_a_row}}
+				</div>
+				<textarea placeholder="{{Paste_emails_or_phone}}" ng-if="onlyOneUser==false?true:false"></textarea>
+
+			</div>  
+			<div class="addUser" ng-click="saveDataUser()">{{Add_a_user}}</div>
+		</div>
+		<div class="emailAdd" ng-if="addType==2?true:false">
+			<div class="studentMobile">
+				<div>{{Please_enter_user_s_email}}</div>
+				<div ng-click="changeTypeEmail($event)">{{oneOrManyNumersCopy}}</div>
+			</div>
+			<div class="contentChange">
+				<ul class="emailInp" ng-if="onlyOneEmail">
+					<li><input type="text" placeholder="{{email}}" class="inputValue" /></li>  
+				</ul> 
+				<div class="addBtn" ng-if="onlyOneEmail" ng-click="addOneLine(email)">	
+						<span>+</span>{{Insert_a_row}}
+				</div>
+				<textarea placeholder="{{Paste_emails_here}}" ng-if="onlyOneEmail==false?true:false"></textarea>
+			</div>
+			<div class="addUser" ng-click="saveDataEmail()">{{send_email}}</div>
+		</div>
+		<div class="urlAdd" ng-if="addType==3?true:false">
+			<div class="studentMobile">
+				<div>{{Copy_and_send_invitation_link}}</div>
+				<div ng-click="closeUrl($event)" class="urlInvite">{{Switch_off_invitation_link}}</div>
+			</div>
+			<div class="urlAdded">{{H5InviteStudentUrl}}</div>
+			  
+			<div class="isChoose"><input type="checkbox" ng-click="isChooseQuestion()" /><span>{{Set_security_questions_and_answers}}</span></div>
+			<ul class="checkPro" ng-show="isvalidate">
+				<li><span>{{Question}}</span><input type="text" maxlength="50" class="question" /></li>
+				<li><span>{{Answer}}</span><input type="text" maxlength="50" class="answer" /></li>
+			</ul>
+			<div class="cloneUrl" ng-show="isvalidate" ng-click="questionSave()">{{save}}</div>
+		</div>
+	</div>
+</div>
+<div class="shadow" ng-if="errorShow" style="z-index: 20000;">
+	<div class="errorDiv">
+		<div class="errorDivTitle">{{Finish_Adding}}</div>
+		<div style="margin-bottom:10px;">{{successNum}}{{users_successfully_added}}{{failNum}}{{users_failed_to_add}}</div>
+		<ul>
+			<li ng-repeat="item in errorShowInf"><div>{{item.userInfo}}</div><div>{{item.exception}}</div></li>
+		</ul>
+		<div class="confirm errorShowBtn" ng-click="closeError()">{{Close}}</div>
+	</div>
+</div>

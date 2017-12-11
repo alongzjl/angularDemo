@@ -1,0 +1,184 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>PopOn</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<!-- 以下为openinstall集成代码 -->
+	<!-- 强烈建议直接引用下面的cdn加速链接，以得到最及时的更新，我们将持续跟踪各种主流浏览器的变化，提供最好的服务；不推荐将此js文件下载到自己的服务器-->
+	<script type="text/javascript" src="//res.cdn.openinstall.io/openinstall.js"></script>
+   	<script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+    <script src="./rem.js"></script>  
+    <!-- <script type="text/javascript" src="./util.js"></script> -->
+    <style media="screen">
+        *{margin:0;padding:0;}
+        .top{
+            width:100%;
+            height:.93rem;
+            background: #00BCD3; 
+            font-family: 'PingFangSC-Semibold';
+            font-size: .32rem;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            line-height: .6rem;
+            text-align: center;
+            padding-top: .33rem
+        }
+        .topImg{
+            width:100%;
+            height:3.69rem;
+            background: url('./h5/share-congras@2x.png') no-repeat center .24rem ,url('./h5/share-avata-right@2x.png') no-repeat center .24rem ,url('./h5/h5-whale@2x.png') no-repeat center 2.92rem;
+            background-size: 5.2rem 2.62rem, 2.44rem 2.44rem, 1.4rem .82rem;
+            padding-top: .45rem
+        }
+        .topImg img{
+            width:2rem;
+            height:2rem;
+            margin: 0 auto;
+            display: block;
+            border-radius: 50% 50%;
+        }
+        .middle{
+            background: #FFFFFF;
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.08);
+            border-radius: 3px;
+            margin:0 .32rem;
+            /*padding-top:.58rem;*/
+            padding:.34rem .24rem;
+            height:4.74rem;
+            overflow: hidden;
+        }
+        .middle>i{
+            width:100%;
+            height:.05rem;
+            display: block;
+            background: url('./h5/h5-mail@2x.png') repeat-x center;
+            background-size: 100%;
+        }
+        .middle i:last-child{
+            margin-top:2.34rem
+        }
+        .middle .h2{
+            font-family: PingFangSC-Semibold;
+            font-size: 20px;
+            color: #00BCD3;
+            letter-spacing: -0.48px;
+            margin-top: .42rem;
+            margin-bottom: .4rem
+        }
+        .middle p{
+            font-family: PingFangSC-Regular;
+            font-size: 14px;
+            color: #2C3440;
+            letter-spacing: -0.34px;
+            line-height: 24px;
+            padding-left: .2rem;
+        }
+        .icon {
+            margin-top:.82rem;
+            margin-bottom: .54rem;
+            position: relative;
+            height:.8rem;
+            /*width:100%;*/
+            width:6.5rem;
+            float: right;
+        }
+        .icon img{
+            position: absolute;
+            width:.8rem;
+            height:.8rem;
+            left:3.08rem;
+            border-radius: 50% 50%;
+        }
+        .icon span{
+            font-family: PingFangSC-Regular;
+            font-size: 12px;
+            color: #2C3440;
+            letter-spacing: -0.29px;
+            line-height: .34rem;
+            position: absolute;
+            left: 4.2rem;
+            top:.1rem;
+            overflow: hidden;
+            text-overflow: ellipsis;  
+            white-space: nowrap;
+            width: 2.5rem;
+        }
+        .icon span:last-child{
+            top:.44rem
+        }
+        #openBtn{
+            display: block;
+            outline: none;
+            border: 0;
+            width:5.16rem;
+            height:.96rem;
+            background: #09BFCD;
+            box-shadow: 0 3px 10px 0 rgba(0,188,211,0.30);
+            margin:.74rem auto .78rem;
+            font-family: PingFangSC-Medium;
+            font-size: 16px;
+            color: #FFFFFF;
+            border-radius: 6px;
+        }
+    </style>
+    <script type="text/javascript"> 
+	var data = OpenInstall.parseUrlParams();  
+	//开发者也可通过其他方式设置绑定数据
+	new OpenInstall({
+		/*appKey必选参数，openinstall平台为每个应用分配的ID*/
+		appKey : "t4vitr", 
+		onready : function() {   
+            var m = this,button = document.getElementById("openBtn");
+			button.style.visibility="visible";
+			//用法1：如app已安装，进入网页立即拉起app；用户点击某个按钮时再开始安装app
+			/*通过scheme拉起app(如果已在openinstall平台开启scheme启动功能)*/
+			m.schemeWakeup();
+			/*用户点击某个按钮时(假定按钮id为downloadButton)，安装app*/
+			button.onclick = function() {
+                m.install();   
+			}   
+              
+		}
+	}, data);
+</script>
+</head>
+<body>
+    <div class="top">欢迎加入</div> 
+    <div class="topImg"> 
+        <img src="./h5/h5-whale@2x.png" alt="">
+    </div>
+    <div class="middle">
+        <i></i>
+        <p class="h2"><span class="userNameGet"></span><span class="pSpan">同学，您好!</span></p>
+        <p class="plast">恭喜你从今天开始成为我们的一员，期待我们在今后的时光中一起成长</p>
+    </div>
+    <button id="openBtn">打开Pop On开始新的学习</button>
+    <script type="text/javascript">  
+       
+          $.ajax({  
+            url:groupInviteQueryUrl,
+            type:'post',
+            data:{
+              groupId:17,
+              identity:'Student'   
+            },
+            success:function(data){
+              if(data.code == 200){
+                    var html = '';
+                    var orgTitle = data.result.orgTitle ? data.result.orgTitle : '';
+                    html += ' <div class="icon"><img src="'+data.result.orgAvatar+'" /><span>'+orgTitle+'</span><span>'+data.result.groupTitle+'</span></div><i></i>';
+                    $(html).appendTo($('.middle'));
+                 }
+            }
+        })  
+       // var utils = new Methods();
+        // utils.openOrDownApp('openBtn');  
+    </script>
+</body>
+</html>
+

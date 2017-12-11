@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+    <script src="./rem.js" charset="utf-8"></script>   
+    <style media="screen">
+        *{margin:0;padding:0;}
+        .top{
+            width:100%;
+            height:4.95rem;
+            background: url(./h5/h5-bg@2x.png) no-repeat;
+            background-size: 100%;
+            padding-top:.33rem;
+        }
+        .top>p{
+            font-family: 'PingFangSC-Semibold';
+            font-size: .32rem;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            line-height: .32rem;
+            text-align: center;
+            margin-bottom:.7rem;
+        }
+        .top .icon {
+            position: relative;
+            width:6.5rem;
+            height:2rem;
+            margin: 0 auto;
+        }
+        .icon img{
+            position: absolute;
+            width:1.76rem;
+            height:1.76rem;
+            left:1.32rem;
+            border-radius: 50% 50%;
+        }
+        .icon span{
+            font-family: PingFangSC-Semibold;
+            font-size: 20px;
+            letter-spacing: -0.48px;
+            position: absolute;
+            left: 3.48rem;
+            top:.5rem;
+            color: #FFFFFF;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 3rem;
+        }
+        .icon span:last-child{
+            font-family: PingFangSC-Regular;
+            font-size: 14px;
+            letter-spacing: -0.34px;
+            line-height: 24px;
+            top:.98rem
+        }
+        .middle{
+            background: #FFFFFF;
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.08);
+            border-radius: 3px;
+            margin:0 .32rem;
+            margin-top:-1.6rem;
+            padding-top:.58rem;
+            padding-bottom: .76rem;
+            margin-bottom: .4rem;
+        }
+        .middle p{
+            text-align: center;
+            font-family: 'PingFangSC-Regular';
+            font-size: 14px;
+            color: #959FAF;
+            letter-spacing: -0.34px;
+            margin-bottom: .62rem;
+        }
+        .middle .plast{
+            font-family: 'PingFangSC-Regular';
+            font-size: 14px;
+            color: #2C3440;
+            letter-spacing: -0.34px;
+            line-height: 24px;
+
+            width:6rem;
+            height:.96rem;
+            margin:0 auto;
+            margin-bottom: .82rem;
+        }
+        .middle .txt{
+            background: #F7F8FA;
+            border: 1px solid #E3E5E8;
+            outline: inherit;
+            width:5.6rem;
+            height:2.68rem;
+            padding:.2rem;
+            margin:0 auto;
+            display: block;
+            margin-bottom: 1rem;
+            border-radius: 6px;
+            font-family: 'PingFangSC-Regular';
+            font-size: 14px;
+            color: #959FAF;
+            line-height: 14px;
+        }
+        .middle>button{
+            width:4.4rem;
+            height:.96rem;
+            outline: inherit;
+            margin: 0 auto;
+            display: block;
+            border:0;
+            background: #09BFCD;
+            box-shadow: 0 3px 10px 0 rgba(0,188,211,0.30);
+            font-family: 'PingFangSC-Medium';
+            font-size: 16px;
+            color: #FFFFFF;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <p>欢迎加入</p>
+     </div>
+    <div class="middle">
+        <p class="p1">安全问题验证</p>
+        <p class="plast">恭喜你从今天开始成为我们的一员，期待我们在今后的时光中一起成长</p>
+        <textarea class="txt" value="" placeholder="输入问题答案"></textarea>
+        <button type="button" name="button" id="subBtn">确定</button>
+    </div>
+    <script type="text/javascript">
+         var groupId = getQueryString('id');
+         var acc = getQueryString('acc');
+         var identity = getQueryString('iden');
+         var langObj = {
+             "Chinese":[
+                 '欢迎加入',
+                 '安全问题验证',
+                 '恭喜你从今天开始成为我们的一员，期待我们在今后的时光中一起成长',
+                 '输入问题答案',
+                 '确定'
+             ],
+             "English":[
+                 'Welcome!',
+                 'Security Question Verification',
+                 'Hello! Congratulations on becoming our member, we look forward to the very exciting times ahead',
+                 'Enter your answer to the question',
+                 'OK'
+             ],
+             "Japanese":[
+                 'ようこそ','セキュリティー問題認証','本日からあなたは私達の一員になりました！おめでとう！これから一緒に頑張っていきましょう','答えを入力','OK'
+             ],
+             "Korean":[
+                 '가입을 환영합니다.','안전 문제 검증','오늘부터 우리의 멤버로 되신 것을 축하드리며, 모두 같이 성장하길 바랍니다.','문제의 답안을 입력하세요.','확인'
+             ],
+             "Spanish":[
+                 '¡Te damos la bienvenida!','Verificación de preguntas de seguridad','Enhorabuena por unirte a nosotros, seguro que viviremos tiempos emocionantes','Escribe tu respuesta a la pregunta','Aceptar'
+             ]
+         }
+         var lang = getQueryString('L'); 
+         var langArr = langObj.Chinese;
+         switch (lang) {
+             case 'Chinese':langArr = langObj.Chinese;break;
+             case 'English':langArr = langObj.English;break;
+             case 'Japanese':langArr = langObj.Japanese;break;
+             case 'Korean':langArr = langObj.Korean;break;
+             case 'Spanish':langArr = langObj.Spanish;break;
+             default:
+             case 'Chinese':langArr = langObj.Chinese;break;
+         }
+         $('.top>p').html(langArr[0]);
+         $('.middle .p1').html(langArr[1]);
+         $('.plast').html(langArr[2]);
+         $('.txt').attr('placeholder', langArr[3]);
+         $('#subBtn').html(langArr[4]);
+
+          $.ajax({
+            url:groupInviteQueryUrl,
+            type:'post',
+            data:{
+              groupId:groupId,
+              identity:identity
+            },
+            success:function(data){
+              if(data.code == 200){
+                    var html = '';
+                     var orgTitle = data.result.orgTitle ? data.result.orgTitle : '';
+                    html += ' <div class="icon"><img src="'+data.result.orgAvatar+'" /><span>'+orgTitle+'</span><span>'+data.result.groupTitle+'</span></div>';
+                    $(html).appendTo($('.top'));
+                 }
+            }
+        })
+       $('#subBtn').on('click',function(){
+        var answer = $('textarea').val();
+         groupInviteUser(groupId,acc,answer,identity,lang); 
+       })
+    </script>
+</body>
+</html>

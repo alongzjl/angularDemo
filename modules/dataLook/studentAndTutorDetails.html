@@ -1,0 +1,59 @@
+<div class="dateChoose">    
+			<ul>    
+				<li>{{orderDataShow[0]}}</li> 
+				<li>
+					<div id="dateRangeChoose" ng-click="chooseDateRange()"></div>
+				</li>   
+				<li ng-click="chooseThisWeek()">{{orderDataShow[1]}}</li>  
+				<li ng-click="chooseLastWeek()">{{orderDataShow[2]}}</li>
+				<li ng-click="chooseThisMonth()">{{orderDataShow[3]}}</li>
+				<li ng-click="chooseLastMonth()">{{orderDataShow[4]}}</li>
+			</ul>
+		</div> 
+		<table ng-if="studentOnDataDetails==1 ? true :false">  
+			<thead> 
+				<tr style="color:#808080;font-size: 12px;height:50px;">
+					<td style="text-align: left;">{{orderDataShow[5]}}</td>
+					<td>{{orderDataShow[6]}}</td>
+					<td>{{orderDataShow[7]}}</td>
+					<td>{{orderDataShow[10]}}</td>  
+				</tr> 
+			</thead> 
+			<tbody> 
+				<tr style="height:160px;font-size: 16px;vertical-align: top;" ng-repeat="item in groupMemberStuOrderDataList">
+					<td width="250" style="text-align: left;">
+						<div style="position:relative;">
+							<p>{{item.materialName}}</p>  
+							<div class="stuPingJia" style="top:70px;">
+								<div class="PingContent">{{orderDataShow[8]}}</div>
+								<div class="PingContent" style="color:#ADD5AE;">{{item.stuServiceStars || 0}}</div>
+								<div class="PingContent">
+									<ul> 
+										<li ng-repeat="value in item.stuEvals track by $index">{{value}}</li>
+									</ul>  
+								</div> 
+								<div style="clear:both;"></div> 
+							</div>
+							<div class="TutorPingJia pingJiaOrder">
+								<div class="PingContent">{{orderDataShow[9]}}</div>
+								<div class="PingContent" style="color:#ADD5AE;">{{item.tutServiceStars || 0}}</div>
+								<div class="PingContent">  
+									<ul>  
+										<li ng-repeat="value in item.tutEvals track by $index">{{value}}</li>
+									</ul>   
+								</div>  
+								<div style="clear:both;"></div>  
+							</div>  
+							<div style="clear:both;"></div>
+						</div>
+					</td>
+					<td width='150'><div class="commonStyleLook">{{item.userName}}</div></td>
+					<td width="150"><div class="commonStyleLook">{{item.duration}}{{orderDataShow[12]}}</div></td>
+					<td width="150"><div class="commonStyleLook">{{item.beginTime}}</div></td>
+				</tr>
+			</tbody>
+		</table>
+		<div ng-if="studentOnDataDetails==0 ? true :false">{{orderDataShow[11]}}</div>
+		 <div class="worDoorPaging_dataLook">
+			<div class="tcdPageCodeDetail tcdPageCode" ng-show="studentsListDetailsPaging"></div>
+		</div>     

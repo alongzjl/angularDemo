@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html ng-app="login">
+<head>
+	<meta charset="utf-8">
+	<title>上海沃动科技有限公司</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<link rel="stylesheet" href="./wordoorCss/headerCommon.css">
+  	<link rel="stylesheet" href="./wordoorCss/login.css">
+  		<link rel="stylesheet" href="./css/bootstrap.css">
+  	<script type="text/javascript" src="./js/jquery-1.11.3.js"></script>
+  	<script type="text/javascript" src="./js/angular.js"></script>
+  	<script type="text/javascript" src="./js/bootstrap.js"></script>
+	<script type="text/javascript" src="./js/language/lang.js"></script>
+</head>
+<body class="lognBody">
+	<div ng-controller="wordoorLogin" ng-cloak>
+	<div class="header">
+		<div class="messagePerson clear">
+            <div class="logo fl">
+                <a href=""><img src="./images/header/logo.png"></a>
+            </div>
+         </div>
+	</div>
+	<div class="login">
+		<img src="images/login_left.jpg" alt="" class="loginImg" />
+		<div class="content">
+			<div class="clear lognTitle">
+	            <h3 class="fl emailLogin CheckMark">{{mobile_login}}</h3>
+	            <h3 class="fr mobileLogin">{{phone_login}}</h3>
+	            <div style="clear:both;"></div>
+	        </div>
+	        <div style="border-bottom:solid 1px #dbdbdb;"></div>
+	        <div class="emailLoginInp">
+	        <div class="form-group">
+			  	<input type="email" class="form-control userNameEmail" required placeholder="{{enter_mobile}}">
+			  	<div class="errorEmail"></div>
+			  	 <ul class="showUserEmail"></ul>
+			    	<div style="clear:both;"></div>
+			  </div>
+			  <div class="form-group">
+			    <input type="password" class="form-control userPasswordEmail" required placeholder="{{enter_password}}">
+			     <div class="errorPasswordEmail"></div>
+			       <div style="clear:both;"></div>
+			  </div>
+			  <div class="RFpassword">
+	        		<a href="">{{forget_password}}</a>
+	        	</div>
+			  <div class="btn loginBut loginButEmail">{{sing_in}}</div>
+			</div>
+	        <div class="mobileLoginInp">
+	        	<div class="form-group">
+			  	<select class="form-control" name="">
+			  		<option ng-repeat="item in arrCountries" value="{{item.id}}">{{item.country}}</option>
+				</select>
+			    <input type="text" class="form-control userNameMobile" required placeholder="{{enter_phone}}">
+			    <div class="errorMobile"></div>
+			    <ul class="showUserMobile"></ul>
+			    <div style="clear:both;"></div>
+			  </div>
+			  <div class="form-group">
+			    <input type="password" class="form-control userPasswordMobile" required placeholder="{{enter_password}}">
+			     <div class="errorPassword"></div>
+			     <div style="clear:both;"></div> 
+			  </div>
+			  <div class="RFpassword">
+	        		<a href="">{{forget_password}}</a>
+	        	</div>
+			  <div class="btn loginBut loginButMobile">{{sing_in}}</div>
+			</div>
+		</div>
+	</div>
+	<div class="foot">
+		<p><a href="http://www.gopopon.com">{{system_copyright}}</a></p>
+	</div>
+	</div>
+</body>
+<script type="text/javascript" src="./wordoorJs/login.js"></script>
+</html>  

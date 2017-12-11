@@ -1,0 +1,12 @@
+<div class="classContent">
+	<div class="classTitle">
+		<ul>
+			<li ng-click="classTask(1)" ng-class="{classTitleActive:1==classClickGroup}">{{dataClassShow[0]}}</li> 
+			<li ng-click="classStudent(2)" ng-class="{classTitleActive:2==classClickGroup}">{{dataClassShow[1]}}</li> 
+			<li ng-click="classTutor(3)" ng-class="{classTitleActive:3==classClickGroup}">{{dataClassShow[2]}}</li>  
+			<li ng-click="classContent(4)" ng-class="{classTitleActive:4==classClickGroup}">{{dataClassShow[3]}}</li> 
+		</ul>        
+	</div>    
+	<div ui-view></div>       
+</div>
+   

@@ -1,0 +1,275 @@
+
+body{
+	font-family:'Microsoft YaHei';
+}
+.hide{
+	display:none;
+}
+.circle{
+	border-radius:50%;
+}
+.mobile-head .logo img{
+    width:1.5rem;
+    display:block;
+    margin:0 auto;
+}
+.mobile-head{
+    padding:0.44rem 0 0 0 ;
+
+}
+
+.mobile-head  .language{
+    position:absolute;
+    right:0.6rem;
+    top:0.44rem;
+    font-size:0.16rem;
+}
+.mobile-head  .language span{
+	margin: 0 0.06rem;
+}
+.mobile-head  .active{
+	color: rgb(36, 68, 86);
+    font-weight: bold;
+}
+.mobile-descTitle .title{
+	font-size: 0.32rem;
+	color:#09c0ce;
+	text-align:center;
+	padding-bottom: 0.4rem;
+	display: block;
+}
+.mobile-descTitle{
+	padding-top:0.72rem;
+}
+.mobile-descTitle .desc{
+	width: 4.24rem;
+	margin:0 auto;
+	font-size: 0.18rem;
+	text-align: center;
+	line-height: 0.3rem;
+	margin-bottom: 0.5rem;
+	/* word-break: break-all; */
+}
+.mobile-descTitle .download, .foot .download{
+	width:2.3rem;
+	font-weight: 600;
+	line-height:0.6rem;
+	margin:0 auto;
+	background-color:#09c0ce;
+	color:#fff;
+	text-align:center;
+	font-size: 0.24rem;
+	/* letter-spacing: 0.03rem; */
+	border-radius: 0.3rem;
+	height: 0.6rem;
+}
+.mobile-descDisplay{
+	padding: 0.78rem 0 0.8rem 0;
+	overflow:hidden;
+	width: 100%;
+}
+
+.mobile-descDisplay .descDispla-style>div{
+	text-align:-webkit-center;
+	text-align:center;
+}
+.mobile-descDisplay .title{
+	color:#09c0ce;
+	text-align:center;
+	font-size:0.32rem;
+	font-weight:600;
+	margin-bottom:0.16rem;
+	display: block;
+}
+.mobile-descDisplay .desc{
+	font-size: 0.18rem;
+	line-height: 0.3rem;
+	width: 4.24rem;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.mobile-descDisplay .switch div{
+	width:0.2rem;
+	height:0.2rem;
+	background-color:rgba(9,192,206,0.15);
+	float:left;
+	margin: 0 0.25rem 0 0;
+}
+.mobile-descDisplay .switch div:nth-of-type(3){
+	margin:0;
+}
+.mobile-descDisplay .switch .active{
+	background-color:rgba(9,192,206,1);
+}
+
+.mobile-descDisplay .switch{
+	padding: 0.26rem 0;
+
+	text-align:center;
+}
+.mobile-descDisplay .switch nav{
+	display:inline-block;
+}
+.mobile-descDisplay img{
+	width: 4.3rem;
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	top: 1.08rem;
+}
+.mobile-descDisplay .pic-bg{
+	width: 4.9rem;
+    background: url(../images/index/mockup.png) no-repeat;
+    background-size: 100%;
+    margin: 0 auto;
+    height: 8.76rem;
+}
+
+.user-story .total .title{
+	font-size:0.2rem;
+	text-align:center;
+	color:#09c0ce;
+	margin-bottom: 0.48rem;
+	display: block;
+}
+.user-story .total .desc{
+	width:4.23rem;
+	margin:0 auto;
+	text-align:center;
+	margin-bottom: 0.48rem;
+	
+}
+.user-story  .user-story-total-wrap{
+	margin:0 0.3rem 0.85rem 0.3rem;
+}
+.user-story .user-story-wrap{
+	float:left;
+	width: 2.65rem;
+	margin-bottom: 0.4rem;
+}
+.user-story .user-story-wrap:nth-of-type(odd){
+	margin-right:0.25rem;
+}
+.user-story .user-story-wrap:nth-of-type(even){
+	margin-left:0.25rem;
+	
+}
+.user-story .user-story-wrap img{
+	width:100%;
+}
+.user-story .user-story-wrap .desc{
+	font-size:0.15rem;
+	margin-top: 0.2rem;
+}
+.user-story .user-story-wrap .country{
+	font-size:0.16rem;
+	padding-bottom: 0.1rem;
+	border-bottom: solid 0.02rem #f9a51e;
+	
+}
+
+
+
+.roles .chatpal,.roles .tutor{
+	position:relative;
+}
+.roles .tutor{
+	height:2.6rem;
+	margin-bottom:0.68rem;
+}
+.roles .chatpal{
+	margin-bottom:0.85rem;
+}
+.roles .img{
+	width:3.21rem;
+	height:2.6rem;
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+	position:relative;
+}
+
+.roles .chatpal .img{
+ 	background-image:url(../images/index/f1.png);
+ 	
+ }
+ .roles .tutor .img{
+ 	background-image:url(../images/index/tutor.png);
+ 	position:absolute;
+ 	right:0;
+ 	/* height: 2.6rem; */
+ }
+
+.roles .title{
+	font-size: 26px;
+	font-weight: 600;
+	padding-bottom: 6px;
+	border-bottom: solid 0.02rem #f9a51e;
+	position: absolute;
+	color:#09c0ce;
+}
+.roles .chatpal .title{
+	left:0.4rem;
+	top:0.36rem;
+}
+
+.roles .tutor .title{
+	left:0.1rem;
+	top:0.26rem;
+}
+.roles .desc{
+	font-size:0.15rem;
+	line-height:0.16rem;
+	width:3.2rem;
+	position:absolute;
+	/* letter-spacing: 0.001rem; */
+}
+
+.roles .chatpal  .desc{
+	
+	left: 2.8rem;
+	top: 0.9rem;
+}
+
+.roles .tutor .desc{
+	
+	left: 0.3rem;
+	top: 1.1rem;
+	width:4rem;
+}
+
+
+.foot{
+	height: 4rem;
+	box-sizing: border-box;
+	background-color:#19262e;
+	position: relative;
+	padding-top:0.54rem;
+}
+.foot .download{
+	
+}
+.foot .share img{
+	
+	width:0.6rem;
+	
+}
+.foot .share li{
+	margin:0 0.2rem;
+	float:left;
+	border-radius: 50%;
+	border: solid 0.02rem #fff;
+}
+.foot .share{
+	width: 4.16rem;
+	margin: 0.74rem auto;
+}
+.foot .companyInformation{
+	text-align:center;
+	color:#bdbec0;
+	margin-bottom: 0.15rem;
+	font-size: 0.15rem;
+}
+.mobile-descDisplay-wrap{
+	text-align:center;
+}

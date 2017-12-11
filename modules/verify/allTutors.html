@@ -1,0 +1,38 @@
+<div class="searchAdd clear">
+    <!-- <div class="clear">
+        <div class="search fl">
+            <div class="sologo gsearch"><img src="./images/Popzu/index_search.png"></div>
+            <input class="gword" type="text" placeholder="{{search}}"> 
+        </div> 
+    </div> -->
+</div>
+<div class="noDataShow" ng-if="AllTutorsNoDataShow">
+    <p>{{no_data}}</p>
+</div>
+<ul class="allTutor verifyTutor verifyAllTutors">
+	<li ng-repeat="item in allTutors" class="allTutorLi">
+		<img ng-src="{{item.avatar || './images/security/avatar132.png'}}" alt="" class="imgshow"/>
+		<p>{{item.name || 'N0.'+item.userId}}</p> 
+		<div class="clear sound"> 
+			<div class="centerCircle">
+				<img class="recording_play check_play" style="width:12px;height:12px;margin-top:5px;margin-right: -1px;" src="./images/tutor/sound.png">
+			</div>
+		</div>
+		<div class="score">
+			<ul class="clear fl">
+				<li style="background-image: url(./images/tutor/star-gold.png)"></li>
+				<li style="background-image: url(./images/tutor/star-gold.png)"></li>
+				<li style="background-image: url(./images/tutor/star-gold.png)"></li>
+				<li style="background-image: url(./images/tutor/star-gold.png)"></li>
+				<li style="background-image: url(./images/tutor/star-gold.png)"></li>
+			</ul>
+			<div class="fr">
+				<span style="color: #aaaaaa;font-style: italic;">5</span>
+			</div>
+		</div>
+	</li>
+	<div style="clear:both;"></div>
+</ul>
+<div class="worDoorPaging">
+	<div class="tcdPageCode" ng-show="allTutorsPaging"></div>
+</div>

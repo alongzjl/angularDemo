@@ -1,0 +1,17 @@
+<div class="model_Img">
+	<div class="banjiTitleList" id="allDataZhe">
+		<div>{{titleContent}}</div>
+		<div ng-mouseover="lookDirecWeekMonth = true;" ng-mouseout="lookDirecWeekMonth = false;">
+			{{weekLook}} 
+			<ul class="weekAndMonths" ng-show="lookDirecWeekMonth">
+				<li ng-click="chooseThis(0)" ng-mouseover="enter(1)" ng-mouseout="out(0)" ng-class="{commonStyleActive:groupIndex==1}">{{Check_According_to_The_Week}}</li>
+				<li ng-click="chooseThis(1)" ng-mouseover="enter(2)" ng-mouseout="out(0)" ng-class="{commonStyleActive:groupIndex==2}">{{Monthly_View}}</li> 
+			</ul>       
+		</div>     
+	</div>       
+	<div class="banjiDateDetails" style="height:380px;">   
+		<div id="echartZhe{{type}}"></div>    
+	</div>
+</div>
+
+ 

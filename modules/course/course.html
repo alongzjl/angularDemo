@@ -1,0 +1,67 @@
+<div class="searchAdd clear">
+    <div class="clear">
+        <div class="search fl">
+            <div class="sologo gsearch" ng-click="searchCourse(courseSearch)">
+            	<img src="./images/Popzu/index_search.png">
+            </div>
+            <input class="gword" type="text" placeholder="{{Search}}" ng-model="courseSearch">
+        </div>
+        <div class="addCourse addse gadd fr" ng-click="addNewCourse()">
+            <div class="addSign"><img src="./images/security/index_addcourse.png"></div>
+            <span>{{add_courses}}</span>
+        </div>
+    </div>
+</div>
+<div class="PopzuCount">{{displayCourseAll}}
+	<ul class="clear ificationNav fr">
+        <li ng-mouseover="statusCourse=true" ng-mouseout="statusCourse=false"><span>{{status}}</span>
+            <span class="triangle triangle_down_gray"></span>
+            <ul class="ificationNavSel fstatus" ng-show="statusCourse">
+                <li ng-repeat="item in statusList" ng-click="courseStatusFilter(item.val)" ng-mouseover="isChoose=$index" ng-mouseout="isChoose=100" ng-class="{chooseOneChangeActive:isChoose==$index}">{{item.display}}</li>
+            </ul>   
+        </li>
+        <li ng-mouseover="typeCourse=true" ng-mouseout="typeCourse=false"><span>{{type}}</span>
+            <span class="triangle triangle_down_gray"></span> 
+           <ul class="ificationNavSel fcategory" ng-show="typeCourse" ng-style="fcategoryStyle">
+                <li ng-repeat="item in courseTypeList" ng-click="courseCategoryFilter(item.val)" ng-mouseover="isTypeChoose=$index" ng-mouseout="isTypeChoose=100" ng-class="{chooseOneChangeActive:isTypeChoose==$index}">{{item.display}}</li>
+            </ul>     
+        </li>    
+    </ul>  
+</div>  
+<div class="noDataShow" ng-if="noDataShow">
+    <p>{{noDataShowToAddCourse}}</p>
+</div> 
+<ul class="displayCourse">
+	<li class="courseRealDetail" ng-repeat="(index,item) in displayCourse" ng-click="reviewCourse(item)">
+		<div style="background-size:100%;;background-image: url({{item.cover}})" class="myPic">
+			<div class="pub">
+				<span>{{item.auditStatusShow}}</span>
+			</div>
+			<div class="signWrap">
+				<div class="sign time">{{item.category?item.category.display : ''}}</div>
+				<div class="sign el">{{item.difficulty.display}}</div>
+			</div>
+		</div> 
+		<div class="font">
+			<h3>{{item.title}}</h3>
+            <ul>
+                <li ng-repeat="value in item.seriesInformation track by $index" class="seriesAllInCourse">{{value.title}}</li>
+            </ul> 
+        </div>    
+         <div ng-mouseover="enter($event)" ng-mouseout="out($event)" class="setUp">
+            <img style="width:27px;height:27px;" src="./images/security/Course-Details_setting.png" alt="" />
+            <ul class="editLi" ng-style="onlyWithChange">     
+                <li ng-click="editCourse($event,item.id)" ng-mouseover="chooseOnlyOne=1" ng-mouseout="chooseOnlyOne=100" ng-class="{chooseOneChangeActive:chooseOnlyOne==1}">{{course_edit}}</li>     
+                <li ng-click="reviewCourse(item)" ng-mouseover="chooseOnlyOne=2" ng-mouseout="chooseOnlyOne=100" ng-class="{chooseOneChangeActive:chooseOnlyOne==2}">{{Course_Preview}}</li>   
+                <li ng-click="addToSeries($event,item)" ng-mouseover="chooseOnlyOne=3" ng-mouseout="chooseOnlyOne=100" ng-if="item.auditStatus.id==2?true:false" ng-class="{chooseOneChangeActive:chooseOnlyOne==3}">{{choose_series}}</li> 
+                 <li ng-click="verifyCourse($event,item.id)" ng-mouseover="chooseOnlyOne=4" ng-mouseout="chooseOnlyOne=100" ng-if="item.auditStatus.id==0?true:false" ng-class="{chooseOneChangeActive:chooseOnlyOne==4}">{{verify_normal}}</li>
+                <li ng-click="removeCourse($event,item.id)" ng-mouseover="chooseOnlyOne=5" ng-mouseout="chooseOnlyOne=100" ng-class="{chooseOneChangeActive:chooseOnlyOne==5}">{{delete_course}}</li>      
+            </ul>                
+        </div> 
+	</li>
+	<div style="clear:both;"></div>
+</ul>
+<div class="worDoorPaging">
+	<div class="tcdPageCode" ng-show="coursePaging"></div>
+</div>
+

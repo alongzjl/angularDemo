@@ -1,0 +1,23 @@
+<div class="dataLookBody">
+	<div class="dataLook_content"> 
+		<div class="contentLeft"> 
+			<div class="dataReview dataReviewOnly" ng-click="dataReview($event)" ng-class="{true:'dataReviewIconActive',false:'dataReviewIcon'}[isClick]">{{Data_Overview}}</div>     
+			<div class="banjiData">    
+				<div class="banjiTitle dataReview">{{Class_Data}}</div>
+				<ul class="dataLook_ul">  
+					<li ng-repeat="item in groupList" ng-click="toBanjiDetails($event,item.groupId,$index)" ng-class="{commonStyleActive:$index===classClick}">{{item.groupName}}</li>  
+				</ul>        
+			</div>      
+			<div class="orgData">         
+				<div class="orgTitle dataReview">{{Institution_Data}}</div>
+				<ul class="dataLook_ul">
+ 					<li ng-repeat="(index,item) in orgDataList" ng-click="everyData(item.val,index)" ng-class="{commonStyleActive:index===classClickOrg}">{{item.display}}</li> 
+ 				</ul>     
+			</div>             
+		</div>  
+		<div class="contentRight"> 
+			<div ui-view></div>
+		</div>
+		<div style="clear:both;"></div>
+	</div>
+</div> 

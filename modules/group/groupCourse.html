@@ -1,0 +1,48 @@
+<div class="clear groupaddType">
+   <div class="addCourse addse gadd fr" ng-click="addPlan=true;planTitle='';planDesc='';planId='';">
+       <!--  <div class="addSign"><img src="./images/security/index_addcourse.png"></div> -->
+        <span>{{Add_new_plan}}</span> 
+    </div> 
+</div>  
+<div class="noDataShow" ng-if="noDataShowPlan">
+    <p>{{noPlanShow}}</p> 
+</div>
+<ul class="displayCourse">
+    <li class="planTemplate" ng-repeat="(index,item) in groupPlanList">
+        <div class="myPic"> 
+            <div class="pub" ng-class="{'beginPlanActive':item.status==1,'endPlanActive':item.status==0}">{{item.statusShow}}</div> 
+        	<h3>{{item.title}}</h3>          
+        </div>                     
+         <div class="signWrap"> 
+            <img src="./images/Popzu/startDate.png" /> 
+            <span>{{start_on}}</span><span>{{item.beginAt.substr(0,10)}}</span>
+       </div> 
+        <div class="signWrap" style="left:140px;">  
+            <img src="./images/Popzu/lastTime.png" />     
+            <span>{{last_for}}</span><span>{{item.dayNums}}{{Days}}</span>
+       </div>     
+        <div class="font">    
+            <ul> 
+                <li ng-repeat="value in item.seriesVTOs track by $index">{{value.title}}</li>
+            </ul>  
+        </div>  
+         <div ng-mouseover="isEnter=true" ng-mouseout="isEnter=false" class="setUp">
+            <img src="./images/Popzu/planEdit.png" alt="" />  
+            <ul class="editLi" ng-class="{true:'show',false:'hide'}[isEnter]">  
+                <li ng-click="editTemplate(item)" ng-mouseover="isMouseEnter=true" ng-mouseout="isMouseEnter=false" ng-class="{true:'commonBackgroundAndColorActive',false:'commonBackgroundAndColor'}[isMouseEnter]">{{Edit_Plan}}</li>
+              <li ng-click="removeTemplate($event,item.id)" ng-mouseover="isMouseEnterAnother=true" ng-mouseout="isMouseEnterAnother=false" ng-if="item.status == 1?false:true" ng-class="{true:'commonBackgroundAndColorActive',false:'commonBackgroundAndColor'}[isMouseEnterAnother]">{{Delete_Plan}}</li>     
+            </ul>     
+        </div>     
+    </li>
+    <div style="clear:both;"></div>
+</ul> 
+ 
+<div class="worDoorPaging"> 
+	<div class="tcdPageCode" ng-show="groupPlanPaging"></div>  
+</div>  
+
+<!--添加计划-->
+<div class="shadow" ng-if="addPlan">  
+	<plan-date-list close="close_tap(data)" plan-id="{{planId}}" group-id="{{groupId}}" plan-title="{{planTitle}}" plan-desc="{{planDesc}}" group-language="{{groupLanguage}}"> </plan-date-list>  
+</div>  
+ 

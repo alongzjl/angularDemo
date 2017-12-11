@@ -1,0 +1,33 @@
+<div class="searchAdd clear">
+    <!-- <div class="clear">
+        <div class="search fl">
+            <div class="sologo gsearch"><img src="./images/Popzu/index_search.png"></div>
+            <input class="gword" type="text" placeholder="{{search}}"> 
+        </div>
+    </div> -->
+</div>
+<div class="noDataShow" ng-if="noDataShowVerifyTutor">
+    <p>{{no_data}}</p>
+</div>
+<ul class="allTutor verifyTutor verifyAllVerifyTutors">
+	<li ng-repeat="item in verifyTutors" class="allTutorLi">
+		<img ng-src="{{item.avatar || './images/security/avatar132.png'}}" alt="" class="imgshow"/>
+		<p><span>{{item.name}}</span></p>    
+		<div class="clear sound"> 
+			<div class="leftCircle"></div>
+			<div class="centerCircle">
+				<div class="Music_player"></div>
+				<img class="recording_play check_play" style="width:12px;height:12px;margin-top:2px;margin-right: 20px;" src="./images/tutor/sound.png">
+			</div>
+			<div class="rightCircle"></div>
+		</div>
+		<div class="scoreVerify">
+			<div class="scoreBtn pop_btns pop-btnsDeep pop_circle pop_delete" ng-click="passTutor(item.id)">{{approved}}</div>
+			<div class="scoreBtn pop_btns pop-btnsShallow pop_circle pop_cancel" ng-click="unPassTutor(item.id)">{{rejected}}</div>
+		</div>
+	</li>
+	<div style="clear:both;"></div>
+</ul>
+<div class="worDoorPaging">
+	<div class="tcdPageCode" ng-show="verifyTutorsPaging"></div>
+</div>

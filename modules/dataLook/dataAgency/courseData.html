@@ -1,0 +1,106 @@
+<div class="orgContent">
+	<div style="margin-bottom:32px;">
+		<div class="dataAllShow">
+			<h2>{{courseReviewList.tutorCounter}}</h2>     
+			<p>教练总人数</p>   
+		</div>
+		<div class="dataAllShow" style="background-color: #ADD5AE;">
+			<h2>{{courseReviewList.studentCounter}}</h2>     
+			<p>学生总人数</p> 
+		</div>  
+		<div class="dataAllShow" style="background-color: #74A1D6;">
+			<h2>{{courseReviewList.usageCounter}}</h2>     
+			<p>总使用次数</p> 
+		</div> 
+		<div class="dataAllShow" style="background-color: #B4C4DE;">
+			<h2>{{courseReviewList.actualAmount}}</h2>     
+			<p>订单总金额</p> 
+		</div>  
+		<div style="clear:both;"></div>
+	</div>
+	<div class="filterUser">
+		<div class="filterUserOne">
+	         <div class="title">{{dataFilterShow[16]}}</div>
+	        <select style="width:80px;" class="form-control" ng-model="languageGet" ng-change="chooseLanguage()">  
+	          <option value=''>{{dataFilterShow[1]}}</option>  
+	         <option value='{{item.id}}' ng-repeat="item in languageList">{{item.display}}</option> 
+	        </select>
+	        <div style="clear:both;"></div>  
+	    </div>
+	    <div class="filterUserOne">
+	         <div class="title">{{dataFilterShow[18]}}</div>
+	        <select class="form-control" ng-model="categoriesData" ng-change="chooseCategories()">
+	          <option value=''>{{dataFilterShow[1]}}</option>
+	          <option value='{{item.id}}' ng-repeat="item in categoriesList">{{item.display}}</option>
+	        </select>
+	        <div style="clear:both;"></div>
+	    </div>
+	    <div class="filterUserOne">
+	         <div class="title">{{dataFilterShow[17]}}</div>
+	        <select class="form-control" ng-model="difficultiesData" ng-change="chooseDifficulties()">
+	          <option value=''>{{dataFilterShow[1]}}</option>  
+	          <option value='{{item.id}}' ng-repeat="item in difficultiesList">{{item.display}}</option>
+	        </select>    
+	        <div style="clear:both;"></div>
+	    </div>  
+	    <div class="filterUserOne" style="margin-right:0;">
+	         <div class="title">{{dataFilterShow[4]}}</div> 
+	         <select class="form-control" ng-model="groupGet" ng-change="chooseGroup()">
+	          <option value=''>{{dataFilterShow[1]}}</option>
+	          <option value='{{item.id}}' ng-repeat="item in orgGroupList">{{item.name}}</option>
+	        </select>  
+	        <div style="clear:both;"></div>
+	    </div>
+	    <div style="clear:both;"></div>
+	</div> 
+	<div style="width: 300px;">
+		<div class="search" style="background-color: #f9f9f9;margin-top:15px;width:189px;border:1px solid #E5E7EA;">
+	        <div class="sologo gsearch" ng-click="searchContentClick()">
+	        	<img src="./images/Popzu/index_search.png">
+	        </div>  
+	        <input class="gword" type="text" placeholder="{{dataFilterShow[13]}}" style="background-color: #f9f9f9;width:126px;" ng-model="searchContent"> 
+	    </div>   
+	</div>
+	<table style="width:740px;text-align:center;margin-top:40px;" ng-if="contentOnData==1?true:false">
+		<thead> 
+				<tr style="color:#808080;font-size: 12px;height:50px;">
+					<td style="text-align: left;">{{dataContentShow[6]}}</td>
+					<td>{{dataContentShow[1]}}</td>  
+					<td>{{dataContentShow[2]}}</td>
+					<td>
+						<p>{{dataContentShow[3]}}</p>
+						<p>({{dataContentShow[4]}})</p>
+					</td>
+					<!-- <td>  
+						<p>{{dataContentShow[7]}}</p>
+						<p>({{dataContentShow[8]}})</p>   
+					</td> -->
+				</tr>    
+			</thead>    
+			<tbody> 
+				<tr style="height:120px;border-bottom:1px solid #e5e7ea;" ng-repeat="item in CourseData">
+					<td>
+						<div>  
+							<img ng-src="{{item.cover || ''}}" class="imgShowContent" />
+							<div class="userInf">
+								<div class="AgencyName">{{item.name || ''}}</div>
+								<div class="planName">{{item.category.display || ''}}</div>
+								<p>{{item.forNativeLanguage.display || ''}}·{{item.difficulty.display || ''}}</p>
+							</div> 
+						</div>  
+					</td>     
+					<td width='120'>{{item.author.userNickName || ''}}</td> 
+					<td width="120">{{item.updatedAt}}</td>   
+					<td width="150" style="color:#ADD5AE;">{{item.statistics.tutorCount || 0}}/{{item.statistics.learnerCount || 0}}/{{item.statistics.evalServiceCount || 0}}</td> 
+				</tr>   
+			</tbody> 
+	</table>
+	<div ng-if="contentOnData==0?true:false" class="no_data_show">
+	
+		<img src="./images/dataLook/empty@2x.png">
+		<p>这里什么都没有~~</p>  
+	</div>   
+	<div class="worDoorPaging" style="margin-top:30px;">    
+		<div class="tcdPageCode" ng-show="contentListPaging"></div>
+	</div>  
+</div>     

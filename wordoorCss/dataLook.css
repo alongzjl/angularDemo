@@ -1,0 +1,587 @@
+body {
+	font-family: Helvetica;
+}
+ body p {
+	margin:0;
+}
+.dataLookBody {
+	background-color:  #F9F9F9;
+}
+.dataLook_content {
+	width:1002px;
+	margin:30px auto 0;
+	color: #505766;
+
+}
+.dataLook_content .contentLeft {
+	width:220px;
+	float:left;
+}
+.contentLeft .dataReview {
+	height:45px;
+	line-height: 45px;
+	font-size:16px;
+	padding-left: 25px; 
+	text-align: left;  
+	color: #505766;
+	cursor: pointer;  
+}
+.dataLook_content .contentRight {
+	width:780px;
+	float:left;
+}
+.dataLook_ul li {  
+	list-style: square;
+	height:40px;
+	line-height: 40px;
+	font-size:14px;
+	text-align: left;
+	color: #505766; 
+	cursor: pointer;
+	margin-left: 43px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width:170px;
+}
+
+.dataLook_ul li:hover{
+	color: #09C0CE;  
+}
+
+.banjiTitle {
+	background:url(../images/dataLook/nav_class_normal@2x.png) no-repeat 0 15px;    
+	background-size:16px 16px;
+}   
+.contentLeft .orgTitle {  
+	background:url(../images/dataLook/nav_institute_normal@2x.png) no-repeat 0 15px;
+	background-size:16px 16px; 
+}
+.contentLeft .dataReviewIcon {
+	background:url(../images/dataLook/nav_data_normal@2x.png) no-repeat 0 15px;
+	background-size:16px 16px;
+}
+
+.contentLeft .dataReviewIconActive {
+	background:url(../images/dataLook/nav_data_active@2x.png) no-repeat 0 15px;
+	background-size:16px 16px;
+	color:#09C0CE;   
+}
+.contentLeft .banjiTitleIcon {
+	background:url(../images/dataLook/nav_class_normal@2x.png) no-repeat 0 15px;
+	background-size:16px 16px;
+	color:#09C0CE; 
+}   
+.contentLeft .orgTitleIcon {
+	background:url(../images/dataLook/nav_institute_normal@2x.png) no-repeat 0 15px;
+	background-size:16px 16px;
+	color:#09C0CE; 
+}
+.contentLeft .commonStyle { 
+	color:#000;
+}     
+.contentLeft .commonStyleActive {    
+	color:#09C0CE; 
+}
+.weekAndMonths .commonStyleActive {
+	background: #09C0CE; 
+	color:#fff; 
+}
+   
+.dataAllShow {
+	height:105px;
+	width:138.4px;
+	float:left;
+	background-color: #F07E71;
+	margin-right:22px;
+	border-radius:4px;
+}
+.dataAllShow h2 {
+	height:39px;
+	line-height: 39px;
+	text-align: center;
+	font-size: 32px;
+	color: #FFFFFF;
+	margin-top:12px;
+	font-family: "Georgia";
+}
+.dataAllShow p {
+	 height: 20px;
+    line-height: 16px;
+    text-align: center; 
+    margin-top: 12px;
+    font-size: 14px; 
+    color: #FFFFFF;
+    width: 100px;
+    margin: 12px auto;
+}
+.banjiTable {
+	height:325px;
+	width:380px;
+	border:1px solid #E5E7EA;
+	float:left;
+	margin-right:20px;
+	margin-bottom:34px;
+	box-shadow: 0px 4px 12px rgba(0,0,0,0.06);
+	border-radius:4px;
+}
+.model_Img {
+	border:1px solid #E5E7EA;
+	box-shadow: 0px 4px 12px rgba(0,0,0,0.06);
+	margin-bottom:34px; 
+	border-radius:4px;  
+} 
+.banjiTable:nth-child(even) {
+	margin-right:0;
+}
+.banjiTable .banjiTitleList {
+	height:45px;
+	padding:0 20px;
+	border-bottom: 1px solid #E5E7EA;
+}
+
+.banjiTitleList>div:first-child {
+	float:left;
+	height:45px;
+	line-height: 45px;
+}
+.banjiTitleList>div:last-child {
+	float:right;
+	height:26px;
+	line-height: 26px;
+	padding:0 20px 0 10px;
+	background: #F9F9F9 url(../images/Creatacourse_arrow.png) no-repeat 62px 7px;
+	background-size:10px 10px;
+	border: 1px solid #E5E7EA;
+	border-radius:30px;
+	margin-top:10px;
+	cursor: pointer;
+	position: relative;
+	color: #999999;
+	font-size: 12px;
+}
+.banjiDateDetails {
+	background-color: #fff;
+	height:278px;
+	position: relative;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+.banjiDateDetails .details,.banjiDateDetails .tuxing {  
+	width:160px; 
+	position: absolute;
+	top:0;
+}
+.banjiDateDetails .details {
+	left:20px;
+}
+.banjiDateDetails .tuxing {
+	right:20px;
+}
+.banjiDateDetails .details li {
+	color: #505766;
+	height:56px;
+	line-height: 56px;
+	border-bottom: 1px solid #E5E7EA;
+	font-size: 13px;
+}
+.banjiDateDetails .details li:last-child {
+	border:none;
+}
+.banjiDateDetails .details li span:first-child {
+	display: block;
+	float:left;
+}
+.banjiDateDetails .details li span:last-child {
+	display: block;
+	float:right;
+}   
+.tuxing p ,.tuxingWeeks p{ 
+	text-align: center;
+	color:#09C0CE;
+	font-size: 14px;
+}
+.tuxing .echart, .tuxingWeeks .echart {
+	height:156px;
+	width:156px;
+	margin:29px auto 0px;
+	
+} 
+.classContent {
+	position: relative;
+}
+.classContent .classTitle {
+	height: 63px;
+    border: 1px solid #E5E7EA;
+    border-radius: 4px 4px 0 0; 
+    background: #fff;
+}
+.classContent .classTitle ul {
+	float:left;
+}
+.classContent .classTitle div{
+	float:right;
+}
+.classContent .classTitle li {
+	height:62px;
+	line-height: 62px;
+	padding: 0 10px;
+	float:left;
+	margin:0 20px;
+	cursor: pointer;
+}
+.classTitleActive {
+	color:#09C0CE;
+	border-bottom:2px solid #09C0CE;
+}
+.imgShow {
+	height: 44px;
+    width: 44px;
+    float: left;
+    border-radius: 50%;
+}
+.imgShowContent {
+	height:65px;
+	width:86px;
+	float:left;
+}
+.userInf{
+	/*height: 44px;*/
+    float: left;
+    position: relative;
+    color:#505766;
+    margin-left: 10px;
+    text-align: left;
+}
+.userInf .userName {
+	 float: left;
+	 width: 100px;
+	 height:21px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.userInf .userEmail {
+	text-align: left;
+	width:130px;
+}
+.userInf .xingbie {
+	 height: 15px;
+    width: 15px;
+    float: left;
+   /* margin-left: 15px;*/
+}
+.userInf .InGroupInf { 
+	height:21px;
+	width:71px;
+	background: rgba(9,192,206,0.2);
+	color:#09C0CE;
+	line-height:21px;
+	font-size:12px;
+	text-align: center;
+	border-radius:10px;
+	margin-top:5px;
+} 
+.userInf p { 
+	font-size: 12px;
+	margin-top:5px;
+	text-align: left;
+}
+.userInf .AgencyName {
+	text-align: left;
+	width: 150px;  
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.userInf .planName {
+	text-align: left;
+}
+.stuPingJia,.TutorPingJia {
+	position: absolute;
+	left:0;
+	top:80px;
+	width: 750px;
+	color:#505766;
+	font-size:13px;
+}
+
+.TutorPingJia {
+	top:120px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #e5e7ea;
+}
+
+.stuPingJia .PingContent,.TutorPingJia .PingContent {
+	height:20px;
+	line-height: 20px;
+	padding-right:20px;
+	float:left;
+}
+.PingContent ul li {
+	float: left;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    margin-right: 20px;
+    border-radius: 20px;
+    border: 1px solid #D6D6D6;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+.orderGroupAll ul li {
+	 height: 26px;
+    line-height: 26px;
+     margin-top: -2px;
+     border:none;
+     background-color: rgba(9,192,206,0.2);
+     color:#09C0CE;
+     font-size: 12px;
+}
+.userDetails {
+	width: 60px;
+    height: 31px;
+    margin: 0 auto;
+    border: 1px solid #09C0CE;
+    line-height: 31px;
+    border-radius: 20px;
+    color: #09C0CE;
+    cursor: pointer;
+    font-size:12px;
+}
+.courseInfor {
+	font-size: 12px;
+	margin-top:5px;
+	color:#505766;
+}
+.tuxingWeeks {
+	width:150px;
+	float:left;
+	position: relative;
+}
+.taskShow {
+	 margin-bottom: 30px;
+    position: relative;
+    height: 280px;
+    border: 1px solid #E5E7EA;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.06);
+    background: #fff; 
+}
+.model_task_user {
+	 width: 780px;
+    background: #fff; 
+    padding: 10px 15px;
+    border: 1px solid #E5E7EA;
+    border-top:none;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.06); 
+}
+.taskShowLeft, .taskShowRight {
+	width: 50%;
+    position: absolute;
+    top: 0;
+ }
+.taskShowLeft {
+	left:0;
+}
+.taskShowRight {
+	left:370px;
+}
+.taskShowRight ul{
+	width:100%;  
+	margin-top:60px;
+	height:170px;
+}
+.taskShowRight ul li {
+	float:left;
+	width:185px;
+	height:85px;
+	text-align: center;
+}
+.taskShowRight li h3 {
+	font-size: 33px;
+	color:#09C0CE;
+}
+.taskShowRight li p {
+	font-size: 14px;
+	color:#505766;
+}
+.taskShowRight .shutiao {
+	position:absolute;
+	width:1px;
+	height:68px;
+	left:185px;
+	top:101px;
+	background-color: #E5E7EA;
+}
+.taskShowRight .hangtiao {
+	position:absolute;
+	height:1px;
+	width:108px;
+	top:135px; 
+	left:131px;
+	background-color: #E5E7EA;
+} 
+.filterUser {
+	padding-top:20px;
+}   
+.filterUser .filterUserOne{
+	height:40px;
+	float:left;
+	line-height: 40px; 
+	margin-right:20px; 
+}
+.filterUserOne .title {
+	padding:0 6px;   
+	float:left;
+}
+.filterUserOne .form-control {
+	float:left;
+	width:80px; 
+	border-radius: 20px;
+	background: #f9f9f9;  
+}
+.showPercent {
+	height:40px;
+	width:80px;
+	line-height: 40px; 
+	text-align: center;
+	color:#09C0CE;
+	font-size: 32px;
+	position: absolute;
+	top:85px;
+	left:40px;  
+}
+.weekAndMonths {
+	 position: absolute;
+    left: 0; 
+    top: 25px;
+    z-index: 100;
+    background: #fff;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+}
+.weekAndMonths li {  
+	width:100%;  
+	height:26px;
+	line-height: 26px;
+	text-align:center; 
+} 
+.weekAndMonths li:first-child {  
+	border-radius: 3px 3px 0 0;
+}
+.weekAndMonths li:last-child {  
+	border-radius: 0 0 3px 3px; 
+}
+/*ÃƒÂ¨Ã‚Â¯Ã‚Â¦ÃƒÂ¦Ã†â€™Ã¢â‚¬Â¦ÃƒÂ¥Ã‚Â¼Ã‚Â¹ÃƒÂ§Ã‚ÂªÃ¢â‚¬â€ÃƒÂ¥Ã‚Â­Ã‚Â¦ÃƒÂ§Ã¢â‚¬ÂÃ…Â¸*/
+.orderDetailsLook {
+	position: fixed;
+    top: 5%; 
+    left: 50%;
+    z-index: 130;
+    width: 740px;
+    height:720px;  
+    margin-left:-370px;
+    text-align: center;
+    background: rgb(255, 255, 255);
+}
+.orderLookTitle {
+	padding:0 32px;
+	font-size: 20px;
+    color: #505766;  
+    height: 60px;
+    line-height: 60px;
+    position: relative;
+    border-bottom: solid 1px #dbdbdb;
+    font-weight: bolder;
+    text-align: left;
+}
+.orderDetailsLook table {
+	margin:0 36px;
+}
+.orderLookTitle .delete {
+	position: absolute;
+    right: 26px;
+    width: 27px;
+    height: 27px;
+    top: 18px;
+    cursor: pointer;
+    border: none;
+}
+.orderLookTitle .delete img {
+	height:27px;
+}
+.orderDetailsLook .dateChoose {
+	height:60px;
+	padding-left:30px;
+}
+.dateChoose li {
+	height:60px;
+	line-height: 60px;
+	padding:0 10px;
+	float:left;
+	cursor: pointer; 
+}
+.orderDetailsLook .pingJiaOrder {
+	width:635px;
+	top:110px;
+}
+/*.commonStyleLook {
+	height:50px;
+	line-height: 50px;
+}*/
+#dateRangeChoose {
+	width:200px;
+	height:40px;
+	line-height: 40px;
+	border-radius:20px;
+	background: #E5E7EA;
+	margin-top:10px;
+	cursor: pointer;
+	padding-left: 20px;
+    text-align: left;
+}
+#echartZheAll,#echartZheBan {
+	height:380px;
+	width:100%;
+}  
+#allDataZhe {
+	height:45px;
+	width:100%;
+	padding:0 20px; 
+	border-bottom: 1px solid #E5E7EA;
+}
+.worDoorPaging_dataLook {
+	text-align: center; 
+}  
+.no_data_show {
+	height:600px;
+	background: #fff;
+	padding-top:150px; 
+	border: 1px solid #E5E7EA;
+	border-top:none;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.06);
+    text-align:center; 
+}
+.no_data_show_task {
+	border-top: 1px solid #E5E7EA; 
+}
+.no_data_show img {
+	display:block;
+	margin:0 auto; 
+	width:132px; 
+}  
+.blankContent {
+	border-left:1px solid #E5E7EA;
+	border-right:1px solid #E5E7EA;
+	height: 40px;
+    background: #fff;  
+}
+.orgContent {
+	background-color: #fff;
+	padding:10px 0 10px 20px;
+	border-radius:4px; 
+	box-shadow: 0px 4px 12px rgba(0,0,0,0.06);
+}

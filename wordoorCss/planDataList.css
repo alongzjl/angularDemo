@@ -1,0 +1,433 @@
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
+::-webkit-scrollbar  
+{  
+    width: 6px;  /*滚动条宽度*/
+    height: 6px;  /*滚动条高度*/ 
+}  
+   
+.groupPlan {
+	width:1023px;
+	background: #FFFFFF;
+	box-shadow: 0 2px 13px 0 rgba(0,0,0,0.20);
+	border-radius: 3px;
+	font-family: PingFangSC-Medium;
+	position: absolute;
+	top:10%;
+	left:50%;
+	margin-left:-511px; 
+}
+.groupPlan .planLeft {
+	width:210px;
+	height:100%;
+	float:left;
+	/*box-shadow: 0 2px 13px 0 rgba(0,0,0,0.20);*/
+	border-radius: 3px;
+	padding:33px 0 0 28px;
+}
+.planLeft h2 { 
+	font-size: 20px;
+	color: #5E5F62;
+	letter-spacing: -0.48px;
+	margin-bottom:55px;
+}
+.planLeft p {
+	font-size: 14px;
+	color: #5E5F62;
+	letter-spacing: -0.34px; 
+	margin-bottom:17px;
+}
+.planLeft .lengthPlan {
+	font-size: 14px;
+	color: #BABCC1;
+	letter-spacing: -0.34px;
+	margin:8px 0 18px 0;
+	width:80%;  
+	text-align: right;
+}
+.planLeft input , .planLeft textarea {
+	border: solid 1px #dbdbdb;
+    border-radius: 3px;
+    background-color: #f9f9f9;
+    width: 150px;
+    padding-left: 10px;
+    font-size: 14px;
+    font-family: Helvetica;
+    cursor: pointer;
+    height: 40px;
+}
+.planLeft .planTitle {
+	height:40px;
+}
+.planLeft .planDesc { 
+	height:224px; 
+}
+.groupPlan .planRight {
+	float:left;
+	width:812px;
+	box-shadow: 0 2px 13px 0 rgba(0,0,0,0.20);
+	border-radius: 3px;
+	height:100%;
+}
+.planRight .chooseTime {
+	height:80px;
+	border-bottom: 1px solid #DBDBDB;
+}
+.chooseTime .show_date {
+	height:80px;
+	text-align: center;
+	line-height: 80px;
+	font-size: 24px;
+	color: #5E5F62;
+	cursor:pointer;
+	margin:0 20px;  
+	float:left;
+	position: relative;
+	z-index:10; 
+} 
+.chooseTime .show_date span {
+	position: absolute;
+    right: -30px; 
+    top: 33px;
+    border: 7px solid transparent;
+    border-top: 15px solid #000;
+    width: 0;
+    height: 0;
+}
+.chooseTime .year_page {
+	float:left;
+	background-color: #fff;
+	height:40px;
+	width:300px;
+	box-shadow: 2px 4px 13px 0 rgba(0,0,0,0.20);
+}
+.chooseTime .year_page div {
+	line-height: 40px;
+	width:60px;
+	text-align: center;
+	font-size:30px;
+	float:right;
+}
+.chooseTime .date_list {
+	position: absolute;
+	top:70px; 
+	left:0;
+	width:235px;  
+	height:235px;  
+	box-shadow: 0 2px 13px 0 rgba(0,0,0,0.20);
+	border-radius: 8px 0 0 8px;
+	background-color: #fff;
+}
+.chooseTime .date_list .year,.chooseTime .date_list .month {
+	float:left; 
+	height:235px;
+	box-shadow: 0 2px 6px 0 rgba(0,0,0,0.20); 
+	padding:18px 0;
+	overflow-y: auto;   
+}
+.chooseTime .date_list .year {
+	width:99px;
+}
+.chooseTime .date_list .month {
+	width:135px;
+	
+}
+.date_list .year li,.date_list .month li {
+	height:25px;
+	line-height: 25px;
+	width:100%;
+	text-align: center;
+	font-family: 'PingFangSC-Semibold';
+	font-size: 14px;
+	color: #5E5F62;
+	letter-spacing: -0.42px; 
+	margin:5px 0;
+}
+.date_list .year .choosed {
+	color: #00BCD3;
+	background: url(../images/Popzu/series_back.png) no-repeat 80px 8px;
+	background-size: 5px 8px;
+}
+.date_list .month .choosed {
+	color: #00BCD3;
+}
+
+.chooseTime .date_list li:hover {
+	color:#00BCD3;
+}
+
+.planRight .chooseTime img {
+	height:25px;
+	width:25px;
+	cursor:pointer;
+	float:right;
+	margin:33px 44px 0 0;
+}
+.planRight .weeks {
+	height:60px;
+}
+.planRight .weeks li {
+	float:left;
+	height:60px;
+	line-height: 60px; 
+	text-align: right;
+	width:116px;
+	font-size: 14px;
+	color: #5E5F62;
+	letter-spacing: -0.34px;
+	padding-right:10px;
+}
+.planRight .planDate {
+	width:100%;
+	
+}
+.planRight .planDate li {
+	float:left;
+	width:116px;
+	height:93px; 
+	border-right: 1px solid #E9E9E9; 
+	border-bottom: 1px solid #E9E9E9; 
+	cursor: pointer;
+	overflow: hidden;
+}
+.planRight .planDate .frontTable {
+	border-top:1px solid #E9E9E9;  
+} 
+ .planRight .planDate .choose_this_date {
+	border:1px solid #00BCD3;  
+}    
+.planRight .planDate li p {
+	width:100%;  
+	margin-top: 14px;
+	text-align: right;
+	padding-right:14px; 
+	font-size: 14px;
+	color: #5E5F62;
+	letter-spacing: -0.34px;
+} 
+.planRight .planDate li .course_added {
+	height:20px;
+	line-height: 20px;
+	width:90%;
+	overflow: hidden; 
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	background: #00BCD3;
+	border-radius: 3px;
+	font-size: 12px;
+	color: #FFFFFF;
+	letter-spacing: -0.29px;
+	padding:0 0 0 10px; 
+	margin: 5px auto 0;  
+	position: relative;
+}
+.planRight .planDate li .before_course { 
+	background: #F4F4F4;
+    color: #B7B8BC;
+}  
+.planDate li .course_added img {
+	display: none;
+	position: absolute;
+	top:2px;
+	right:2px;
+	height:15px;
+	width:15px;
+	text-align:center;
+	line-height: 15px;
+	color: #fff;
+	cursor: pointer;
+}
+.planDate li .course_added .hover_img {
+	display: block;
+}
+.planRight .planDate .last { 
+	background: #F4F4F4;
+}
+.planRight .planDate .today {
+	border:2px solid #00BCD3; 
+	font-weight:bolder;
+	border-radius:10px;
+} 
+.planRight .planDate .today p {
+	color:#00BCD3;
+}
+
+.planRight .planDate .last p {
+	color: #B7B8BC;
+}
+.planRight .confirm {
+	width:142px;
+	height:42px;
+	line-height: 42px;
+	text-align: center;
+	background: #00BCD3;
+	border-radius: 3px;
+	font-size: 14px;
+	color: #FFFFFF;
+	letter-spacing: -0.34px;
+	margin:10px 54px 20px 0;
+	float:right; 
+}
+.planRight .page_look {
+	float:left;
+	height:42px;
+	width:200px;
+	margin-left:20px; 
+}
+.planRight .page_look div {
+	height:25px;
+	width:25px;
+	text-align: center;
+	cursor:pointer; 
+	border-radius: 6px;
+	font-size: 14px; 
+	color: #5E5F62;
+	letter-spacing: -0.42px;
+	float:left;
+	margin-top:17px;
+}
+.planRight .page_look .show_page {
+	width:65px;
+	border: 1px solid #5E5F62;
+	margin:17px 8px 0;  
+} 
+.planRight .page_look .prev {
+	background: url(../images/Popzu/prev.png) no-repeat top left;
+	background-size: 100%;
+} 
+.planRight .page_look .next {
+	background: url(../images/Popzu/next.png) no-repeat top left; 
+	background-size: 100%;
+}
+/*右键弹窗*/
+.rightTap {
+	position: absolute;
+	height:150px; 
+	width:100px; 
+	background: #FFFFFF; 
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.20);
+	border-radius: 3px;
+} 
+.rightTap div {
+	width:100%;
+	height:50px;
+	line-height: 50px;
+	text-align:center;
+	border:1px solid #E9E9E9;
+	cursor: pointer;
+}
+.rightTap div:hover {
+	/*border:1px solid #00BCD3;*/
+	color:#00BCD3;
+} 
+/*添加课程*/
+
+.click_choose_course {
+	position: absolute;
+	width:345px;  
+	background: #FFFFFF;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.20);
+	border-radius: 3px;
+	padding:10px;
+	font-family: 'PingFangSC-Regular'; 
+}
+.click_choose_course .title { 
+	height:60px;
+
+}
+.click_choose_course .title span {
+	height:60px;
+	line-height: 60px;
+	width:100px;
+	display: inline-block;
+	float:left;
+	font-family: 'PingFangSC-Semibold'; 
+	font-size: 14px;
+	color: #5E5F62;
+	letter-spacing: -0.34px;
+	text-align: left;
+}
+.click_choose_course .title input {
+	height:26px;
+	width:135px;
+	float:right;
+	margin:20px 0 0 0;
+	background: #FFFFFF;
+	border: 1px solid #D3DEE5;
+	box-shadow: inset 0 0 2px 0 rgba(0,0,0,0.10);
+	border-radius: 32px;
+	padding-left:10px;
+}
+.click_choose_course .delete_tab {
+	position: absolute; 
+	right:5px; 
+	top:5px;
+	height:20px; 
+	width:20px;
+	cursor: pointer;  
+}
+.click_choose_course .delete_tab img {
+	width:100%;
+}
+.click_choose_course .content {
+	height:170px;
+	border-bottom: 1px solid #F4F4F4;
+}
+.click_choose_course .content .series {
+	border-right: 1px solid #F4F4F4; 
+}
+.click_choose_course .content .series,.click_choose_course .content .course {
+	width:50%;
+	float:left;
+	height:170px;
+	overflow-y:auto;  
+}
+.content .series li,.content .course li {
+	height:29px;
+	width:100%; 
+	font-size: 12px;
+	color: #989A9F;
+	letter-spacing: -0.29px;
+	line-height: 29px;
+	cursor:pointer;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.content .series li {
+	padding-left:20px;
+}
+/*.content .series li:hover {
+	background: #D3DEE5;
+}*/
+.content .course li {
+	padding-left:30px; 
+}
+/*.content .course li:hover {
+	background: #D3DEE5;
+} */ 
+.content .series .choose_this_data {
+	background: #D3DEE5 url(../images/Popzu/series_back.png) no-repeat 145px 10px;
+    background-size: 7px 10px; 
+}
+/*.content .series .choose_this_data:hover {
+	background: #D3DEE5 url(../images/Popzu/series_back.png) no-repeat 145px 10px;
+    background-size: 7px 10px;
+} */
+
+.content .course .choose_this_data {
+	background: #D3DEE5 url(../images/Popzu/course_selected.png) no-repeat 10px 10px;
+    background-size: 10px; 
+}
+.click_choose_course .tab_confirm {
+	height:23px;
+	width:70px;
+	float:right;
+	text-align: center;
+	line-height: 23px;
+	border: 1px solid #00BCD3;
+	border-radius: 100px;
+	font-size: 12px;
+	color: #00BCD3;
+	letter-spacing: -0.29px;
+	cursor: pointer;
+} 

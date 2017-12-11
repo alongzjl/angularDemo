@@ -1,0 +1,964 @@
+.pop_btns-small {
+    width: 100px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 16px;
+}
+.pop_circle {
+    border-radius: 3px;
+}
+.pop-btnsDeep {
+    background-color: #07c0cd;
+    color: #fff;
+}
+.pop_btns {
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+.btnGroupByNew {
+    font-size: 16px;
+    padding: 0px 20px;
+}
+.btnGroupByNew > div {
+    float: right;
+    margin-right: 10px;
+}
+.confirm {
+    background-color: #09c0ce;
+    color: #fff;
+}
+.cancel, .confirm, .delete {
+    width: 105px;
+    border: solid 1px #09c0ce;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.searchAdd {
+    background-color: #09C0CE;
+    padding-bottom: 24px;
+}
+ .searchAdd > div {
+    width: 1002px;
+    padding-bottom: 20px;
+    padding-right: 40px;
+    margin: 0 auto;
+}
+ .search {
+    width: 159px;
+    height: 37px;
+    border-radius: 18px;
+    padding-left: 20px;
+    overflow: hidden;
+    background-color: #fff;
+    position: relative;
+}
+ .search > div {
+    position: absolute;
+    right: 13px;
+    top: 5px;
+    cursor: pointer;
+}
+.search > div > img {
+    height: 27px;
+}
+ .search input {
+    border: none;
+    height: 34px;
+    font-size: 12px;
+    color: #000;
+    width: 96px;
+}
+ .PopzuCount {
+ 	width:1002px;
+ 	height:75px;
+ 	padding-top:30px;
+ 	margin:0 auto;
+ 	position:relative;
+ 	z-index: 1000;
+ }
+ .addCourse {
+    background-color: rgba(180, 211, 174, 1);
+    color: #fff;
+    padding: 0 30px 0 50px;
+    line-height: 37px;
+    font-size: 12px;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(10, 72, 73, 0.16);
+    height: 37px;
+    border-radius: 18px;
+    position:relative;
+}
+ .addCourse .addSign {
+    position: absolute;
+    top: 10px;
+    left: 33px;
+}
+.addCourse .addSign>img {
+	height:15px;
+}
+.displayCourse {
+	/*height:560px;*/
+	width: 1002px;
+    margin: 0 auto;
+    background: #f9f9f9;
+}
+ .displayCourse .courseRealDetail {
+    width: 300px;
+    height: 258px;
+    float: left;
+    margin-right: 31px;
+    position: relative;
+    margin-bottom: 26px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    padding-bottom: 4px;
+    background-color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.courseRealDetail .add-relateCourse {
+	color: #09c0ce;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    cursor:pointer;
+    margin-top:20px;
+    border-top: solid 1px #dbdbdb;
+}
+.courseRealDetail .mdeletecourse {
+ 	position:absolute;
+ 	right:15px;
+ 	bottom:15px;
+ 	z-index: 10000;
+ }
+ .courseRealDetail .mdeletecourse img {
+ 	height:32px;
+ }
+.courseRealDetail .myPic {
+	position: relative;
+    height: 152px;
+   	border-radius: 3px 3px 0 0;
+    background-position-y: -16px;
+}
+ .myPic .pub {
+    background-color: #b5d4ae;
+    position: absolute;
+    border-radius: 3px;
+    height: 24px;
+    line-height: 24px;
+    left: -5px;
+    top: 5px;
+    padding-left: 5px;
+}
+ .myPic .pub  span {
+    display: block;
+    padding: 0 16px;
+    background: #fff;
+    color: #09c0ce;
+    border-radius: 0 3px 3px 0;
+    margin-bottom:5px; 
+}
+ .myPic .time {
+   left:0;
+}
+.myPic .sign {
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    padding: 4px 16px;
+    height: 24px;
+    line-height: 17px;
+    font-size: 12px;
+    float: left;
+    margin-left: 10px;
+    position: absolute;
+}
+.myPic .el {
+   right: 10px;
+}
+.signWrap {
+    position: absolute;
+    bottom: 11px;
+    height: 24px;
+   width: 290px;
+}
+ .courseRealDetail .font {
+ 	top:0;
+    height:86px;
+    padding-top: 16px;
+    color: #19191a;
+    font-size: 14px;
+    text-indent: 17px;
+    position: relative;
+    z-index: 100;
+    background-color: #fff;
+   overflow: hidden;
+}
+.font>h3 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-bottom: 6px;
+}
+.font .descriptionP {
+    color: #808080;
+    font-size: 14px;
+    margin-top:2px;
+}
+ .font p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+ .font .endP {
+    padding-top: 7px;
+    color: #09c0ce;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    bottom: -25px;
+}
+.setUp {
+     position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.setUp .editLi {
+    display:none;
+    width:60px;
+    position: absolute;
+    right:0;
+    background-color: #fff;
+    text-align: center;
+}
+.setUpSeries .editLi {
+    width:120px;
+    z-index: 10000;
+    text-align: center;
+}
+.courseButs {
+	/*display:none;*/
+	height:32px;
+	margin-left:45px;
+}
+.courseButs li{
+	float:left;
+	height:32px;
+	width:32px;
+	margin-right:10px;
+}
+.courseButs li img {
+	height:32px;
+	width:32px;
+}
+/*筛选*/
+.ificationNav {
+	margin-right:50px;
+}
+.ificationNav > li {
+    float: left;
+    min-width: 42px;
+    color: #505766;
+    margin-left: 28px;
+    position: relative;
+    cursor: pointer;
+   /* padding: 0 10px 23px 0;
+    height: 44px;*/
+}
+.ificationNav .fstatus {
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    position: absolute;
+    left: 0;
+    width:100px;
+    z-index: 10000;
+    top: 20px;
+}
+.ificationNavSel {
+	position:absolute;
+	top:20px;
+	left:0;
+	width:80px;
+}
+.ificationNavSel li {
+    background-color: #fff;
+    min-height: 29px;
+    color: #505766;
+    line-height: 29px;
+   text-align:center;
+    cursor: pointer;
+}
+.ificationNavSel li:first-of-type {
+    border-radius: 3px 3px 0 0;
+}
+.ificationNavSel li:nth-last-child(1) {
+    border-radius: 0 0 3px 3px;
+}
+/*添加课程*/
+.course-along {
+    position: absolute;
+    top: 390px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 864px; 
+    border-radius: 3px; 
+    background-color: #fff; 
+    z-index: 15000; 
+}
+.course-along .title {
+    height: 64px;
+    width: 100%;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 0 30px;
+}
+.course-along .title span {
+    line-height: 64px;
+    font-size: 20px;
+    color: #505766;
+    float: left;
+    font-weight: bold;
+}
+.course-along .title img {
+    float: right;
+    cursor: pointer;
+    height: 27px;
+    width: 27px;
+    margin-top: 15px;
+}
+.course-along .courseinp {
+    width: 100%;
+    padding: 40px 30px;
+    border-bottom: 1px solid #dbdbdb;
+}
+.courseinpNewFr {
+    float: right;
+    margin: 20px 40px 20px 0;
+}
+.courseinp .language, .courseinp .difficult {
+    width: 380px;
+    float: right;
+    position: relative;
+}
+.courseinp .language,.courseinp .time {
+    margin-bottom: 35px;
+}
+.courseinp .classify, .courseinp .time {
+    width: 380px;
+    float: left;
+    position: relative;
+}
+.courseinp .navtitle, .courseinp .des {
+    float: left;
+    margin-top: 35px;
+}
+
+.courseinp .navtitle {
+    position: relative;
+}
+.courseinp .imgChoose {
+    float: left;
+    margin: 30px 0 0;
+}
+.courseinp .language span,
+.courseinp .difficult span, 
+.courseinp .time span, 
+.courseinp .navtitle span, 
+.courseinp .des span, 
+.courseinp .classify span, 
+.courseinp .navChoose span {
+    display: block;
+    line-height: 40px;
+    font-size: 18px;
+    color: #505766;
+    height: 40px;
+    width: 150px;
+    text-align: left;
+    float: left;
+}
+.courseinp .language input, 
+.courseinp .difficult input, 
+.courseinp .classify input, 
+.courseinp .time input {
+    float: left;
+    width: 216px;
+    height: 40px;
+    border-radius: 3px;
+    border: 1px solid #dbdbdb;
+    font-size: 16px;
+    color: #505766;
+    text-indent: 20px;
+    cursor: pointer;
+    background: url(../images/Creatacourse_arrow.png) #f9f9f9 no-repeat 190px 15px;
+    background-size: 10px 10px;
+}
+.courseinp .language .alongCourse, 
+.courseinp .difficult .alongCourse, 
+.courseinp .classify .alongCourse, 
+.courseinp .time .alongCourse {
+    display: none;
+    width: 218px;
+    position: absolute;
+    left: 108px;
+    top: 40px;
+    z-index: 100;
+    background-color: #fff;
+}
+.languagechoose li {
+    list-style: none;
+    float: left;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 35px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: normal;
+}
+.language-unactive {
+    background: url(../images/course/uncheck.png) no-repeat 15px 13px;
+    background-size: 14px 14px;
+}
+.language-active {
+    background: url(../images/course/check.png) no-repeat 15px 13px;
+    background-size: 14px 14px;
+}
+.courseinp .language .alongCourse, 
+.courseinp .difficult .alongCourse, 
+.courseinp .classify .alongCourse, 
+.courseinp .time .alongCourse {
+    display: none;
+    width: 218px;
+    position: absolute;
+    left: 148px;
+    top: 40px;
+    z-index: 100;
+    background-color: #fff;
+}
+.courseinp .difficult .alongCourse li, 
+.courseinp .classify .alongCourse li, 
+.courseinp .time .alongCourse li {
+    height: 40px;
+    padding-left: 20px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #505766;
+    list-style: none;
+    cursor: pointer;
+}
+.courseinp .navtitle input {
+    float: left;
+    width: 645px;
+    height: 40px;
+    border: 1px solid #dbdbdb;
+    font-size: 16px;
+    border-radius: 3px;
+    text-indent: 20px;
+    outline: none;
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+.courseinp .navtitle .news {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    font-size: 12px;
+}
+.courseinp .des textarea {
+    float: left;
+    width: 645px;
+    height: 100px;
+    border-radius: 3px;
+    border: 1px solid #dbdbdb;
+    font-size: 16px;
+    text-indent: 20px;
+    padding-top: 20px;
+    resize: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+.courseinp .imgChoose .imgtext {
+    display: block;
+    line-height: 40px;
+    font-size: 18px;
+    color: #505766;
+    height: 40px;
+    width: 150px;
+    text-align: left;
+    float: left;
+}
+.courseinp .imgChoose .imgUpDate {
+    width: 180px;
+    height: 100px;
+    background-color: #f9f9f9;
+    border-radius: 3px;
+    float: left;
+}
+ .imgUpDate span {
+    height: 40px;
+    width: 120px;
+    display: block;
+    border-radius: 40px;
+    border: 1px solid #f9f9f9;
+    line-height: 40px;
+    text-align: center;
+    font-size: 16px;
+    margin: 30px auto 0;
+    background-color: #fff;
+    cursor: pointer;
+}
+/*课程标签的样式4/7/2017*/
+.nav-along {
+    position: absolute;
+    top: 390px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:774px;
+    /*height:435px;*/
+    border-radius:3px;
+    background-color: #fff;
+    z-index:15000; 
+
+}
+.nav-along div {
+    box-sizing:border-box;
+}
+.nav-along .title {
+    height:64px;
+    width:100%;
+    border-bottom:1px solid #dbdbdb;
+    padding:0 30px;
+}
+.nav-along .title span{
+    line-height:64px;
+    font-size:20px;
+    font-weight:bold;
+    color:#505766;
+    float:left;
+}
+.nav-along .title img {
+    float:right;
+    cursor: pointer;
+    height:27px;
+    width:27px;
+    margin-top:15px;
+}
+.chooseSeries {
+    margin-top:50px;
+    height:40px;
+    padding:0 30px;
+}
+.chooseSeries div {
+    float:left;
+    line-height: 40px;
+    font-size: 18px;
+    color: #505766;
+    height: 40px;
+}
+.chooseSeries .centerDiv {
+    position:relative;
+    margin:0 20px;
+}
+.chooseSeries .inpchoose {
+    width: 416px;
+    height: 40px;
+    border-radius: 3px;
+    border: 1px solid #dbdbdb;
+    font-size: 16px;
+    color: #505766;
+    text-indent: 20px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+.chooseSeries .seriesNumber {
+    width:200px;
+}
+.chooseSeries .showseriesLi {
+   position: absolute;
+    height: 24px;
+    width: 24px;
+    right: 10px;
+    top: 8px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #cdcdcd;
+    background: url(../images/Creatacourse_arrow.png) #f9f9f9 no-repeat 5px 5px;
+    background-size: 10px;
+}
+.chooseSeries .seriesUl {
+    position: absolute;
+    top:42px;
+    left:0;
+    background-color: #fff;
+    z-index: 100;
+    width:100%;
+
+}
+.numberSeries {
+    display:none;
+}
+.seriesUl span {
+    cursor: pointer;
+    height: 40px;
+    display: block;
+    line-height: 40px;
+    float: right;
+    margin-right: 20px;
+    padding: 0 10px;
+}
+.chooseSeries .seriesUlNumber {
+    position: absolute;
+    top:42px;
+    left:0;
+    background-color: #fff;
+    z-index: 100;
+    width:100%;
+}
+.chooseSeries .seriesUl li,.chooseSeries .seriesUlNumber li {
+    height: 40px;
+    padding-left: 20px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #505766;
+    list-style: none;
+    cursor: pointer;
+}
+.chooseSeries .seriesAdd {
+    cursor: pointer;
+}
+.addedSeries {
+       margin: 10px 0 10px 20px;
+       height:30px;
+}
+.addedSeries li {
+    float:left;
+    margin-right:10px;
+    height:30px;
+    line-height:30px;
+    padding:0 20px;
+    border-radius:30px;
+    border:1px solid #cdcdcd;
+    text-align:center;
+    cursor: pointer;
+}
+.courseNavList .tagList:hover {
+	box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+.tagList .thumbPic-thumb {
+    padding: 6px;
+}
+.thumbPic-thumb .thumbPic-thumb-top {
+    width: 288px;
+    height: 100px;
+    background-color: #f8f8f8;
+    background-size: 100%;
+    margin-bottom: 3px;
+}
+.thumbPic-thumb .thumbPic-thumb-li-wrap {
+    width: 290px;
+}
+.thumbPic-thumb .thumbPic-thumb-li {
+    width: 94px;
+    height: 59px;
+    display: inline-block;
+    background-color: #f8f8f8;
+    background-size: 100%;
+}
+.thumbPic-thumb .thumbPic-thumb-li:nth-of-type(3) {
+    margin-right: 0;
+}
+.tagList p {
+    color: rgba(128,128,128,1);
+    font-size: 12px;
+    margin: 5px 0 0 20px;
+}
+.tagList p, .tagList h3 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.tagList h3 {
+	font-size:16px;
+    width: 85px;
+    border-radius: 20px;
+    margin: 0 auto;
+    border: 1px solid #999;
+    text-align: center;
+    height: 40px;
+    font-weight: normal;
+    padding: 10px 0;
+}
+.navKongBai {
+	height:50px;
+	width:100%;
+	background-color:#09c0ce;
+}
+.noDataShow {
+    margin-top: 100px;
+    text-align: center;  
+}
+.seriesAllInCourse{
+    height: 30px;
+    width: 80px;
+    line-height: 30px;
+    border: 1px solid #cdcdcd;
+    float: left;
+    margin: 10px 10px 0;
+    border-radius: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/*课程预览页面*/
+#navContent {
+    padding-bottom: 15px;
+    background-color: #09C0CE;
+}
+#navContent div {
+    height: 60px;
+    width: 1002px;
+    margin: 0 auto;
+}
+#navContent>div>ul {
+    font-size: 29px;
+    color: #fff;
+    width: 1002px;
+    margin: 0 auto;
+    height: 60px;
+}
+#navContent ul li {
+    float: left;
+    height: 60px;
+    margin-right: 40px;
+    font-size: 16px;
+    line-height: 60px;
+    text-align: center;
+}
+#navContent ul li:nth-child(1) {
+    font-size: 18px;
+}
+#navContent div ul .courseDetails {
+    height: 35px;
+    background: url(../images/course/detail-info.png) no-repeat 7px 7px;
+    background-size: 22px 22px;
+    color: #fff;
+    border-radius: 3px;
+    padding:0 5px 0 30px;
+    line-height: 35px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 13px;
+    border: 1px solid rgb(132,224,231);
+}
+.editCourse {
+    position: relative;
+    height: 600px;
+    width: 340px;
+    margin: 30px auto;
+    background-image: url(../images/course/mobile.png);
+    background-size: 100% 100%;
+    padding: 60px 7px 30px;
+}
+#mobileView {
+    width: 320px;
+    height: 486px;
+    margin: 0 auto;
+    border: none;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+}
+/*添加系列课程的弹窗*/
+.gsac-content {
+    width:1002px;
+    margin:0 auto;
+    padding: 25px 0 51px 0;
+    position:relative;
+}
+.gsac-content .gsac-logo {
+    padding-right: 18px;
+    border-right: solid 1px #dbdbdb;
+    height: 27px;
+    float: left;
+}
+.gsac-content .gsac-logo img {
+    height: 27px;
+    vertical-align: middle;
+}
+.gsac-content .gsac-name {
+    height: 27px;
+    line-height: 27px;
+    font-size: 16px;
+    padding-left: 18px;
+    float: left;
+}
+.gsac-content .gsac-remove {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+.gsac-content .gsac-remove img {
+    width: 27px;
+}
+.addGroupCourse .whole {
+    height: 98px;
+    line-height: 98px;
+    background-color: #f9f9f9;
+}
+.addGroupCourse .whole>div {
+    width: 1022px;
+    margin: 0 auto;
+}
+.whole .gsac-search {
+    width: 159px;
+    height: 37px;
+    border-radius: 18px;
+    border: solid 1px #dbdbdb;
+    background-color: #fff;
+    line-height: 37px;
+    position: relative;
+    display: inline-block;
+}
+.whole .gsac-search-logo {
+    display: inline-block;
+    position: absolute;
+    right: 13px;
+    top: 5px;
+    cursor: pointer;
+}
+.whole .gsac-search img {
+    width: 27px;
+    height: 27px;
+}
+.whole .gsac-search-input {
+    width: 100px;
+    display: inline-block;
+    padding-left: 20px;
+}
+.whole .gsac-search-input input {
+    border: none;
+    display: inline-block;
+    width: 100px;
+    color: #bcbcbc;
+    height: 27px;
+}
+.relateContent {
+    width:100%;
+    background-color: #f9f9f9;
+}
+.addGroupCourse {
+    position:absolute;
+    top:793px;
+    left:0;
+    width: 100%;
+    height: 0;
+    background-color:#f9f9f9;
+    z-index:10000;
+    overflow:hidden;
+}
+.subMenu .myCourse {
+    margin-right: 52px;
+    position: relative;
+    cursor: pointer;
+    color: #bcbcbc;
+}
+.subMenu .tabActive {
+    color:#09c0ce;
+    border-bottom: solid 2px #09c0ce;
+}
+.subMenu .tabActiveMy {
+    color:#09c0ce;
+    border-bottom: solid 2px #09c0ce;
+}
+.subMenu {
+    width: 100%;
+    background-color: #09C0CE;
+    height: 40px;
+   
+}
+.subMenu li {
+    padding:0 10px;
+    margin-left: 15px; 
+    float: left;
+    cursor: pointer;
+    font-family: 'Microsoft YaHei';
+    color: rgba(229, 231, 234, 0.67);
+    text-align: center;
+    line-height: 35px;
+}
+.subMenu .subMenuSelect {
+    display: inline-block; 
+    color: #fff;
+    cursor: pointer;
+    border-bottom: 3px solid #f07e71;
+}
+.subMenu .subMenuSelectenter {
+    display: inline-block;
+    color: #fff;
+    cursor: pointer;
+    border-bottom: 3px solid #f07e71;
+}
+/*图片裁剪*/
+
+.cropWrap {
+    padding-bottom: 60px;
+    z-index: 15000; 
+    position: absolute;
+    background-color: #fff;
+    border-radius: 3px;
+    left:100px;
+    top:100px;
+ }
+ .cropWrap .cropBtns {
+    position: absolute;
+    bottom: 10px;
+    width: 200px; 
+    left:50%;
+    margin-left:-100px; 
+    text-align: center;
+}  
+.pop-btnsDeep:hover {
+    background-color: rgba(9, 192, 206, 0.8);
+}  
+.pop-btnsShallow:hover {  
+    background-color: rgba(9, 192, 206, 0.15);
+    color: #09c0ce;
+} 
+     
+#seriesCourseSort {
+    width : 880px;
+    margin:160px auto 0;    
+}    
+#seriesCourseSort .oneCourseSort{   
+    width : 200px;   
+    height : 150px;   
+    float : left;     
+    margin : 10px;
+    text-align: center;
+    font-size: 16px;
+} 
+.oneCourseSort>div {
+    height:100px;  
+}
+.oneCourseSort p {
+    height:50px;  
+    color:#07c0cd; 
+    background-color: #fff; 
+}
+#seriesCourseSortBtn {
+    position: fixed;
+    width:280px; 
+    bottom: 0;
+    right:10%;  
+}
+.ificationNav .chooseOneChangeActive,
+.editLi .chooseOneChangeActive {
+    background-color:#09c0ce;
+    color:#fff;    
+}

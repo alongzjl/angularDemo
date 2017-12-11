@@ -1,0 +1,39 @@
+<div class="searchAdd clear">
+    <div class="clear">
+        <div class="addCourse addse gadd fr" ng-click="addNewplanTemplate()">
+            <span>{{Create_New_Template}}</span>   
+        </div> 
+    </div>   
+</div> 
+<div class="PopzuCount">{{planTemplateAll}}</div>  
+<div class="noDataShow" ng-if="noDataShowTemplate">
+    <p>{{noTemplateShow}}</p> 
+</div>
+<ul class="displayCourse">
+    <li class="planTemplate" ng-repeat="(index,item) in planTemplateList">
+        <div class="myPic"> 
+            <div class="pub">{{item.languageShow}} </div> 
+        	<h3>{{item.title}}</h3>
+        </div>   
+         <div class="signWrap">
+                <img src="./images/Popzu/lastTime.png" /> 
+                <span>{{last_for}}</span><span>{{item.weekNums}}{{Week}}</span>
+           </div>   
+        <div class="font">
+            <ul>  
+                <li ng-repeat="value in item.seriesVTOs track by $index">{{value.title}}</li>
+            </ul> 
+        </div> 
+         <div ng-mouseover="isEnter=true" ng-mouseout="isEnter=false" class="setUp">
+            <img src="./images/Popzu/planEdit.png" alt="" />  
+            <ul class="editLi" ng-class="{true:'show',false:'hide'}[isEnter]">  
+                <li ng-click="editTemplate($event,item.id)" ng-mouseover="isMouseEnter=true" ng-mouseout="isMouseEnter=false" ng-class="{true:'commonBackgroundAndColorActive',false:'commonBackgroundAndColor'}[isMouseEnter]">{{Edit_Template}}</li>   
+               <li ng-click="removeTemplate($event,item.id)" ng-mouseover="isMouseEnterAnother=true" ng-mouseout="isMouseEnterAnother=false" ng-class="{true:'commonBackgroundAndColorActive',false:'commonBackgroundAndColor'}[isMouseEnterAnother]">{{Delete_Template}}</li>   
+            </ul>    
+        </div>    
+    </li>
+    <div style="clear:both;"></div>
+</ul>
+<div class="worDoorPaging">
+    <div class="tcdPageCode" ng-show="planTemplatePaging"></div>
+</div>

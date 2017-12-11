@@ -1,0 +1,66 @@
+<div style="width: 200px;position: absolute;left: 550px;top: -3px;">
+	<div class="search" style="background-color: #f9f9f9;margin-top:15px;border:1px solid #E5E7EA;">
+        <div class="sologo gsearch" ng-click="searchTutorClick()">  
+        	<img src="./images/Popzu/index_search.png">    
+        </div>
+        <input class="gword" type="text" placeholder="{{dataClassShow[4]}}" style="background-color: #f9f9f9;" ng-model="searchTutor">
+    </div>  
+</div>   
+<div class="blankContent"></div> 
+<div class="model_task_user" ng-show="tutorOnData==1?true:false"> 
+	<table style="width:740px;text-align:center;">  
+		<thead> 
+			<tr style="color:#808080;"> 
+				<td style="text-align: left;">{{dataStudentsShow[0]}}</td>
+				<td>{{dataStudentsShow[1]}}</td>  
+				<td>{{dataTutorShow[0]}}</td>   
+				<td>{{dataTutorShow[1]}}</td>  
+				<td>{{dataTutorShow[2]}}</td> 
+				<td>{{dataStudentsShow[5]}}</td>     
+			</tr>
+		</thead>    
+		<tbody>
+			<tr style="height:120px;border-bottom:1px solid #e5e7ea;" ng-repeat="item in tutorsListGroup">
+				<td>
+					<div>
+						<img ng-src="{{item.avatar || './images/security/avatar.png'}}" class="imgShow" />
+						<div class="userInf">   
+							<div class="userName">{{item.name}}</div>
+							<img ng-src="{{item.sexImg}}" class="xingbie" />
+							<div class="userEmail">{{item.account || ''}}</div>
+						</div>  
+					</div>
+				</td>
+				<td width='80'>{{item.nativeLanguage || ''}}</td>
+				<td width="80">{{item.secLanguage || ''}}</td>
+				<td width="100" style="color:#ADD5AE;">
+					<div class="timesLearn">{{item.orderNums || 0}}{{dataStudentsShow[7]}}</div>
+					<div class="learnDurarion">{{item.orderTotalDuration || 0}}{{dataStudentsShow[8]}}</div>
+				</td> 
+				<td width="150">{{item.serviceStars || 0}}</td>
+				<td width="100"><div class="userDetails" ng-click="tutorDetailsLook(item.userId)">{{dataStudentsShow[6]}}</div></td>
+			</tr>
+		</tbody>     
+	</table>
+	<div class="worDoorPaging"> 
+		<div class="tcdPageCode" ng-show="tutorsListGroupPaging"></div>
+	</div> 
+</div>     
+<div ng-if="tutorOnData==0?true:false" class="no_data_show">
+	
+	<img src="./images/dataLook/empty@2x.png">
+	<p>这里什么都没有~~</p>  
+</div>  
+ 
+<!-- 详情弹窗 -->    
+<div class="shadow" ng-if="tutorLookShow" style="position: fixed;"> 
+	<div class="orderDetailsLook">    
+		<div class="orderLookTitle">    
+			{{dataTutorShow[3]}} 
+            <div class="delete" ng-click="closeShadow()">
+                <img src="./images/close.png">
+            </div>    
+		</div>    
+		<stu-And-Tut-Details userid="{{userIdDirective}}" identity="Tutor" groupid="{{groupId}}"></stu-And-Tut-Details>  
+	</div>      
+</div>      

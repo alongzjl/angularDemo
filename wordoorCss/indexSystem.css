@@ -1,0 +1,1883 @@
+@import './planDataList.css';
+ 
+body img {
+     vertical-align: top; 
+}
+
+.courseContent {
+    width: 1002px;
+    margin: 0 auto;
+    background: #f9f9f9;
+}
+.permissionsEditTab {
+    height:530px;
+}
+.memberList th {
+    text-align:left;
+}
+ .classification {
+    padding: 24px 0 0 0;
+    height: 75px;
+} 
+.classification > span {
+    color: #333;
+    line-height:37px;
+}
+.groupaddType {
+    width: 1002px;
+    padding:20px 40px 20px 0;
+    margin: 0 auto;
+}
+.relateContent .relationCourse{
+    height:640px;
+}
+.addCourse {
+    background-color: rgba(180, 211, 174, 1);
+    color: #fff;
+    padding: 0 40px;
+    line-height: 37px;
+    font-size: 14px;
+    cursor: pointer;
+    height: 37px;
+    border-radius: 30px;
+    position:relative;
+}
+.addCourse:hover   {
+    opacity:0.7;
+}
+ .addCourse .addSign {
+    position: absolute;
+    top: 10px;
+    left: 33px;
+}
+.addCourse .addSign>img {
+    height:15px;
+}
+.permissionsEdit .permissionsEditTab table {
+    width: 1022px;
+}
+.permissionsEditTab thead tr {
+    color: #808080;
+    font-size: 12px;
+     border-bottom: solid 1px #dbdbdb;
+}
+.permissionsEditTab thead th {
+        padding-bottom: 20px;
+        height: auto;
+        font-weight: normal;
+}
+
+.permissionsEditTab thead th:first-child{
+    text-indent:10px;
+}
+.permissionsEditTab tbody tr {
+    font-size: 14px;
+    color: #505766;
+}
+
+.permissionsEditTab tbody tr:hover {
+    background-color:#eee;
+}
+
+.permissionsEditTab tbody td {
+    height: 70px;
+    border-bottom: solid 1px #dbdbdb;
+}
+
+.permissionsEditTab tbody td:first-child{
+    text-indent:10px;
+}
+.permissionsEditTab td img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
+.permissionsEditTab .edit {
+    padding-right: 10px;
+}
+.permissionsEditTab .edit>div {
+    position:relative;
+}
+.permissionsEditTab .edit>div img {
+    height:27px;
+    width:27px;
+}
+
+ .editLi {
+    display:none;
+    position:absolute;
+    top:28px;
+    right:-26px;
+    z-index: 100;
+    border-radius:5px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+}
+ .editLi li {
+    color: #505766;
+    background-color: #fff;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    z-index: 1000;
+}
+.editLi li:nth-child(1) {
+    border-radius: 3px 3px 0 0;
+}
+.editLi li:nth-child(2) {
+    border-radius: 0 0 3px 3px;
+}
+#createMember {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    z-index: 130;
+    width: 640px;
+    margin-left:-320px;
+    background: rgb(255, 255, 255);
+    border-radius: 4px;
+}
+#createMember .title {
+    font-size: 15px;
+    color: #505766;
+    padding-left: 32px;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    border-bottom: solid 1px #dbdbdb;
+    font-weight: normal;
+}
+#createMember .delete {
+    position: absolute;
+    right: 26px;
+    width: 27px;
+    height: 27px;
+    top: 11px;
+    cursor: pointer;
+    border: none;
+}
+#createMember .delete img {
+    height: 27px;
+}
+#createMember .fromContent {
+    padding: 14px 32px 27px 32px;
+    border-bottom: solid 1px #dbdbdb;
+}
+#createMember .fromContent table {
+    width: 100%;
+    font-size: 16px;
+    color: #505766;
+}
+#createMember .fromContent tr {
+    text-align: left;
+    height: 54px;
+    /* border: solid 1px #dbdbdb; */
+}
+#createMember .fromContent input {
+    border: solid 1px #dbdbdb;
+    border-radius: 3px;
+    background-color: #f9f9f9;
+    width: 100%;
+    padding-left: 14px;
+    font-size: 14px;
+    font-family: Helvetica;
+    height:40px;
+    cursor: pointer;
+}
+.fromContent .single {
+    position: absolute;
+    right: 16px;
+    top: 26px;
+    cursor: pointer;
+}
+.fromContent .single img {
+    width: 10px;
+    height: 10px;
+}
+.fromContent .single + ul {
+    position: absolute;
+    z-index: 100;
+    text-align: left;
+    font-size: 12px;
+    color: #505766;
+    width: 100%;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+    border: solid 1px #dbdbdb;
+    background-color: #fff;
+}
+.fromContent .single + ul > li {
+    height: 42px;
+    line-height: 42px;
+    font-weight: normal;
+    padding-left: 14px;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    /* color: #505766; */
+}
+.pop_circle {
+    border-radius: 3px;
+}
+.pop-btnsDeep {
+    background-color: #07c0cd;
+    color: #fff;
+}
+#createMember table th {
+    padding: 11px 0;
+    position: relative;
+    font-weight: normal;
+    font-size: 14px;
+    text-align: left;
+}
+.pop_btns-small {
+    width: 116px;
+    height: 40px;
+    line-height: 36px;
+    font-size: 16px;
+    border: 1px solid #07c0cd;
+}
+.pop_btns {
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+.btnGroupByNew {
+    font-size: 16px;
+    padding: 20px 20px;
+}
+.btnGroupByNew > div {
+    float: right;
+    margin-right: 10px;
+}
+.confirm {
+    background-color: #09c0ce;
+    color: #fff;
+}
+.cancel, .confirm, .delete {
+    width: 105px;
+    border: solid 1px #09c0ce;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.Ulist-right-wrap {
+    margin-left: -154px;
+    height: 236px;
+    overflow: auto;
+    margin-top: 22px;
+    background-color: #f9f9f9;
+    padding: 4px 20px;
+}
+.Ulist-right-wrap td {
+    text-align: left;
+}
+#addTutorAndStu .Ulist-right-wrap {
+    margin-left:0;
+     height:250px;
+    overflow: auto;
+}
+.Ulist-right-wrap .avatar {
+    height:40px;
+    width:40px;
+    border-radius:50%;
+    margin-right: 10px;
+}
+.Ulist-right-wrap .avatar img {
+    height:100%;
+    width:100%;
+}
+#searchUserRight {
+    height: 27px;
+    width: 50px;
+    padding: 0;
+    line-height: 26px;
+    font-size: 12px;
+    border: 1px solid #09C0CE;
+    color: #09C0CE;
+    background-color: #f9f9f9;
+}
+.userInformation {
+    position:relative;
+    padding: 1px 0 0 28px;
+}
+.headPortrait {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    margin: 34px 0 26px 0;
+}
+.userInformation .userName {
+    position: absolute;
+    font-size: 18px;
+    top: 58px;
+    left: 130px;
+    width:300px;
+}
+.userInformation .email {
+    position: absolute;
+    color: rgba(80, 87, 102, 0.8);
+    font-size: 16px;
+    left: 108px;
+    top: 96px;
+}
+.searchAdd {
+    background-color: #09C0CE;
+}
+.searchAddVerify {
+     width: 216px;
+    float: right;
+    margin-top: 18px;
+}
+.searchAddVerify .search {
+    border: 1px solid #E5E7EA;
+} 
+ .searchAdd > div {
+    width: 1002px;
+    padding-bottom: 20px;
+    /* padding-right: 40px; */
+    margin: 0 auto;
+}
+ .search {
+    width: 216px;
+    height: 37px;
+    border-radius: 18px;
+    padding-left: 20px;
+    overflow: hidden;
+    background-color: #fff;
+    position: relative;
+    line-height: 37px;  
+}
+ .search > div {
+    position: absolute;
+    right: 18px;
+    top: 7px;
+    cursor: pointer;
+}
+.search > div > img {
+    height: 22px;
+}
+ .search input {
+    border: none;
+    height: 37px;
+    font-size: 12px;
+    color: #000;
+    width: 144px;
+}
+ .PopzuCount {
+     width: 1002px;
+     height: 75px;
+     margin: 0 auto;
+     line-height: 75px;
+     /* padding-right: 40px; */
+ }
+ .PopzuList {
+    margin:0 30px 30px 0;
+    width: 314px;
+    height:272px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    position: relative;
+    background-color: #fff;
+    cursor: pointer;
+    padding-top: 116px;
+    border-radius: 4px;
+ }
+ .PopzuList:hover{
+     box-shadow: 0px 6px 20px rgba(0,0,0,0.26);
+ }
+
+
+
+ .PopzuListTitle {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    top: 52px;
+    text-align: center;
+ }
+  .PopzuList .title {
+    font-size: 20px;
+    color: #505766;
+    padding-bottom: 6px;
+    text-align: center;
+    font-weight:bold;
+    width: 214px;
+}
+ .PopzuList .international {
+    font-size: 12px;
+    color: #8e8e8e;
+}
+.PopzuList .international:hover{
+    text-decoration:none;
+}
+ .PopzuList .userPortrait {
+    width: 204px;
+    text-align: center;
+    margin: 0 auto;
+}
+.userPortrait li {
+    display: inline-block;
+    position:relative;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 4px 7px;
+    background-size: 100% 100%;
+}
+.international img {
+    width:20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.PopzuList .course {
+    position: absolute;
+    bottom: 0;
+    height: 45px;
+    background-color:#f7f7f7;
+    width: 100%;
+    font-size: 14px;
+    color: #999;
+    line-height: 44px;
+    text-align: center;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.PopzuList .course span {
+    margin: 0 4px;
+}
+.groupUl {
+    width:1002px;
+    margin:0 auto;
+}
+
+.groupUl li:nth-child(3n+0){
+    margin-right: 0;
+}
+.setUp {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+#createNewGroup {
+    width: 628px;
+    background: #fff;
+    border-radius: 3px;
+    z-index: 10000;
+    position: absolute;
+    top: 16%;
+    left: 50%;
+    margin-left:-324px;
+}
+#createNewGroup .title {
+    height: 96px;
+    font-size: 20px;
+    color: #505766;
+    padding-left: 32px;
+    height: 60px;
+    line-height: 60px;
+    position: relative;
+    border-bottom: solid 1px #dbdbdb;
+}
+#createNewGroup .delete {
+    position: absolute;
+    right: 26px;
+    width: 27px;
+    height: 27px;
+    top: 18px;
+    cursor: pointer;
+     border: none;
+}
+#createNewGroup .delete img {
+    height: 27px;
+}
+#createNewGroup .fromContent {
+    padding: 23px 32px 27px 32px;
+    border-bottom: solid 1px #dbdbdb;
+}
+#createNewGroup .fromContent table {
+    width: 100%;
+    /* font-size: 15px; */
+    color: #505766;
+    text-align: left;
+}
+#createNewGroup .fromContent tr {
+    text-align: left;
+}
+#createNewGroup table th {
+    padding: 11px 0;
+    position: relative;
+    font-weight: normal;
+    font-size: 14px;
+}
+.fromContent input, .fromContent textarea {
+    border: solid 1px #dbdbdb;
+    border-radius: 3px;
+    background-color: #f9f9f9;
+    width: 100%;
+    padding-left: 10px;
+    font-size: 14px;
+    font-family: Helvetica;
+    cursor: pointer;
+    height:40px;
+}
+.titleGroup {
+    background-color: #09C0CE;
+    width:100%;
+    padding-bottom: 26px;
+    color: #fff;
+}
+.groupName {
+    width: 1022px;
+    font-size: 30px;
+    margin: 0 auto;
+    background-color: #09C0CE;
+}
+.allTutor {
+       width: 1040px; 
+    margin:0 auto;
+}
+.allTutor .allTutorLi {
+    float:left;
+    width: 176.4px;
+    height:231px;
+    text-align: center;
+    padding-top: 16px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    background-color: #fff;
+    position: relative;
+    margin-bottom: 26px;
+    margin-right:30px;
+}
+.allTutor .allTutorLi:hover{
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+}
+.allTutorLi .imgshow {
+    height: 66px;
+    width: 66px;
+    border-radius: 50%;
+    display: block;
+    margin:0 auto;
+}
+ .allTutorLi p {
+    font-size: 14px;
+    height:42px;
+    padding: 17px 5px 11px;
+    overflow:hidden;
+}
+ .allTutorLi .sound {
+    padding-bottom: 10px;
+    margin-top:10px;
+    display: inline-block;
+ }
+ .sound .leftCircle {
+    float:left;
+    height: 100%;
+    background-color: #09C0CE;
+}
+.sound .centerCircle {
+    /* float: left; */
+    height: 23px;
+    width: 36px;
+    background-color: #09C0CE;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.sound .rightCircle {
+    float: left;
+    height: 100%;
+    width: 12px;
+    background-color: #09C0CE;
+    border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+}
+.allTutorLi .score {
+    border-top:solid 1px #dbdbdb;
+    padding: 12px 20px 0 20px;
+    height: 41px;
+    margin-top: 20px;
+}
+.allTutorLi .score>ul li {
+    float: left;
+    background-size: 100% 100%;
+    width: 18px;
+    height: 18px;
+    margin-right: 2px;
+}
+#groupDelete {
+    position: absolute;
+    top: 25px;
+    right: -10px;
+    z-index: 100;
+    
+}
+#groupDelete li {
+    color: #ccc;
+    height: 30px;
+    width: 45px;
+    line-height:30px;
+    text-align:center;
+    border: solid 1px #ccc;
+    border-radius: 3px;
+}
+#addTutorAndStu {
+    position: absolute;
+    top: 16%;
+    left: 24%;
+    z-index: 133;
+    width: 640px;
+    background: #fff;
+    padding: 0 20px;
+    min-height: 450px;
+}
+#addTutorAndStu .stUinvitation-title {
+    height: 96px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #505766;
+    /* padding-left: 32px; */
+    height: 60px;
+    line-height: 60px;
+    position: relative;
+    border-bottom: solid 1px #dbdbdb;
+}
+#addTutorAndStu .stUinvitation-desc {
+    font-size: 14px;
+    color: #8c8c8c;
+    /* padding: 0 32px; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#addTutorAndStu .search1 input[type='text'] {
+    width: 332px;
+    height: 36px;
+    /* line-height: 40px; */
+    border-radius: 3px;
+    border: solid 1px #CDD2D4;
+    padding: 7px;
+    /* margin-left: 32px; */
+    display: inline-block;
+}
+#addTutorAndStu .stu-list {
+    height: 275px;
+    overflow-y: auto; 
+    height: 155px;
+    color: #505766;
+    margin-top: 28px;
+}
+#addTutorAndStu .stUinvitation-btns-pos {
+    position: absolute;
+    bottom: 18px;
+    right: 23px;
+}
+.pop-btnsDeep:hover {
+    background-color: rgba(9, 192, 206, 0.8);
+}
+.gsac-content {
+    width:1002px;
+    margin:0 auto;
+    padding: 25px 0 51px 0;
+    position:relative;
+}
+.gsac-content .gsac-logo {
+    padding-right: 18px;
+    border-right: solid 1px #dbdbdb;
+    height: 27px;
+    float: left;
+}
+.gsac-content .gsac-logo img {
+    height: 27px;
+    vertical-align: middle;
+}
+.gsac-content .gsac-name {
+    height: 27px;
+    line-height: 27px;
+    font-size: 16px;
+    padding-left: 18px;
+    float: left;
+}
+.gsac-content .gsac-remove {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+.gsac-content .gsac-remove img {
+    width: 27px;
+}
+.addGroupCourse .whole {
+    height: 98px;
+    line-height: 98px;
+    background-color: #f9f9f9;
+}
+.addGroupCourse .whole>div {
+    width: 1022px;
+    margin: 0 auto;
+}
+.whole .gsac-search {
+    width: 159px;
+    height: 37px;
+    border-radius: 18px;
+    border: solid 1px #dbdbdb;
+    background-color: #fff;
+    line-height: 37px;
+    position: relative;
+    display: inline-block;
+}
+.whole .gsac-search-logo {
+    display: inline-block;
+    position: absolute;
+    right: 13px;
+    top: 5px;
+    cursor: pointer;
+}
+.whole .gsac-search img {
+    width: 27px;
+    height: 27px;
+}
+.whole .gsac-search-input {
+    width: 100px;
+    display: inline-block;
+    padding-left: 20px;
+}
+.whole .gsac-search-input input {
+    border: none;
+    display: inline-block;
+    width: 100px;
+    color: #bcbcbc;
+    height: 27px;
+}
+.relateContent {
+    width:100%;
+    background-color: #f9f9f9;
+}
+.addGroupCourse {
+    position:absolute;
+    top:793px;
+    left:0;
+    width: 100%;
+    height: 0;
+    background-color:#f9f9f9;
+    z-index:10000;
+    overflow:hidden;
+}
+.subMenu .myCourse {
+    margin-right: 52px;
+    position: relative;
+    cursor: pointer;
+    color: #bcbcbc;
+}
+.subMenu .tabActive {
+    color:#09c0ce;
+    border-bottom: solid 2px #09c0ce;
+}   
+.subMenu .tabActiveMy {
+    color:#09c0ce;
+    border-bottom: solid 2px #09c0ce;
+}
+#planDate {
+    width:200px;
+}
+.subMenu {
+    width: 100%;
+    background-color: #09C0CE;
+    height: 68px;
+}
+.subMenu ul {
+    width:1002px;
+    margin:0 auto;
+}
+.subMenu li {
+    /* padding: 0 20px 0 0px; */
+    margin-right: 42px;
+    float: left;
+    cursor: pointer;
+    font-family: 'Microsoft YaHei';
+    color: rgba(229, 231, 234, 0.67);
+    text-align: center;
+    line-height: 44px;
+    padding-top: 20px;
+    font-size: 15px;
+}
+.subMenu .subMenuSelect {
+    display: inline-block;
+    color: #fff;
+    cursor: pointer;
+}
+.subMenu .subMenuSelectenter {
+    display: inline-block;
+    color: #fff;
+    cursor: pointer;
+    border-bottom: 4px solid #f07e71;
+}
+.alongCourse {
+    height:266px;
+}
+.displayCourse {
+    width: 1002px;
+    margin: 0 auto;
+    background: #f9f9f9;
+}
+ .displayCourse .courseRealDetail {
+    width: 314px;
+   /* height:276px; */
+    float: left;  
+    margin-right: 30px;
+    position: relative;
+    margin-bottom: 26px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    padding-bottom: 4px;
+    background-color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+ .displayCourse .courseRealDetail:hover{
+     box-shadow: 0px 6px 20px rgba(0,0,0,0.26);
+ }
+
+.displayCourse li:nth-child(3n+0)
+{
+    margin-right: 0px;
+}
+.courseRealDetail .add-relateCourse {
+    color: #09c0ce;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    cursor:pointer;
+    margin-top:30px;
+    border-top: solid 1px #dbdbdb;
+}
+.courseRealDetail .mdeletecourse {
+    position:absolute;
+    right:15px;
+    bottom:15px;
+    z-index: 10000;
+ }
+ .courseRealDetail .mdeletecourse img {
+    height:32px;
+ }
+.courseRealDetail .myPic {
+    position: relative;
+    height: 152px;
+    border-radius: 3px 3px 0 0;
+    text-align: center;
+    padding-top: 65px;
+    /* border-bottom:1px solid #cdcdcd; */
+}
+.myPic h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 300px; 
+}
+ .myPic .pub {
+    background-color: #b5d4ae;
+    position: absolute;
+    border-radius: 3px;
+    height: 24px;
+    line-height: 24px;
+    left: -5px;
+    top: 12px;
+    padding-left: 5px;
+}
+ .myPic .pub  span {
+    display: block;
+    padding: 0 16px;
+    background: #fff;
+    color: #09c0ce;
+    border-radius: 0 3px 3px 0;
+}
+ .myPic .time {
+   right: -24px;
+   bottom: 32px;
+}
+.myPic .sign {
+    position: absolute;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    padding: 4px 16px;
+    height: 26px;
+    line-height: 17px;
+    font-size: 12px;
+    float: left;
+    /* margin-left: 10px; */
+}
+.myPic .el {
+    right: -24px;
+    bottom: -1px;
+}
+.signWrap {
+    position: absolute;
+    bottom: 13px;
+    left: 0px;
+    height: 24px;
+    width:280px;
+    color: #505766;
+}
+ .courseRealDetail .font {
+    padding-top: 15px;
+    color: #19191a;
+    font-size: 14px;
+    text-indent: 12px;
+    position: relative;
+    z-index: 100;
+    background-color: #fff;
+    height: 70px;
+    width: 314px;
+    overflow: hidden;
+}
+.courseRealDetail .font ul{
+    width: 314px;
+    overflow: hidden;
+    padding-right:12px;
+}
+.font>h3 {
+    /* overflow: hidden; */
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-bottom: 4px;
+    font-size: 18px;
+    color: #505766;
+    font-weight: normal;
+    overflow: hidden;
+    padding-right: 12px;
+}
+.font .descriptionP {
+    color: #808080;
+    font-size: 14px;
+    margin: 4px 0;
+}
+ .font p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+ .font .endP {
+    padding-top: 7px;
+    color: #09c0ce;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    bottom: -25px;
+}
+.verifyTutor {
+    margin-top:30px;
+}
+
+.verifyTutor li:nth-child(5n+0) {
+    margin-right: 0;
+}
+.verifySeries {
+    position: absolute;
+    right: 10px;
+    bottom:10px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    border: 1px solid #cdcdcd;
+    border-radius: 50px;
+    z-index:100;
+}
+.course-along {
+    position: absolute;
+    top: 390px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 864px;
+    border-radius: 3px;
+    background-color: #fff;
+    z-index: 15000; 
+}
+.course-along .title {
+    height: 64px;
+    width: 100%;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 0 30px;
+}
+.course-along .title span {
+    line-height: 64px;
+    font-size: 20px;
+    color: #505766;
+    float: left;
+    font-weight: bold;
+}
+.course-along .title img {
+    float: right;
+    cursor: pointer;
+    height: 27px;
+    width: 27px;
+    margin-top: 15px;
+}
+.course-along .courseinp {
+    width: 100%;
+    padding: 40px 30px;
+    border-bottom: 1px solid #dbdbdb;
+}
+.courseinpNewFr {
+    float: right;
+    margin: 20px 40px 20px 0;
+}
+.courseinp .language, .courseinp .difficult {
+    width: 380px;
+    float: right;
+    position: relative;
+}
+.courseinp .language,.courseinp .time {
+    margin-bottom: 35px;
+}
+.courseinp .classify, .courseinp .time {
+    width: 380px;
+    float: left;
+    position: relative;
+}
+.courseinp .navtitle, .courseinp .des {
+    float: left;
+    margin-top: 35px;
+}
+
+.courseinp .navtitle {
+    position: relative;
+}
+.courseinp .imgChoose {
+    float: left;
+    margin: 30px 0 0;
+}
+.courseinp .language span,
+.courseinp .difficult span, 
+.courseinp .time span, 
+.courseinp .navtitle span, 
+.courseinp .des span, 
+.courseinp .classify span, 
+.courseinp .navChoose span {
+    display: block;
+    line-height: 40px;
+    font-size: 18px;
+    color: #505766;
+    height: 40px;
+    width: 150px;
+    text-align: left;
+    float: left;
+}
+.courseinp .language input, 
+.courseinp .difficult input, 
+.courseinp .classify input, 
+.courseinp .time input {
+    float: left;
+    width: 216px;
+    height: 40px;
+    border-radius: 3px;
+    border: 1px solid #dbdbdb;
+    font-size: 16px;
+    color: #505766;
+    text-indent: 20px;
+    cursor: pointer;
+    background: #f9f9f9 no-repeat 190px 15px;
+}
+
+.courseinp .navtitle input {
+    float: left;
+    width: 595px;
+    height: 40px;
+    border: 1px solid #dbdbdb;
+    font-size: 16px;
+    border-radius: 3px;
+    text-indent: 20px;
+    outline: none;
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+
+.courseinp .des textarea {
+    float: left;
+    width: 595px;
+    height: 100px;
+    border-radius: 3px;
+    border: 1px solid #dbdbdb;
+    font-size: 16px;
+    text-indent: 20px;
+    padding-top: 20px;
+    resize: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+.courseinp .imgChoose .imgtext {
+    display: block;
+    line-height: 40px;
+    font-size: 18px;
+    color: #505766;
+    height: 40px;
+    width: 150px;
+    text-align: left;  
+    float: left;
+}
+.courseinp .imgChoose .imgUpDate {
+    width: 180px;
+    height: 100px;
+    background-color: #f9f9f9;
+    border-radius: 3px;
+    float: left;
+} 
+
+.authChoose {
+     float: left;
+    width: 150px;  
+    height:34px;  
+    line-height: 34px; 
+   /* text-align: right*/  
+}
+ body .form-control {
+    display: block; 
+    width: 200px;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+}
+
+.dialogDelete-content .language {
+    padding-top: 50px;
+    /*margin-left: 50px;*/
+}
+.nav-along {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1010px;
+    height: 594px;
+    border-radius: 3px;
+    background-color: #fff;
+    z-index: 10000; 
+
+}
+.nav-along .nav-along-left, .nav-along .nav-along-right {
+    width:50%;
+    float:left;  
+    height:450px;   
+    border-bottom: 1px solid #DBDBDB;
+    position: relative; 
+}
+.nav-along div {
+    box-sizing:border-box;
+}
+.nav-along .title {
+    height:64px;
+    width:100%;
+    border-bottom:1px solid #dbdbdb;
+    padding:0 30px;
+}
+.nav-along .title span{
+    line-height:64px;
+    font-size:20px;
+    font-weight:bold;
+    color:#505766;
+    float:left;
+}
+.nav-along .title img {
+    float:right;
+    cursor: pointer;
+    height:27px;
+    width:27px;
+    margin-top:15px;
+}
+.chooseSeries {
+    margin-top:30px;
+    height:40px;
+    padding:0 30px;
+}
+.chooseSeries div {
+    float:left;
+    line-height: 40px;
+    font-size: 18px;
+    color: #505766;
+    height: 40px;
+}
+.chooseSeries .centerDiv {
+    position:relative;
+    margin:0 20px;
+}
+.chooseSeries .inpchoose {
+    width: 282px;
+    height: 40px;
+    border-radius: 3px;
+    border: 1px solid #dbdbdb;
+    font-size: 16px;
+    color: #505766;
+    text-indent: 20px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+.chooseSeries .seriesNumber,.chooseSeries .seriesLanguage {
+    width:282px; 
+}
+.chooseSeries .showseriesLi {
+   position: absolute;
+    height: 24px;
+    width: 24px;
+    right: 10px;
+    top: 8px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #cdcdcd;
+    background: url(../images/Creatacourse_arrow.png) #f9f9f9 no-repeat 5px 5px;
+    background-size: 10px;
+}
+.chooseSeries .seriesUl {
+    position: absolute;
+    top:42px;
+    left:0;
+    background-color: #fff;
+    z-index: 100;
+    width:100%;
+
+}
+.chooseSeries>div:first-child {
+    width:100px;
+}
+.seriesUl span {
+    cursor: pointer;
+    height: 40px;
+    display: block;
+    line-height: 40px;
+    float: right;
+    margin-right: 20px;
+    padding: 0 10px;
+}
+.chooseSeries .seriesUlNumber {
+    position: absolute;
+    top:42px;
+    left:0;
+    background-color: #fff;
+    z-index: 100;
+    width:100%;
+    display:none;
+}
+.chooseSeries .seriesUl li,.chooseSeries .seriesUlNumber li {
+    height: 40px;
+    padding-left: 20px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #505766;
+    list-style: none;
+    cursor: pointer;
+}
+.nav-along .seriesAdd {
+    position: absolute;
+    top:85px;
+    right:70px;
+    cursor: pointer;
+    height:32px; 
+    width:73px; 
+    line-height: 32px; 
+    text-align: center;
+    border: 1px solid #00BCD3;
+    border-radius: 100px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #00BCD3;
+ }
+ .addedSeriesTitle {
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #768094;
+    margin-top:90px; 
+     padding-left: 30px;
+ }
+.addedSeries {
+    height:220px; 
+      width:414px;  
+      margin-top:27px;     
+      margin-left: 25px;   
+      overflow: auto;    
+} 
+.addedSeries li {
+    height:32px;
+    line-height:30px;
+    cursor: pointer;
+    position: relative;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #505766; 
+    padding-left: 10px;
+}
+.addedSeries li:hover {
+     background: #F9F9F9;
+}
+.addedSeries li .deleteSeriesInTem {
+    position: absolute;
+    right: 6px; 
+    top: 6px;  
+    height: 20px; 
+    width: 20px; 
+    background: url(../images/plan_series_delete.png) no-repeat top left;
+    background-size: 100%;
+    display:none;
+}  
+.addedSeries li:hover .deleteSeriesInTem {
+    display: block; 
+}
+.seriesAllInCourse{
+    height: 30px;
+    width: 300px;
+    line-height: 30px;
+    /* border: 1px solid #cdcdcd; */
+    float: left;
+    /* margin: 10px 10px 0; */
+    border-radius: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #999999;
+    margin-right: 10px;
+}
+.seriesUlLang {
+    display:none;
+}
+.noDataShow {
+    margin-top: 100px;
+    text-align: center;  
+}
+
+#navContent {
+    /* padding-bottom: 15px; */
+    background-color: #09C0CE;
+}
+#navContent div {
+    height: 60px;
+    width: 1002px;
+    margin: 0 auto;
+}
+#navContent>div>ul {
+    font-size: 29px;
+    color: #fff;
+    width: 1002px;
+    margin: 0 auto;
+    height: 60px;
+}
+#navContent ul li {
+    float: left;
+    height: 40px;
+    margin-right: 40px;
+    font-size: 12px;
+    line-height: 40px;
+    text-align: center;
+} 
+#navContent ul li span {
+   font-size: 16px;
+   font-weight: bold;
+   margin-left: 8px;
+}
+.goToPrevCourse .courseDetails {
+   height: 40px;
+    background: url(../images/course/detail-info.png) no-repeat 0 -3px;
+    background-size: 22px 22px;
+    color: #fff;
+    padding: 0 5px 0 30px;
+    line-height: 35px;
+    cursor: pointer;
+    margin-top: 13px;
+} 
+.editCourse {
+    position: relative;
+    height: 629px;
+    width: 350px;
+    margin: 30px auto;
+    background-image: url(../images/course/mobile.png);
+    background-size: 100% 100%;
+    padding: 60px 7px 30px;
+}
+#mobileView {
+    width: 320px;
+    height: 486px;
+    margin: 0 auto;
+    border: none;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+}
+.planJoin {
+   position: absolute;
+    width: 100%;
+    background: #fff;
+    height: 40px; 
+}
+.fromContent .planJoin span {
+   float: right;
+    height: 40px;
+    line-height: 40px;
+    width: 60px;
+    text-align: center;
+    cursor: pointer; 
+    border:none;
+    top:0;
+}
+.scoreVerify {
+     border-top: solid 1px #dbdbdb;
+    height: 41px;
+    margin-top: 20px;
+}
+.scoreVerify .scoreBtn {
+    margin-top: 10px;
+    padding: 0 5px;
+}
+#navContent ul .verifyCoursePass {
+   float: right;
+   border: 1px solid rgb(132,224,231);
+   height: 35px;
+   cursor: pointer;
+   /* margin-top: 13px; */
+   line-height: 35px;
+   padding: 0 35px;
+   border-radius: 4px;
+   font-size: 14px;
+   margin-right:0;
+   margin-left:20px;
+   margin-top:2px;
+}
+
+#navContent ul .verifyCoursePass:hover{
+    border: 1px solid #AFE0C9;
+    background-color: #AFE0C9;
+}
+.studentTitle {
+    height:40px;
+    margin:10px 0;
+}
+.studentTitle li {
+    height: 30px;
+    line-height: 30px;
+    float: left;
+     width: 200px; 
+    text-align: center;
+    border-right: 1px solid #999;
+    cursor: pointer;
+    color: #cdcdcd;
+}
+.studentTitle li:last-child {
+    border:none;
+}
+.studentMobile {
+    height:40px;
+}
+.studentMobile>div:first-child {
+    float:left;
+    height:40px;
+    line-height:40px;
+
+}
+.studentMobile>div:last-child {
+    float:right;
+    height:40px;
+    line-height:40px;
+    cursor: pointer;
+}
+.contentChange {
+    height: 230px;
+    overflow: auto;
+}
+.contentChange .emailInp input {
+    height: 30px;
+    width: 300px;
+}
+.contentChange .emailInp li {
+    margin:10px 0;
+}
+.contentChange .addBtn {
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+}
+.contentChange .addBtn span {
+    height: 26px;
+    line-height: 26px;
+    width: 26px;
+    float: left;
+    display: block;
+    border-radius: 50%;
+    border: 1px solid #000;
+    font-size: 30px;
+    text-align: center;
+    margin-right: 5px;
+    box-sizing: content-box;
+}
+#addTutorAndStu .addUser {
+    height:30px;
+    line-height:30px;
+    width:150px;
+    text-align: center;
+    border:1px solid #999;
+    border-radius:10px;
+    background-color: #cdcdcd;
+    margin:10px auto;
+    cursor: pointer;
+}
+.contentChange textarea {
+    width: 300px;
+    height: 210px;
+    margin-left: 150px;
+}
+.studentTitle .colorBlack {
+    color:#000;
+}
+.urlAdded {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+   /* width: 550px;*/
+    background: #cdcdcd;
+    margin: 10px auto;
+}
+.cloneUrl {
+    height: 30px;
+    line-height: 26px;
+    width: 80px;
+    border: 2px solid #cdcdcd;
+    text-align: center;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    margin-left: 470px;
+    cursor: pointer;
+}
+.checkPro li{
+    height:40px;
+    margin-bottom:20px;
+}
+.checkPro li input {
+    height: 30px;
+    margin-left: 30px;
+    width: 300px;
+}
+.isChoose {
+    height:40px;
+    padding-left: 15px;
+}
+.isChoose span {
+    margin-left:10px;
+}
+#addTutorAndStu .delete {
+   position: absolute;
+    right: 26px;
+    width: 27px;
+    height: 27px;
+    top: 18px;
+    cursor: pointer; 
+    border: none; 
+}
+#addTutorAndStu .delete img {
+    height:27px;
+    width:27px;
+}
+.Training_Intensity {
+     width: 100%;
+     margin-top: 50px;
+}
+.Training_Intensity li {
+         width: 65px;
+        float:left; 
+}
+.Training_Intensity li .date {
+    width:100%;
+    text-align: center;
+    font-family: PingFangSC-Regular;
+    font-size: 12px; 
+    color: #505766;  
+    margin-top:25px; 
+    margin-left: 6px; 
+}
+.Training_Intensity li .content { 
+    width:32px;
+    height:40px;
+    background: #F9F9F9; 
+    border: 1px solid #DBDBDB;
+    border-radius: 2px;
+    font-family: PingFangSC-Regular; 
+    font-size: 16px; 
+    color: #505766;
+    text-align: center;
+    line-height: 40px; 
+    margin-left: 20px;
+}
+.Training_Intensity .addOne,.Training_Intensity .reduceOne {
+    cursor: pointer;
+    margin-left:25px; 
+    user-select:none; 
+    height:24px;
+    width:24px;
+}
+.Training_Intensity .addOne {
+     
+    background:url(../images/plan_plus_disabled.png) no-repeat top left;
+    background-size: 100%;
+    margin-bottom:16px;
+}
+.Training_Intensity .reduceOne {
+      
+    background:url(../images/plan_minus_disabled.png) no-repeat top left;
+    background-size: 100%;
+    margin-top:16px;
+}
+.errorDiv {
+    position: absolute;
+    top: 18%;
+    left: 35%;
+    z-index: 133;
+    width: 320px;
+    background: #fff;
+    padding: 0 20px;
+    min-height: 300px;
+}
+.errorDivTitle {
+    height:40px;
+    line-height: 40px;
+    border-bottom: 1px solid #cdcdcd;
+    margin-bottom: 20px;
+}
+.errorDiv ul {
+    height: 200px;
+    overflow: auto;
+}
+.errorDiv ul li {
+    width:100%;  
+}
+.errorDiv ul li div {
+    float:left;
+    width:138px;
+    text-align: right;
+}
+.errorShowBtn {
+    margin:30px auto 20px;
+}
+ 
+.goToPrevCourse {
+    /* height:68px; */
+    background: #09C0CE;
+    /* padding-top: 0px; */
+    line-height:44px;
+    color:#fff;
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+.goToPrevCourse>div{ 
+    width:1002px; 
+    margin:0 auto;
+} 
+.goToPrevCourse span {
+    margin-right:10px;
+    border-bottom: 1px solid #09C0CE;
+} 
+.goToPrevCourse span:hover{
+    border-bottom: 1px solid #fff;
+}
+.goToPrevCourse span:first-child,.goToPrevCourse span:last-child {
+    cursor:pointer;  
+}
+.goToPrevCourse span:nth-child(2) { 
+    color:#f9f9f9;
+} 
+#plan_in_template {
+    height: 30px;
+    line-height: 30px;
+    border: solid 1px #dbdbdb;
+    padding: 0 10px; 
+    border-radius: 50px;
+    display: inline-block;
+    cursor: pointer;
+}
+/*è®¡åˆ’è¯¦æƒ…æŸ¥çœ‹*/
+.fromContent .week,.fromContent .weekDate {
+    height:40px;
+    width:564px;
+    overflow: hidden;
+  } 
+  .weekDate .swiper-wrapper {
+    width:2000%;  
+    height:40px;  
+  } 
+.fromContent .week li,.fromContent .swiper-slide>div {
+    float:left; 
+    height:40px;     
+    line-height: 40px;   
+    width:80px; 
+    text-align: center;   
+}
+.fromContent .swiper-slide .clickDate {
+    cursor: pointer;
+    width: 30px;
+    height: 30px; 
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    margin: 0 auto;
+   /* border: 1px solid red; */
+}
+.fromContent .swiper-slide .haveCourse {
+    background:#09C0CE; 
+    color:#fff;    
+} 
+.fromContent .swiper-slide .clicked {
+    background:#cdcdcd;   
+     color:#fff;  
+} 
+.fromContent .weekDate .swiper-slide {
+     width:564px;  
+     height:40px; 
+    float:left;   
+}
+.fromContent .prevPage, .fromContent .nextPage {
+    position: absolute;
+    top:140px; 
+    height: 0; 
+    width: 0;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    cursor: pointer;
+}
+.fromContent .prevPage {
+    border-right: 20px solid #000;
+    left:20px;
+
+} 
+.fromContent .nextPage {
+     border-left: 20px solid #000;  
+     right:20px;  
+}
+.fromContent .courseTitle {
+     height:50px;
+     line-height: 50px;
+     font-size: 18px;
+} 
+.fromContent .courseListShow li {
+    width:100%;
+    margin:10px 0;
+    height:30px; 
+    line-height: 30px; 
+    position: relative;
+}
+.courseListShow li span:first-child {
+    text-align: left;
+}
+.courseListShow li span:last-child {
+    position: absolute;
+    right:0;
+    top:0; 
+    cursor: pointer; 
+}
+/*è®¡åˆ’æ¨¡æ¿æ ·å¼*/
+.displayCourse .planTemplate {
+    background: #FFFFFF;
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,0.14);
+    border-radius: 4px; 
+    position: relative;
+    height:252px; 
+    width:314px;
+    float:left;
+    margin:0 30px 26px 0;  
+}
+.displayCourse .planTemplate:hover {
+        box-shadow: 0px 6px 20px rgba(0,0,0,0.26);
+ } 
+.planTemplate .myPic {
+     height:100px;  
+}
+.planTemplate .myPic h3 {
+    padding-top: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 300px;
+    text-align: left;
+    text-indent: 20px;
+    color: #505766;
+    font-weight: 400;
+}
+.planTemplate .myPic .pub {
+    height:24px;
+    background: #00BCD3;
+    border-radius: 3px;
+    position: absolute;
+    top:18px;
+    left:20px;
+    line-height: 24px;
+    text-align: center;
+    color:#fff;
+    padding:0 10px; 
+}
+.planTemplate .signWrap{
+   bottom: 35px;
+   left:20px;
+   width:200px;
+   color: #505766;
+}  
+.signWrap img {
+    height:27px; 
+    width:27px; 
+    margin-right:10px;  
+    float:left; 
+    margin-top: 3px; 
+}
+.signWrap span {
+    float:left;
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #505766;
+    line-height: 16px;
+    width:80%;
+} 
+.planTemplate .font {
+    padding-top: 3px;
+    color: #19191a;
+    font-size: 14px;
+    /* text-indent: 12px; */
+    background-color: #fff;
+    height: 70px;
+    padding-left:20px;
+    overflow: hidden;
+}  
+.planTemplate .font ul {
+    width:290px; 
+}
+.planTemplate .font li {
+    font-family: Helvetica;
+    font-size: 13px;
+    color: #768094;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width:100%;
+    height:20px;
+    margin-bottom: 4px;
+} 
+.planTemplate .setUp img {
+    height: 4px;
+    width: 21px;
+    margin-top:10px;
+}
+.planTemplate .setUp .editLi {
+    top:20px; 
+}
+.planTemplate .myPic .beginPlanActive {
+    background: rgba(173,213,174,.2);
+    border-radius: 65px;
+    color: #ADD5AE;   
+}
+.planTemplate .myPic .endPlanActive { 
+    background: rgba(240,126,113,.2);  
+    border-radius: 65px; 
+    color: #F07E71;
+}

@@ -1,0 +1,39 @@
+<div class="banjiTitleList">
+	<div>{{lookDirec.groupName}}</div>
+	<div ng-mouseover="lookDirecWeekMonth = true;" ng-mouseout="lookDirecWeekMonth = false;">
+		{{weekLook}} 
+		<ul class="weekAndMonths" ng-show="lookDirecWeekMonth">
+			<li ng-click="chooseThis(0)" ng-mouseover="enter(1)" ng-mouseout="out(0)" ng-class="{commonStyleActive:groupIndex==1}">{{Check_According_to_The_Week}}</li>
+			<li ng-click="chooseThis(1)" ng-mouseover="enter(2)" ng-mouseout="out(0)" ng-class="{commonStyleActive:groupIndex==2}">{{Monthly_View}}</li> 
+		</ul>       
+	</div>  
+</div>      
+<div class="banjiDateDetails">  
+	<ul class="details">
+		<li>
+			<span>{{Numbers_of_Tutors}}</span> 
+			<span>{{lookDirec.tutorNums}}</span> 
+		</li>
+		<li>  
+			<span>{{Numbers_of_Students}}</span>
+			<span>{{lookDirec.stuNums}}</span>
+		</li>
+		<li>
+			<span>{{Total_Numbers_of_Courses}}</span>
+			<span>{{lookDirec.materialNums}}</span>
+		</li>
+		<li>
+			<span>{{Order_Times}}</span>  
+			<span>{{lookDirec.orderReqNums}}</span>
+		</li>
+		<li>  
+			<span>{{Order_Time}}</span>
+			<span>{{lookDirec.orderTotalDuration}}</span> 
+		</li>
+	</ul>
+	<div class="tuxing"> 
+		<div class="echart" id="echart{{look}}"></div>
+		<div class="showPercent">{{perent}}%</div> 
+		<p>{{weekLookPer}}</p>
+	</div>
+</div>

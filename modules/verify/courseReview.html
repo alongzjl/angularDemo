@@ -1,0 +1,18 @@
+<div class="goToPrevCourse">
+	<div>
+		<span ng-click="goBack()">{{Previous_Page}}</span><span>|</span><span>{{Published_course}}</span><span>></span><span>{{detailsCourse.title}}</span><span class="courseDetails" ng-click="courseDetailsShow()"></span>
+	</div>  
+</div>    
+  
+<div id="navContent">
+    <div> 
+	    <ul>  
+		    <li>{{series_course}}:&nbsp;<span ng-repeat="item in courseSeriesAll">{{item.title}}</span></li>  
+		    <li>{{course_classification}}:&nbsp;<span>{{detailsCourse.category.display}}</span></li>
+		    <li>{{difficulty}}:&nbsp;<span>{{detailsCourse.difficulty.display}}</span></li>
+	    </ul>  
+    </div>    
+</div>  
+<div class="editCourse">
+    <iframe id="mobileView" scrolling="no" src="{{detailsCourse.url}}"></iframe>
+</div>  

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html ng-app="mobileApp">
+<head>
+	<title></title>
+	 <meta charset="UTF-8">
+    <meta name="twitter:card" content="app">
+    <meta name="twitter:site" content="@poponapp">
+    <meta name="twitter:description" content="Learn Chinese and English language from native speakers. Connect with tutors and chat pals
+and learn to speak languages like a pro.">
+    <meta name="twitter:app:country" content="US">
+    <meta name="twitter:app:name:iphone" content="Pop On – Learn &amp; Teach Languages">
+    <meta name="twitter:app:id:iphone" content="896998815">
+    <meta name="twitter:app:name:ipad" content="Pop On – Learn &amp; Teach Languages">
+    <meta name="twitter:app:id:ipad" content="896998815">
+    <meta name="twitter:app:name:googleplay" content="Pop On – Learn &amp; Teach Languages">
+    <meta name="twitter:app:id:googleplay" content="com.wordoor.andr.popon">
+    <meta name="p:domain_verify" content="467a2d722f11a72da1b20666d70504ed">
+    <meta name="description" id="meta-description" content="Learn Chinese and English language from
+native speakers. Connect with tutors and chat pals and learn to speak languages like a pro.">
+    <meta name="csrf-param" content="_csrf">
+    <meta name="csrf-token" content="WktiYVdLenYCIzArDX8UBRUqADgZD0kRKHItTA4OSj4UMgY7HX9OOA==">
+    <title>学语言，来Pop On找母语者</title>
+    <meta id="keywords" content="">
+	<meta id="description" content="">
+	<meta id="robots" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="./css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="./js/swiper/swiper.min.css"/>
+    <link rel="stylesheet" type="text/css" href="./wordoorCss/index_mobile.css"/>
+    <script type="text/javascript" src="./js/adaptive.js"></script>
+    <script type="text/javascript" src="./js/language/lang.js"></script>
+	<script type="text/javascript" src="./js/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="./js/swiper/swiper.min.js"></script>
+	<script type="text/javascript" src="./js/angular.js"></script>
+</head>
+<body>
+	<div ng-controller="index_mobile" ng-cloak>
+	<section class='mobile-head'>
+	    <div class='logo'><img src='./images/index/logo_vertical.png'/></div>
+	    <div class='language'>
+		    <span class="active setLanguage" ng-click="chooseLanguage('Chinese')">{{chinese}}</span>|
+		    <span class="setLanguage" ng-click="chooseLanguage('English')">{{english}}</span>
+        </div>
+    </section>
+    <section class='mobile-body'>
+    <section class='mobile-descTitle'>
+        <h3 class='title'>{{popon_world_can_understand}}</h3>
+        <div class='desc'>
+            {{popon_intro_detail}}
+        </div>
+        <a href="http://android.myapp.com/myapp/detail.htm?apkName=com.wordoor.andr.popon">
+            <div class='download'>{{Download_android}}</div>
+        </a>
+    </section>
+    <section class='mobile-descDisplay'>
+    	<div class="swiper-container">
+    	 <div class="swiper-wrapper clear mobile-descDisplay-wrap">
+	        <div class="swiper-slide descDispla-style">
+	        	<div>
+                    <h3 class='title'>{{help_offer}}</h3>
+                    <p class='desc'>
+                        {{help_offer_detail}}
+                    </p>
+                    <div class="switch">
+                        <nav class="clear">
+                            <div class='circle active'></div>
+                            <div class='circle'></div>
+                            <div class='circle'></div>
+                        <nav>
+                    </div>
+                    <div class="pic-bg">
+                        <img src='./images/index/app1.png'/>
+                    </div>
+                </div>
+	        </div>
+	        <div class="swiper-slide descDispla-style">
+	        	<div>
+                    <h3 class='title'>{{Instantly_match}}</h3>
+                    <p class='desc'>{{Instantly_match_detail}}</p>
+                    <div class="switch">
+                        <nav class="clear">
+                            <div class='circle'></div>
+                            <div class='circle active'></div>
+                            <div class='circle'></div>
+                        <nav>
+                    </div>
+                    <div class="pic-bg">
+                        <img src='./images/index/app2.png'/>
+                    </div>
+                </div>
+	        </div>
+	        <div class="swiper-slide descDispla-style">
+	        	 <div>
+                    <h3 class='title'>{{effective_content}}</h3>
+                    <p class='desc'>{{effective_content_detail}} </p>
+                    <div class="switch">
+                        <nav class="clear">
+                            <div class='circle'></div>
+                            <div class='circle'></div>
+                            <div class='circle active'></div>
+                        <nav>
+                    </div>
+                    <div class="pic-bg">
+                        <img src='./images/index/app3.png'/>
+                    </div>
+                </div>
+	        </div>
+	     </div>
+	    </div>
+ 	</section>
+    <section class='user-story'>
+        <div class='total'>
+            <h3 class='title'>{{index_story}}</h3>
+            <div class='desc'>{{user_story_short_detail}}
+            </div>
+        </div>
+
+        <ul class="user-story-total-wrap clear">
+            <li class="user-story-wrap">
+                <div>
+                    <img src='./images/index/pics/p1.png'/>
+                    <div>
+                        <strong class="country">{{popon_user_5}}</strong>
+                    </div>
+                    <p class='desc'>{{popon_user_5_say}}</p>
+                </div>
+            </li>
+            <li class="user-story-wrap">
+                <div>
+                    <img src='./images/index/pics/p2.png'/>
+                    <div>
+                        <strong class="country">{{popon_user_1}}</strong>
+                    </div>
+                    <p class='desc'>{{popon_user_1_say}}</p>
+
+                </div>
+            </li>
+            <li class="user-story-wrap">
+                <div>
+                    <img src='./images/index/pics/p3.png'/>
+                    <div>
+                        <strong class="country">{{popon_user_2}}</strong>
+                    </div>
+                    <p class='desc'>{{popon_user_2_say}}
+                </div>
+            </li>
+            <li class="user-story-wrap">
+                <div>
+                    <img src='./images/index/pics/p4.png'/>
+                    <div>
+                        <strong class="country">{{popon_user_6}}</strong>
+                    </div>
+                    <p class='desc'>{{popon_user_6_say}}</p>
+
+                </div>
+            </li>
+        </ul>
+
+    </section>
+    <section class="roles">
+        <div class='chatpal'>
+            <div class='img'>
+                <p class='title'>{{popon_be_a_chatpal}}</p>
+            </div>
+            <p class='desc'>{{popon_be_a_chatpal_detail}}</p>
+        </div>
+        <div class='tutor'>
+            <div class='img'>
+                <p class='title'>{{popon_be_a_tutor}}</p>
+            </div>
+            <p class='desc'>{{popon_be_a_tutor_detail}}</p>
+        </div>
+    </section>
+</section>
+<section class='foot'>
+   	 <ul class='share clear'>
+        <li><a href="https://www.facebook.com/poponapp" target="_blank"><img
+                    src='./images/index/firstIcon/facebook.png'/></a></li>
+        <li><a href="http://weibo.com/poponapp" target="_blank"><img
+                    src='./images/index/firstIcon/weibo.png'/></a></li>
+        <li class="wechartQrcode"><a><img src='./images/index/firstIcon/wechart.png'/></a>
+            <div class="wechartQrcodeImg"></div>
+        </li>
+        <li><a href="https://www.pinterest.com/poponapp" target="_blank"><img
+                    src='./images/index/firstIcon/social4.png'/></a></li>
+    </ul>
+    <div class="companyInformation">
+        <p class="copyRight">{{system_copyright}}</p>
+        <p class="addressICP">沪公网安备 31011002002303号</p>
+    </div>  
+</section>
+</div>
+<script>
+    	if(localStorage.getItem('lang')){
+
+		}else{
+			localStorage.setItem('lang','Chinese');
+		}
+	    // 设计图宽度
+		    window['adaptive'].desinWidth = 640;
+		    // body 字体大小
+		    window['adaptive'].baseFont = 18;
+
+		    /*
+		     // 显示最大宽度
+		     window['adaptive'].maxWidth = 480;
+		     // rem值改变后执行方法
+		     window['adaptive'].setRemCallback = function () {
+
+		     };
+		     */
+		    window['adaptive'].scaleType = 3;
+		    // 初始化
+		    window['adaptive'].init();
+		    (function () {
+		        var isIPhone = !!window.navigator.appVersion.match(/iphone/gi);
+		        if (isIPhone && devicePixelRatio === 2) {
+		            var testElem = document.createElement('div');
+		            testElem.style.border = '.5px solid transparent';
+		            document.body.appendChild(testElem);
+		            if (testElem.offsetHeight == 1) {
+		                document.querySelector('html').classList.add('hairlines');
+		            }
+		            document.body.removeChild(testElem);
+		        }
+		    })();
+			var mySwiper = new Swiper ('.swiper-container', {
+			    direction: 'horizontal',
+			   	autoplay: 3000,
+			    speed:500
+			  }) 
+	</script>
+<script type="text/javascript" src="./wordoorJs/index_mobile.js"></script>
+</body>
+</html>

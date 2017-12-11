@@ -1,0 +1,6 @@
+<div class="subMenu">
+    <ul>
+        <li ng-click="verifyTitleChoose($index,item.val)" ng-repeat="item in verifyTitleList" ng-mouseenter="isChooseVerify=$index" ng-mouseleave="isChooseVerify=100" ng-class="{subMenuSelect:isChooseVerify==$index,subMenuSelectenter:isClickVerify==$index}">{{item.display}}</li>  
+       </ul>  
+</div>    
+<div ui-view></div>

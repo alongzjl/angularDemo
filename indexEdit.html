@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html ng-app="popon">
+<head>
+	<meta charset="utf-8">
+	<title>上海沃动科技有限公司</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<link rel="stylesheet" href="./wordoorCss/indexEdit.css">
+  	<link rel="stylesheet" href="./wordoorCss/headerCommon.css">
+  	<link rel="stylesheet" type="text/css" href="./css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="./js/jcrop/jquery.Jcrop.min.css"/>
+  	<link rel="stylesheet" type="text/css" href="./js/pagination/page.css"/>
+	<script type="text/javascript" src="./js/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="./js/angular.js"></script>
+    <script type="text/javascript" src="./wordoorJs/config.js"></script> 
+	<script src="http://cdn.bootcss.com/angular-ui-router/1.0.0-rc.1/angular-ui-router.js"></script>
+	<script type="text/javascript" src="./js/language/lang.js"></script>
+    <script type="text/javascript" src="./js/jcrop/jquery.Jcrop.min.js"></script>
+</head>
+<body id="body">
+		<div ng-controller="header" class="header">
+		<div class="messagePerson clear">  
+            <div class="logo fl">
+                <a href=""><img src="./images/header/logo.png"></a>
+            </div>
+            <ul class="fl content">
+                <!--查询一级菜单-->
+                 <li ng-repeat="(index,item) in nav" ng-click="navchoose(index)" ng-cloak class="mhref firstMenu" ng-class="{navSelect:choosed == index}">{{item.value}}</li> 
+              <!--查询一级菜单结束-->  
+            </ul>   
+             <ul class="message fr"> 
+                <li class="headportraitImage" ng-mouseover="userChooseShow = true" ng-mouseout="userChooseShow = false">
+                    <img class="headportrait" ng-src="{{avatar}}" /> 
+                    <span ng-cloak>{{userName}}</span>   
+                    <div class="trangel triangle_down_grayEa"></div>
+                    <div class="UserMenu clear" ng-show="userChooseShow">
+                        <ul>
+                            <li class="tuichu" ng-click="tuichu()" ng-mouseover="isMouseEnterOne=true" ng-mouseout="isMouseEnterOne=false" ng-class="{true:'commonBackgroundAndColorActive',false:'commonBackgroundAndColor'}[isMouseEnterOne]">
+                                <span ng-cloak>{{outSide}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                
+                <!--查看消息 包括消息数量与消息列表-->
+                <!-- <li>
+                    <div class="sysNews">
+                        <span class="MessageCount"></span>
+                        <img src="./images/header/index_message.png">
+                    </div>
+                </li> -->
+                
+                <!--消息列表结束-->
+                <li class="noMright languageSelect" ng-mouseover="langShow=true" ng-mouseout="langShow=false"> 
+                    <div class="languageImage">
+                        <img src="./images/header/index_language.png">
+                    </div>
+                    <span ng-cloak>{{language}}</span>
+                    <div class="clear" ng-show="langShow">
+                        <ul class="masterLanguage">
+                            <li ng-repeat="item in languageList" ng-click="chooseLanguage(item.id)" ng-cloak ng-mouseover="isMouseEnterOne=true" ng-mouseout="isMouseEnterOne=false" ng-class="{true:'commonBackgroundAndColorActive',false:'commonBackgroundAndColor'}[isMouseEnterOne]">{{item.display}}</li> 
+                        </ul> 
+                    </div>
+                </li>
+            </ul>
+        </div>
+	</div>
+ <script type="text/javascript" src="./js/pagination/jquery.page.js"></script>
+<div ui-view></div>   
+<script type="text/javascript" src="./wordoorJs/indexEdit.js"></script>
+<script type="text/javascript" src="./wordoorJs/move.js"></script>  
+</body>    
+</html>  

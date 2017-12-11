@@ -1,0 +1,169 @@
+<div class="searchAdd clear">
+    <div class="clear">
+        <div class="search fl">
+            <div class="sologo gsearch" ng-click="searchCourse(courseSearch)">
+            	<img src="./images/Popzu/index_search.png">
+            </div>
+            <input class="gword" type="text" placeholder="{{Search}}" ng-model="courseSearch">
+        </div>
+        <div class="addCourse addse gadd fr" ng-click="addNewCourse(seriesId)">
+            <div class="addSign"><img src="./images/security/index_addcourse.png"></div>
+            <span>{{choose_courses}}</span>
+        </div>
+    </div>
+</div>
+<div class="PopzuCount">{{courseInSeriesAll}}
+	<!-- <ul class="clear ificationNav fr">
+        <li ng-mouseover="inStatus($event)" ng-mouseout="outStatus($event)"><span>{{status}}</span>
+            <span class="triangle triangle_down_gray"></span>
+            <ul class="ificationNavSel fstatus" ng-show="statusCourse">
+                <li ng-click="courseStatusFilter()" ng-mouseover="choosecolor($event)" ng-mouseout="choosecolorNo($event)">{{All}}</li>
+                <li ng-click="courseStatusFilter(1)" ng-mouseover="choosecolor($event)" ng-mouseout="choosecolorNo($event)">{{course_status_review}}</li>
+                <li ng-click="courseStatusFilter(2)" ng-mouseover="choosecolor($event)" ng-mouseout="choosecolorNo($event)">{{course_status_published}}</li>
+                <li ng-click="courseStatusFilter(0)" ng-mouseover="choosecolor($event)" ng-mouseout="choosecolorNo($event)">{{course_status_failed}}</li>
+            </ul>
+        </li>
+        <li ng-mouseover="inType($event)" ng-mouseout="outType($event)"><span>{{type}}</span>
+            <span class="triangle triangle_down_gray"></span>
+           <ul class="ificationNavSel fcategory" ng-show="typeCourse">
+                <li ng-click="courseCategoryFilter()" ng-mouseover="choosecolor($event)" ng-mouseout="choosecolorNo($event)">{{All}}</li>
+                <li ng-click="courseCategoryFilter('SurvivalOral')" ng-mouseover="choosecolor($event)" ng-mouseout="choosecolorNo($event)">{{SurvivalOral}}</li>
+                <li ng-click="courseCategoryFilter('DailyCommunication')" ng-mouseover="choosecolor($event)" ng-mouseout="choosecolorNo($event)">{{DailyCommunication}}</li>
+                <li ng-click="courseCategoryFilter('EntertainmentFocus')" ng-mouseover="choosecolor($event)" ng-mouseout="choosecolorNo($event)">{{EntertainmentFocus}}</li> 
+                <li ng-click="courseCategoryFilter('WorkplaceTalent')" ng-mouseover="choosecolor($event)" ng-mouseout="choosecolorNo($event)">{{WorkplaceTalent}}</li>  
+                <li ng-click="courseCategoryFilter('SocialIssues')" ng-mouseover="choosecolor($event)" ng-mouseout="choosecolorNo($event)">{{SocialIssues}}</li>  
+                <li ng-click="courseCategoryFilter('WhileInRome')" ng-mouseover="choosecolor($event)" ng-mouseout="choosecolorNo($event)">{{WhileInRome}}</li>                     
+            </ul>
+        </li> 
+    </ul> -->
+</div>
+<div class="noDataShow" ng-if="noDataShow">
+    <p>该系列中还没有添加课程,点击右上角选择课程!</p>
+</div>   
+<ul class="displayCourse">
+	<li class="courseRealDetail" ng-repeat="(index,item) in courseInSeries">
+		<div style="background-size:100%;;background-image: url({{item.detail.cover}})" class="myPic">
+			<div class="pub">
+				<span>{{item.detail.auditStatusShow}}</span>
+                <span>No.{{index+1+(displayCourseParams.pn-1)*6}}</span> 
+			</div>          
+			<div class="signWrap">
+				<div class="sign time">{{item.detail.category.display || ''}}</div>
+				<div class="sign el">{{item.detail.difficulty.display}}</div>
+			</div> 
+		</div>    
+		<div class="font">
+			<h3>{{item.detail.title}}</h3>
+            <ul>  
+                <li ng-repeat="value in item.seriesInformation track by $index" class="seriesAllInCourse">{{value.title}}</li>
+            </ul>
+		</div>
+         <div ng-mouseover="enter(data,$event)" ng-mouseout="out(data,$event)" class="setUp setUpSeries">
+            <img style="width:27px;height:27px;" src="./images/security/Course-Details_setting.png" alt="" />
+            <ul class="editLi">
+               <!--  <li ng-click="editCourse($event,item.detail.id)" ng-mouseover="editEnter($event)" ng-mouseout="editOut($event)">{{course_edit}}</li> -->
+                <li ng-click="reviewCourse($event,item.detail)" ng-mouseover="editEnter($event)" ng-mouseout="editOut($event)">{{Course_Preview}}</li>
+                <!-- <li ng-click="addToSeries($event,item.detail)" ng-mouseover="editEnter($event)" ng-mouseout="editOut($event)">{{choose_series}}</li>  
+ -->               <!--  <li ng-click="removeFromSeries($event,item.id)" ng-mouseover="editEnter($event)" ng-mouseout="editOut($event)">{{Delete_from_Series}}</li> -->
+                <!--  <li ng-click="verifyCourse($event,item.detail.id)" ng-mouseover="editEnter($event)" ng-mouseout="editOut($event)" ng-if="item.detail.auditStatus.id==0?true:false">{{verify_normal}}</li>
+                <li ng-click="removeCourse($event,item.detail.id)" ng-if="item.detail.auditStatus.id==0?true:false" ng-mouseover="editEnter($event)" ng-mouseout="editOut($event,item.id)">{{delete_course}}</li> -->
+            </ul>
+        </div>
+	</li>  
+	<div style="clear:both;"></div>
+</ul>
+<div class="worDoorPaging">
+	<div class="tcdPageCode" ng-show="seriesCoursePaging"></div>
+</div>
+
+
+<div class="addGroupCourse" ng-show="showAddCourse">
+    <div style="background:#fff;">
+        <div class="gsac-content clear">
+            <div class="gsac-logo">
+                <img src="./images/Popzu/logo-blue.png">
+            </div> 
+            <div class="gsac-name">{{choose_courses}}</div>
+            <div class="gsac-remove" ng-click="removeHtmlCourse()">
+                <img src="./images/course-close.png">
+            </div>
+        </div>
+    </div>  
+    <div class="subMenu subMenuGroup" style="background:#fff;border-bottom: solid 1px #dbdbdb;">
+        <ul style="width:1002px;margin:0 auto;">
+            <li class="myCourse tabActiveMy" ng-click="myCourse($event)" ng-mouseenter="addStyleCourse($event)" ng-mouseleave="removeStyleCourse($event)">{{my_Courses}}</li>
+            <li class="myCourse" ng-click="customCourse($event)" ng-mouseenter="addStyleCourse($event)" ng-mouseleave="removeStyleCourse($event)">{{public_courses}}</li>
+        </ul>
+    </div>
+    <div class="whole">
+        <div>
+            <div class="gsac-search">
+                <div class="gsac-search-logo" ng-click="searchRelativeCourse()">  
+                    <img src="./images/Popzu/index_search.png"> 
+                </div>                                  
+                <div class="gsac-search-input"> 
+                    <input type="text" placeholder="{{Enter_content}}" ng-model="searchContent"> 
+                </div>                             
+            </div>
+        </div>
+    </div>
+    <div class="relateContent" ng-if="groupMyCourse">
+        <div class="noDataShow" ng-if="noDataMyCourseShow">
+            <p>{{no_data}}</p>
+        </div>
+           <ul class="displayCourse displayMyCourse">
+            <li style="height:308px;" class="courseRealDetail" ng-repeat="(index,item) in displayMyCourse">
+                <div style="background-size:100%;;background-image: url({{item.cover}})" class="myPic">
+                    <div class="pub">
+                        <span>{{item.auditStatusShow}}</span>
+                    </div>
+                    <div class="signWrap">
+                        <div class="sign time">{{item.category.display || ''}}</div>
+                        <div class="sign el">{{item.difficulty.display}}</div>
+                    </div>
+                </div>
+                <div class="font">
+                    <h3>{{item.title}}</h3>
+                    <ul>
+                        <li ng-repeat="value in item.seriesInformation track by $index" class="seriesAllInCourse">{{value.title}}</li>
+                    </ul>
+                </div>
+                <div class="add-relateCourse" ng-click="addMyToSeries(item.id,index)">{{item.addCourseMy}}</div>
+             </li>
+            <div style="clear:both;"></div>  
+        </ul>
+            <div class="worDoorPaging">
+                <div class="tcdPageCode" ng-show="groupMyCoursePaging"></div>
+            </div>
+    </div>
+    <div class="relateContent" ng-if="groupCustomCourse">
+        <div class="noDataShow" ng-if="noDataCustomCourseShow">
+            <p>{{no_data}}</p>
+        </div>
+           <ul class="displayCourse displayMyCourse">
+            <li style="height:308px;" class="courseRealDetail" ng-repeat="(index,item) in displayCustomCourse">
+                <div style="background-size:100%;;background-image: url({{item.cover}})" class="myPic">
+                    <div class="pub">
+                        <span>{{item.auditStatusShow}}</span>
+                    </div>
+                    <div class="signWrap">
+                        <div class="sign time">{{item.category.display || ''}}</div>
+                        <div class="sign el">{{item.difficulty.display}}</div>
+                    </div>
+                </div>
+                <div class="font">
+                    <h3>{{item.title}}</h3>
+                    <ul>
+                        <li ng-repeat="value in item.seriesInformation track by $index" class="seriesAllInCourse">{{value.title}}</li>
+                    </ul>
+                </div>
+                <div class="add-relateCourse" ng-click="addMyToSeries(item.id,index)">{{item.addCourseMy}}</div>
+            </li>
+            <div style="clear:both;"></div>
+        </ul>
+            <div class="worDoorPaging">
+                <div class="tcdPageCode" ng-show="groupCustomCoursePaging"></div>
+            </div>
+    </div>
+    
+</div>

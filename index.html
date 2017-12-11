@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html ng-app="worDoor">
+<head>
+	 <meta charset="UTF-8">
+    <meta name="twitter:card" content="app">
+    <meta name="twitter:site" content="@poponapp">
+    <meta name="twitter:description" content="Learn Chinese and English language from native speakers. Connect with tutors and chat pals
+and learn to speak languages like a pro.">
+    <meta name="twitter:app:country" content="US">
+    <meta name="twitter:app:name:iphone" content="Pop On – Learn &amp; Teach Languages">
+    <meta name="twitter:app:id:iphone" content="896998815">
+    <meta name="twitter:app:name:ipad" content="Pop On – Learn &amp; Teach Languages">
+    <meta name="twitter:app:id:ipad" content="896998815">
+    <meta name="twitter:app:name:googleplay" content="Pop On – Learn &amp; Teach Languages">
+    <meta name="twitter:app:id:googleplay" content="com.wordoor.andr.popon">
+    <meta name="p:domain_verify" content="467a2d722f11a72da1b20666d70504ed">
+    <meta name="description" id="meta-description" content="Learn Chinese and English language from
+native speakers. Connect with tutors and chat pals and learn to speak languages like a pro.">
+    <meta name="csrf-param" content="_csrf">
+    <meta name="csrf-token" content="WktiYVdLenYCIzArDX8UBRUqADgZD0kRKHItTA4OSj4UMgY7HX9OOA==">
+    <title>学语言，来Pop On找母语者</title>
+    <meta id="keywords" content="">
+	<meta id="description" content="">
+	<meta id="robots" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+	<link href='http://cdn.bootcss.com/bootstrap/3.1.1/css/bootstrap.min.css' rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="./wordoorCss/index.css">
+	<script type="text/javascript" src="./js/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="./js/angular.js"></script>
+	<style type="text/css">
+			.prompCircle{
+				width:114px;
+				height:126px;
+			    background: url(../images/index/pop.png) no-repeat;
+			    background-size: cover;
+			    position: absolute;
+			    text-align: center;
+			    box-sizing: border-box;
+			    padding-top: 40px;
+				color:#09c0ce;
+				z-index: 100;
+				transform-origin:center bottom;
+				-webkit-animation:myfirst 0.5s;
+				-moz-animation:myfirst 0.5s;
+				-o-animation:myfirst 0.5s;
+				-ms-animation:myfirst 0.5s;
+				animation:myfirst 0.5s;
+				
+				
+				}
+				.countryGood{
+					padding-bottom: 10px;	
+				}
+				.countryLanguage{
+					padding: 2px 10px;
+			        border-radius: 10px;
+			        background-color: #09c0ce;
+			        color: #fff;
+				}
+	</style>
+	<script>
+		if(localStorage.getItem('lang')){
+
+		}else{
+			localStorage.setItem('lang','Chinese');
+		}
+		
+	    function is_mobile() {
+	        var regex_match = /(nokia|iphone|android|motorola|^mot-|softbank|foma|docomo|kddi|up.browser|up.link|htc|dopod|blazer|netfront|helio|hosin|huawei|novarra|CoolPad|webos|techfaith|palmsource|blackberry|alcatel|amoi|ktouch|nexian|samsung|^sam-|s[cg]h|^lge|ericsson|philips|sagem|wellcom|bunjalloo|maui|symbian|smartphone|midp|wap|phone|windows ce|iemobile|^spice|^bird|^zte-|longcos|pantech|gionee|^sie-|portalmmm|jigs browser|hiptop|^benq|haier|^lct|operas*mobi|opera*mini|320x320|240x320|176x220)/i;
+	        var u = navigator.userAgent;
+	        if (null == u) {
+	            return true;
+	        }
+	        var result = regex_match.exec(u);
+	        if (null == result) {
+	            return false
+	        } else {
+	            return true
+	        }
+	    }
+
+	    function QueryString(item) {
+	        var sValue = location.search.match(new RegExp("[\?\&]" + item + "=([^\&]*)(\&?)", "i"))
+	        return sValue ? sValue[1] : sValue
+	    }
+
+	    if (QueryString("ID") != "t" && is_mobile()) {
+	        document.location.href = './index_mobile.html';
+	    }
+
+</script>
+<script type="text/javascript" src="./js/language/lang.js"></script>
+</head>
+<body>
+	<div ng-controller="worDoorIndex" ng-cloak>
+	<div class='index container'>
+
+	    <div class='head-nav clear'>
+	        <div class="row">
+	            <div class="col-lg-8 col-md-8 hidden-xs hidden-sm ">
+	                <div class='fl logo'><a name="home" href="./index.html"><img src='./images/index/logo.png'/></a>
+	                </div>
+	                <ul class='fl'>
+	                    <li><a href="#"><span>{{index_home}}</span></a></li>
+	                    <li><a href="#popon"><span>{{index_popon}}</span></a></li>
+	                    <li><a href="#story"><span>{{index_story}}</span></a></li>
+	                    <li><a href="#video"><span>{{index_video}}</span></a></li>
+	                </ul>
+	            </div>
+	            <div class="col-lg-4 col-md-4 col-sm-12 col-xl-12">
+	                <div class='select '>
+	                  
+	                    <div class="row">
+	                        <div class="hidden-lg hidden-md col-sm-12 col-xs-12">
+	                            <div class="mobileLogo">
+	                                <img src="./images/index/logo_vertical.png" class="img-responsive center-block"/>
+	                            </div>
+	                        </div>
+	                        <div class="hidden-sm hidden-xs col-lg-12 col-md-12 text-center">
+	                            <div class="text-left" style="display: inline-block;">
+	            <span class='loginButton hidden-sm hidden-xs'>
+	            	<a href="./login.html">{{login}}</a></span>
+
+
+	                                <span class='selectLauguage'>
+	            
+	                    <span class='languageSize setLanguage chinaLanguage'
+	                          lang="zh-CN">{{chinese}}</span>
+	                    <span class="indexlanguagSplit"> | </span>
+						<span
+	                        class="languageSize setLanguage enLanguage"
+	                        lang="en">{{english}}</span>
+	                    </span>
+	                    
+	                                </span>
+	                            </div>
+
+	                        </div>
+	                        <div class="hidden-lg hidden-md setLanguageMobile">
+	                 <span class='selectLauguage'>
+	              
+	                    <span class='languageSize setLanguage chinaLanguage'
+	                          lang="zh-CN">{{chinese}}</span>
+	                    <span class="indexlanguagSplit"> | </span>
+						<span
+	                        class="languageSize setLanguage enLanguage"
+	                        lang="en">{{english}}</span>
+	                     </span>
+	               
+	                            </span>
+	                        </div>
+	                        
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    <div class='describe'>
+	        <h2>{{popon_intro_title}}</h2>
+	        <p>{{popon_intro_detail}}</p>
+	    </div>
+	    <div class='androidIos hidden-sm hidden-xs'>
+	        <div class="androidIosCenter clear">
+	            <div class='android download fl'>
+		            <a target="_blank" href='https://itunes.apple.com/cn/app/wordtalk/id896998815?mt=8'>
+		            	<span class="aiImgWrap">
+		            		<img src='./images/index/ios.png'/>
+		            	</span>
+		            	<span class="downDesc fl">
+			            	<p class='downUp'>{{Download_iphone}}</p>
+			            	<p class='downWhere'>{{for_ios}}</p>
+		            	</span>
+		            </a>
+	            </div>
+
+	            <div class='ios download fl'>
+		            <a target="_blank" href='http://android.myapp.com/myapp/detail.htm?apkName=com.wordoor.andr.popon'>
+			            <span class="aiImgWrap">
+			           	 	<img src='./images/index/android.png'/>
+			            </span>
+			            <span class="downDesc fl">
+				            <p class='downUp'>{{Download_android}}</p>
+				            <p class='downWhere'>{{for_android}}</p>
+			            </span>
+		            </a>
+	            </div>
+	        </div>
+	    </div>
+	    <div class='downLoadWrap hidden-lg hidden-md text-center'>
+	        <div class="downLoad">DOWNLOAD</div>
+	    </div>
+	</div>
+
+	<div class='index-content hidden-sm hidden-xs'>
+	    <a name="popon"></a>
+	    <div class='app' style='background-color:#f7fafa;'>
+	        <div class='clear mobileShow
+	        '>
+	            <div class='fl mobliePic'>
+	                <div class="mobliePic-bg"><img src='./images/index/app1.png'/></div>
+	            </div>
+	            <div class='fl mobileDesc'>
+	                <h2>{{popon_app}}</h2>
+	                <p class='mobileDesc-p'>
+	                    {{popon_app_short_intro}}
+	                </p>
+	                <ul>
+	                    <li class='mobileDesc-li mobileDesc-icon1 mobileDesc-pos'>
+	                        <h3>{{help_offer}}</h3>
+	                        <p>
+	                           {{help_offer_detail}}
+	                        </p>
+	                    </li>
+	                    <li class='mobileDesc-li mobileDesc-icon2 mobileDesc-pos'>
+	                        <h3>{{Instantly_match}}</h3>
+	                        <p>
+	                        	{{Instantly_match_detail}}
+	                        </p>
+	                    </li>
+	                    <li class='mobileDesc-li mobileDesc-icon3 mobileDesc-pos'>
+	                        <h3>{{effective_content}}</h3>
+	                        <p>
+	                        	{{effective_content_detail}}
+	                        </p>
+	                    </li>
+	                </ul>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<div class="index-coutent-mobile hidden-lg hidden-md">
+
+	    <ul class="appDisplay">
+	        <li class="clear" id="appDisplay">
+	            <div class="text-center appDisplayLi">
+	                <h2>{{help_offer}}</h2>
+	                <p>
+	                    {{help_offer_detail}}
+
+	                    <span class="appList">
+	                    <span class="active"></span>
+	                    <span></span>
+	                    <span></span>
+	                </span>
+	                </p>
+
+	                <div class="mobliePic-bg realMobileEven"><img src="./images/index/app1.png"></div>
+	            </div>
+	            <div class="text-center  appDisplayLi">
+	                <h2>{{Instantly_match}}</h2>
+	                <p>{{Instantly_match_detail}}
+	                    <span class="appList">
+	                    <span></span>
+	                    <span class="active"></span>
+	                    <span></span>
+	                </span>
+	                </p>
+
+	                <div class="mobliePic-bg"><img src="./images/index/app2.png"></div>
+	            </div>
+	            <div class="text-center  appDisplayLi">
+	                <h2>{{effective_content}}</h2>
+	                <p>{{effective_content_detail}} <span class="appList">
+	                    <span></span>
+	                    <span></span>
+	                    <span class="active"></span>
+	                </span>
+	                </p>
+
+	                <div class="mobliePic-bg"><img src="./images/index/app3.png"></div>
+	            </div>
+
+	        </li>
+	    </ul>
+
+	</div>
+	<div class='index-stroies'>
+
+	    <div>
+	        <div class='title container'>
+	            <div class="row">
+	                <a name="story"></a>
+	                <h3>{{index_story}}</h3>
+	                <p>{{user_story_short_detail}}</p>
+	            </div>
+	        </div>
+	        <div class='list container'>
+	            <ul class='clear row'>
+
+	                <li class="col-lg-4 col-md-6 col-sm-6">
+	                    <div class='list-pic'>
+	                        <div>
+
+	                            <img src='./images/index/pics/p1.png'/>
+	                            <div class="shadowgradient">
+	                                <p class='descImg'>{{popon_user_5_say}}
+	                                    </br><span class="descNameCity">{{popon_user_5}}</span>
+	                                </p>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </li>
+	                <li class="col-lg-4 col-md-6 col-sm-6">
+	                    <div class='list-pic'>
+	                        <div>
+	                            <img src='./images/index/pics/p2.png'/>
+	                            <div class="shadowgradient">
+	                                <p class='descImg'>{{popon_user_1_say}}
+	                                    </br><span class="descNameCity">{{popon_user_1}}</p>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </li>
+	                <li class="col-lg-4 col-md-6 col-sm-6">
+	                    <div class='list-pic'>
+	                        <div>
+	                            <img src='./images/index/pics/p3.png'/>
+	                            <div class="shadowgradient">
+	                                <p class='descImg'>{{popon_user_2_say}}
+	                                    </br><span class="descNameCity">{{popon_user_2}}
+	                                        </span>
+	                                    }
+	                              
+	                                </p>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </li>
+	                <li class="col-lg-4 col-md-6 col-sm-6">
+	                    <div class='list-pic'>
+	                        <div>
+	                            <img src='./images/index/pics/p4.png'/>
+	                            <div class="shadowgradient">
+	                                <p class='descImg'> {{popon_user_6_say}}
+	                                    </br><span class="descNameCity">{{popon_user_6}}</span>
+	                              
+	                                </p>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </li>
+	                <li class="col-lg-4 col-md-6 col-sm-6">
+	                    <div class='list-pic'>
+	                        <div>
+	                            <img src='./images/index/pics/p5.png'/>
+	                            <div class="shadowgradient">
+	                                <p class='descImg'>{{popon_user_3_say}}
+	                                    </br><span class="descNameCity">{{popon_user_3}}</span>
+	                               
+	                                </p>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </li>
+	                <li class="col-lg-4 col-md-6 col-sm-6">
+	                    <div class='list-pic'>
+	                        <div>
+	                            <img src='./images/index/pics/p6.png'/>
+	                            <div class="shadowgradient">
+	                                <p class='descImg'>{{popon_user_4_say}}
+	                                    </br><span class="descNameCity">{{popon_user_4}}</span>
+	                             
+	                                </p>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </li>
+	            </ul>
+
+	        </div>
+	    </div>
+	</div>
+	<a name="video"></a>
+	<div id='videoName' class='videoName'>
+	    <div class='maskImagewrap'>
+	        <div class='maskBlack'></div>
+	        <img src='./images/index/video.png' id="video" width="1423px"/>
+	    </div>
+
+	    <div class="videoFont">
+	        {{popon_world_can_understand}}
+	        <div class="videoPlay"><img src='./images/index/play.png'/></div>
+	    </div>
+	</div>
+	<div class='index-foot'>
+	    <!--
+	    <div class='index-foot-font'>
+	        <?= \Yii::t('app/web', 'popon-join-us') ?>
+	    </div>
+	    -->
+	    <div class='clear index-foot-list container hidden-xs hidden-sm'>
+
+
+	        <ul class='clear feature'>
+	            <li>
+	                <p class="feature-title"><span
+	                        class="feature-titleContent">{{popon_be_a_chatpal}}</span><span
+	                        class="featureNum"></span></p>
+	                <img src='./images/index/f1.png'/>
+
+	                <p>
+	                    {{popon_be_a_chatpal_detail}}
+	                </p>
+	            </li>
+	            <li>
+	                <p class="feature-title"><span
+	                        class="feature-titleContent">{{popon_be_a_tutor}}</span><span
+	                        class="featureNum"></span></p>
+	                <img src='./images/index/f2.png'/>
+	                <p>
+	                    {{popon_be_a_tutor_detail}}
+	                </p>
+	            </li>
+	           
+	        </ul>
+	    </div>
+	    <div class='clear mobile-index-foot-list container hidden-lg hidden-md hidden-sm'>
+
+
+	        <ul class='clear feature'>
+	            <li class="chatPal">
+	                <div>
+	                    <p class="feature-title"><span
+	                            class="feature-titleContent">{{popon_be_a_chatpal}}</span><span
+	                            class="featureNum"></span></p>
+	                    <img src='./images/index/f1.png'/>
+	                </div>
+	                <p class="mobileDesc">
+	                   {{popon_be_a_chatpal_detail}}
+	                </p>
+	            </li>
+	            <li class="tutor clear">
+	                <div>
+	                    <p class="feature-title"><span
+	                            class="feature-titleContent">{{popon_be_a_tutor}}</span><span
+	                            class="featureNum"></span></p>
+	                    <img class="fr" src='./images/index/tutor.png'/>
+	                </div>
+	                <p class="mobileDesc">
+	                   {{popon_be_a_tutor_detail}}
+	                </p>
+	            </li>
+	            
+	        </ul>
+	    </div>
+	    <div></div>
+	</div>
+
+	<div class='index-logo' style='background-color:#1a262e;padding-bottom:44px;'>
+	    <div>
+	        <ul class='clear freidneLink'>
+	            <li><a href="https://www.facebook.com/poponapp" target="_blank"><img
+	                        src='./images/index/firstIcon/facebook.png'/></a></li>
+	            <li><a href="http://weibo.com/poponapp" target="_blank"><img
+	                        src='./images/index/firstIcon/weibo.png'/></a></li>
+	            <li class="wechartQrcode"><a><img src='./images/index/firstIcon/wechart.png'/></a>
+	                <div class="wechartQrcodeImg"></div>
+	            </li>
+	            <li><a href="https://www.pinterest.com/poponapp" target="_blank"><img
+	                        src='./images/index/firstIcon/social4.png'/></a></li>
+	            <li><a href="https://blog.gopopon.com/" target="_blank"><img
+	                        src='./images/index/firstIcon/medium.png'/></a></li>
+	            <li class="justify_fix"></li>
+	        </ul>
+	        <p>{{system_copyright}}</p><br/>
+	        <p><img src="http://www.beian.gov.cn/img/ghs.png "/>
+	        <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011002002303" target="_blank">沪公网安备 31011002002303号</a></p>    
+
+	    </div>
+	  </div>
+	</div>
+	 <script src='http://cdn.bootcss.com/three.js/r70/three.min.js'></script>
+	 <script type="text/javascript" src="./wordoorJs/index.js"></script>
+</body>
+</html>
